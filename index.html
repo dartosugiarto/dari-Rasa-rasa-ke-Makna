@@ -4,288 +4,297 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Di Antara Jutaan Spesies</title>
+<title>Di Antara Jutaan Spesies — Artikel</title>
 
-<!-- SEO -->
-<meta name="description" content="Esai tentang evolusi manusia dari mesin survival ke pencipta makna, mengeksplorasi realitas objektif, subjektif, dan intersubjektif">
-<meta name="keywords" content="evolusi manusia, homo sapiens, realitas intersubjektif, agama, filosofi">
+<!-- SEO ringkas -->
+<meta name="description" content="Esai tentang perjalanan manusia dari mesin survival ke pencipta makna—objektif, subjektif, intersubjektif—serta paradoks Tuhan vs uang.">
 <meta name="author" content="PlayPal.ID">
-
-<!-- Open Graph -->
 <meta property="og:title" content="Di Antara Jutaan Spesies: Perjalanan dari Mesin Survival ke Pencipta Makna">
-<meta property="og:description" content="Esai tentang evolusi manusia dari mesin survival ke pencipta makna">
+<meta property="og:description" content="Esai evolusi pikiran: dari survival ke katedral makna.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="id_ID">
 
-<!-- Preconnect (jaga-jaga jika menambah aset eksternal kelak) -->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <style>
-/* ====== THEME ====== */
 :root{
-  --bg:#ffffff;
-  --paper:#fafbff;
-  --ink:#0b0f19;
-  --muted:#586074;
-  --accent:#2e6bff;
-  --line:#e7eaf2;
-  --radius:14px;
-  --toc-bg: #f3f6ff;
-  --toc-line:#e6ecff;
+  --bg:#ffffff; --paper:#fafbff; --ink:#0b0f19; --muted:#586074;
+  --accent:#2e6bff; --line:#e7eaf2; --radius:14px;
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#0c0f14;
-    --paper:#10141b;
-    --ink:#e9ecf1;
-    --muted:#a6b0c2;
-    --accent:#74a0ff;
-    --line:#1b2230;
-    --toc-bg:#0f1624;
-    --toc-line:#132035;
+    --bg:#0c0f14; --paper:#10141b; --ink:#e9ecf1; --muted:#a6b0c2;
+    --accent:#74a0ff; --line:#1b2230;
   }
 }
-
-/* ====== BASE ====== */
 *{box-sizing:border-box}
-html{
-  scroll-behavior:smooth;
-  -webkit-text-size-adjust:100%;
-}
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto}
-}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 body{
   margin:0;
-  font-family:
-    -apple-system, BlinkMacSystemFont,
-    "SF Pro Text","SF Pro Display",
-    Inter, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial,
-    "Noto Sans", "Noto Sans Indonesian",    /* fallback untuk glif lokal */
-    system-ui, sans-serif;
-  background:var(--bg);
-  color:var(--ink);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Inter,Segoe UI,Roboto,system-ui,Arial,sans-serif;
+  background:var(--bg); color:var(--ink);
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 }
-
-/* Skip link */
-.skip-link{
-  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
-}
-.skip-link:focus{
-  position:fixed; left:16px; top:16px; width:auto; height:auto;
-  background:var(--accent); color:white; padding:.6rem .8rem; border-radius:8px; z-index:9999;
-}
-
-/* Container */
-main{
-  max-width:70ch;
-  margin-inline:auto;
-  padding:clamp(20px,3vw,40px);
-}
-
-/* Header */
-header[role="banner"]{
-  padding-block:8px 18px;
-  border-bottom:1px solid var(--line);
-  margin-bottom:24px;
-}
+main{max-width:72ch; margin-inline:auto; padding:clamp(20px,3vw,40px)}
+header{padding-block:8px 18px; border-bottom:1px solid var(--line); margin-bottom:24px}
 .kicker{font-size:.95rem;color:var(--muted);letter-spacing:.02em;margin-bottom:6px}
-.title{
-  font-size:clamp(1.6rem,1.3rem + 1.6vw,2.15rem);
-  line-height:1.2;letter-spacing:-.015em;margin:0 0 .4rem 0;text-wrap:balance
-}
+h1{font-size:clamp(1.6rem,1.3rem + 1.6vw,2.15rem); line-height:1.2; letter-spacing:-.015em; margin:0 0 .4rem}
 .byline{font-size:.95rem;color:var(--muted)}
 
-/* TOC */
-nav.toc{
-  margin:18px 0 22px;
-  background:var(--toc-bg);
-  border:1px solid var(--toc-line);
-  border-radius:12px;
-  padding:14px 16px;
-}
-.toc h2{
-  font-size:1rem; margin:.1rem 0 .4rem; color:var(--muted);
-}
-.toc ol{
-  margin:0; padding-left:1.1rem;
-}
-.toc a{
-  color:inherit; text-decoration:none; border-bottom:1px dashed transparent;
-}
-.toc a:focus, .toc a:hover{border-bottom-color:var(--accent)}
+nav.toc{margin:18px 0 22px; background:color-mix(in srgb, var(--paper) 90%, var(--bg) 10%); border:1px solid var(--line); border-radius:12px; padding:14px 16px}
+nav.toc h2{font-size:1rem;margin:.1rem 0 .4rem;color:var(--muted)}
+nav.toc ol{margin:0; padding-left:1.1rem}
+nav.toc a{color:inherit; text-decoration:none; border-bottom:1px dashed transparent}
+nav.toc a:hover, nav.toc a:focus{border-bottom-color:var(--accent)}
 
-/* Article */
-article[role="article"]{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:clamp(18px,2.4vw,28px);
-}
-h2{
-  font-size:clamp(1.25rem,1.05rem + .7vw,1.6rem);
-  line-height:1.25;margin:2rem 0 .75rem;text-wrap:balance
-}
-p{
-  font-size:clamp(1.05rem,1rem + .25vw,1.18rem);
-  line-height:1.75;margin:.9rem 0;text-wrap:pretty
-}
-ul{margin:.6rem 0 .9rem 1.1rem}
-li{margin:.35rem 0;line-height:1.7}
+article{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:clamp(18px,2.4vw,28px)}
+h2{font-size:clamp(1.25rem,1.05rem + .7vw,1.6rem); line-height:1.25; margin:2rem 0 .75rem}
+p{font-size:clamp(1.05rem,1rem + .25vw,1.18rem); line-height:1.75; margin:.9rem 0}
+ul{margin:.6rem 0 .9rem 1.1rem} li{margin:.35rem 0; line-height:1.7}
 
-/* Reading progress */
-.progress{
-  position:sticky; top:0; inset-inline:0;
-  height:4px; background:linear-gradient(to right,var(--accent),var(--accent)) no-repeat;
-  background-size:0% 100%;
-  z-index:1000;
+.figure{
+  margin:1rem 0 1.2rem; padding:14px; border:1px solid var(--line);
+  border-radius:12px; background:color-mix(in srgb, var(--paper) 92%, var(--bg) 8%);
+  display:flex; justify-content:center; align-items:center
 }
-@media print {.progress{display:none}}
+.icon{width:88px; height:88px}
+.diagram{width:100%; max-width:560px; height:auto}
 
-/* Print styles */
-@media print{
-  body{font-size:12pt}
-  .kicker, nav.toc, .progress{display:none}
-  article{border:none}
-}
-
-/* Selection */
+/* progress baca */
+.progress{position:sticky; top:0; height:4px; background:linear-gradient(to right,var(--accent),var(--accent)) no-repeat; background-size:0% 100%; z-index:999}
 ::selection{background:color-mix(in srgb, var(--accent) 22%, transparent)}
+@media print{nav.toc,.progress{display:none}; article{border:none}}
 </style>
-
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Di Antara Jutaan Spesies: Perjalanan dari Mesin Survival ke Pencipta Makna",
-  "author": { "@type": "Organization", "name": "PlayPal.ID" },
-  "inLanguage": "id-ID",
-  "datePublished": "2024-01-01",
-  "dateModified": "2024-01-01",
-  "description": "Esai tentang evolusi manusia dari mesin survival ke pencipta makna",
-  "mainEntityOfPage": { "@type": "WebPage", "@id": "" }
-}
-</script>
 </head>
 <body>
-<a class="skip-link" href="#konten">Lewati ke konten utama</a>
 <div class="progress" aria-hidden="true"></div>
-
-<main id="konten" role="main">
-  <header role="banner" aria-label="Header artikel">
+<main>
+  <header>
     <div class="kicker">Esai</div>
-    <h1 class="title">Di Antara Jutaan Spesies: Perjalanan dari Mesin Survival ke Pencipta Makna</h1>
-    <p class="byline">Penulis: <span aria-label="Nama penulis">PlayPal.ID</span></p>
+    <h1>Di Antara Jutaan Spesies: Perjalanan dari Mesin Survival ke Pencipta Makna</h1>
+    <p class="byline">Penulis: PlayPal.ID</p>
   </header>
 
-  <!-- Table of Contents (dibuat otomatis via JS; fallback link statis dapat ditambah) -->
+  <!-- TOC -->
   <nav class="toc" aria-label="Daftar isi">
     <h2>Daftar Isi</h2>
-    <ol id="toc-list">
-      <!-- auto-generated -->
-    </ol>
+    <ol id="toc-list"></ol>
   </nav>
 
-  <article role="article" aria-labelledby="judul-artikel">
-    <h2 id="judul-artikel" class="sr-only" hidden>Di Antara Jutaan Spesies</h2>
+  <article>
+    <!-- Pembuka -->
+    <div class="figure" aria-hidden="true">
+      <!-- Ikon kepala + pusaran (makna) -->
+      <svg class="icon" viewBox="0 0 96 96">
+        <path d="M26 24c8-6 22-6 30 0 12 2 22 12 22 24 0 9-5 15-8 21 0 7 2 12 2 12-6 5-14 7-22 6-6-1-10-4-12-8-6-1-10-4-10-7s2-5 5-6c-1-6-3-9-7-12-6-5-6-13-3-18 1-5 3-9 3-12z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="52" cy="44" r="3" fill="var(--accent)"/>
+        <path d="M52 44c10-2 14 8 8 14-6 6-18 2-16-8" fill="none" stroke="var(--accent)" stroke-width="2"/>
+      </svg>
+    </div>
 
-    <p>Di antara miliaran makhluk di planet ini, hanya ada satu yang menatap langit malam dan bertanya: “Mengapa aku di sini?” Hanya ada satu yang menciptakan musik untuk menenangkan jiwa, membangun monumen untuk yang telah tiada, dan merumuskan aturan tentang apa itu baik dan jahat.</p>
-    <p><strong>Spesies itu adalah kita—Homo sapiens.</strong></p>
-    <p>Bagaimana kita sampai di titik ini? Bagaimana seekor primata, yang pernah sibuk mencari buah dan menghindari predator, berubah menjadi makhluk pencari makna? Jawaban atas pertanyaan ini bukanlah sebuah misteri ilahi semata, melainkan sebuah epik evolusi yang terekam dalam tiga jenis realitas yang kita huni secara bersamaan: realitas objektif, realitas subjektif, dan realitas intersubjektif. Perjalanan ini dimulai bukan dari filsafat atau doa, melainkan dari sesuatu yang jauh lebih mendasar: mesin biologis yang kita bawa di dalam kepala kita.</p>
+    <p>Manusia adalah makhluk yang aneh: berani mati demi Tuhan yang tak pernah ia lihat, tapi rela hidup demi uang yang tak pernah ia cintai. Tuhan ia bela dengan amarah, uang ia biarkan diremehkan tanpa perlawanan—padahal justru uanglah yang setiap hari memberi makan, menyembuhkan, dan menjaga tubuh tetap hidup.</p>
+    <p>Pertanyaan pun lahir: apakah kita benar-benar merasakan manfaat Tuhan, atau hanya menjaga cerita tentang-Nya dengan emosi? Dan mengapa imajinasi tentang kertas dan angka bisa menyatukan miliaran manusia lebih kuat daripada keyakinan pada yang ilahi?</p>
+    <p>Dari sini, kisah kita dimulai. Kisah bagaimana otak seekor primata berkembang dari sekadar mesin survival menjadi mesin pencipta makna—melahirkan tiga dunia sekaligus: realitas objektif, realitas subjektif, dan realitas intersubjektif.</p>
 
-    <h2 id="mengenal-mesin">Mengenal Mesin di Kepala Kita: Bertahan Hidup dalam Realitas Objektif</h2>
-    <p>Sebelum ada puisi, filsafat, atau doa, otak kita sudah ada. Ia bukan mesin untuk mencari kebenaran absolut atau kebahagiaan abadi. Ia adalah <em>Mesin Survival</em>.</p>
-    <p>Selama jutaan tahun, otak ditempa oleh seleksi alam dengan satu misi brutal: menjaga tubuh ini tetap hidup cukup lama untuk meneruskan gen. Misi ini berlangsung dalam realitas objektif—dunia fisik yang ada di luar sana, terlepas dari apa yang kita pikirkan atau rasakan tentangnya. Singa, gravitasi, pohon, dan sungai adalah fakta objektif. Mereka ada dan memiliki kekuatan kausal, entah kita percaya atau tidak.</p>
-    <p>Berpikir mendalam secara analitis sangat boros energi. Karena itu, otak mengembangkan mode hemat daya: sebuah sistem otomatis berbasis emosi dan insting. Psikolog Daniel Kahneman, dalam bukunya <em>Thinking, Fast and Slow</em>, menyebutnya sebagai “Sistem 1”. Sistem ini cepat, intuitif, dan bekerja tanpa perlu usaha sadar.</p>
-    <p>Melihat ular — langsung takut.<br>Mencium bau makanan — langsung lapar.</p>
-    <p>Cepat, instingtif, dan efektif. Itulah sistem operasi dasar manusia yang dirancang untuk merespons realitas objektif secepat mungkin.</p>
+    <hr>
 
-    <h2 id="kompas-subjektif">Perasaan: Kompas Subjektif di Dunia Objektif</h2>
-    <p>Bagi nenek moyang kita, dunia dipahami lewat rasa. Emosi bukan sekadar hiasan; ia adalah kompas survival. Di sinilah realitas subjektif—pengalaman personal dan internal setiap individu—berperan.</p>
-    <p>Realitas subjektif adalah dunia di dalam kepala kita: perasaan, pikiran, dan sensasi pribadi. Sebuah ular di realitas objektif memicu rasa takut di realitas subjektif.</p>
+    <!-- Mesin Survival -->
+    <h2 id="mesin-survival">Mesin Survival: Realitas Objektif</h2>
+    <div class="figure" aria-hidden="true">
+      <!-- Ikon perisai + guntur (bertahan) -->
+      <svg class="icon" viewBox="0 0 96 96">
+        <path d="M48 14l26 10v18c0 18-12 30-26 38C34 72 22 60 22 42V24l26-10z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M46 28l-6 12h8l-6 12" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <p>Sebelum ada puisi, filsafat, atau doa, otak kita sudah ada. Ia bukan mesin untuk mencari kebenaran absolut atau kebahagiaan abadi. Ia adalah mesin survival, ditempa jutaan tahun oleh seleksi alam dengan satu misi brutal: menjaga tubuh tetap hidup cukup lama untuk meneruskan gen.</p>
+    <p>Realitas objektif—dunia fisik yang ada di luar sana—menjadi arena utamanya. Singa, gravitasi, pohon, dan sungai adalah fakta objektif: ada dan berpengaruh, entah kita percaya atau tidak.</p>
+    <p>Untuk bertahan, otak mengembangkan mode hemat daya. Daniel Kahneman menyebutnya Sistem 1: cepat, instingtif, hemat energi.</p>
     <ul>
-      <li>Takut: “Ada bahaya objektif, waspadalah.”</li>
-      <li>Jijik: “Jangan makan itu, mungkin beracun dan mengancam kelangsungan hidup.”</li>
-      <li>Senang: “Buah manis ini sumber energi, ingat lokasinya.”</li>
-      <li>Kesepian: “Terisolasi secara fisik berbahaya, segera cari kelompok.”</li>
+      <li>Melihat ular → langsung takut.</li>
+      <li>Mencium bau makanan → langsung lapar.</li>
     </ul>
-    <p>Ahli saraf Antonio Damasio berpendapat bahwa emosi bukanlah penghalang bagi rasionalitas, melainkan komponen penting di dalamnya. Tanpa data emosional ini, kita akan lumpuh dalam pengambilan keputusan. Selama ribuan tahun, kita menavigasi dunia objektif dengan panduan kompas subjektif ini. Dunia dirasakan jauh sebelum dunia dipikirkan.</p>
+    <p>Sederhana tapi efektif. Begitulah dasar perangkat lunak manusia dalam menghadapi dunia nyata.</p>
 
-    <h2 id="intersubjektif">Ledakan Bahasa: Lahirnya Realitas Intersubjektif</h2>
-    <p>Puncak transformasi datang ketika kita mengalami Revolusi Kognitif dan mengembangkan bahasa yang kompleks. Bahasa mengubah segalanya, karena ia memungkinkan kita menciptakan dan berbagi sebuah dunia baru: realitas intersubjektif.</p>
-    <p>Realitas intersubjektif adalah realitas yang ada dalam jaringan komunikasi dan kesadaran kolektif banyak individu. Tidak seperti realitas subjektif (yang ada di satu pikiran) atau realitas objektif (yang ada di luar pikiran), realitas intersubjektif ada di antara pikiran. Contohnya adalah uang, hukum, negara, korporasi, dan dewa.</p>
-    <p>Sejak penemuan bahasa, dunia manusia terbelah menjadi tiga lapisan:</p>
+    <hr>
+
+    <!-- Emosi -->
+    <h2 id="emosi">Emosi: Kompas Subjektif</h2>
+    <div class="figure" aria-hidden="true">
+      <!-- Ikon kompas hati -->
+      <svg class="icon" viewBox="0 0 96 96">
+        <path d="M48 74s-24-16-24-34a12 12 0 0 1 24-7 12 12 0 0 1 24 7c0 18-24 34-24 34z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="48" cy="52" r="8" fill="none" stroke="var(--accent)" stroke-width="2"/>
+        <path d="M48 44l4 4-4 4-4-4z" fill="var(--accent)"/>
+      </svg>
+    </div>
+    <p>Namun bertahan hidup tidak cukup dengan refleks. Kita butuh penilaian—dan di sinilah realitas subjektif berperan. Emosi bukan hiasan, melainkan kompas.</p>
+    <p>Seekor ular di dunia objektif memicu rasa takut di dunia subjektif.</p>
     <ul>
-      <li><strong>Dunia Objektif</strong> — Realitas fisik: pohon, sungai, singa.</li>
-      <li><strong>Dunia Subjektif</strong> — Realitas internal: rasa takutku pada singa itu.</li>
-      <li><strong>Dunia Intersubjektif</strong> — Realitas bersama: cerita tentang roh penjaga hutan yang harus dihormati agar tidak diterkam singa.</li>
+      <li>Takut: “Ada bahaya, waspada.”</li>
+      <li>Jijik: “Jangan makan itu, bisa beracun.”</li>
+      <li>Senang: “Buah manis ini, simpan dalam ingatan.”</li>
+      <li>Kesepian: “Cari kelompok, jangan terisolasi.”</li>
     </ul>
-    <p>Sejarawan Yuval Noah Harari dalam <em>Sapiens: A Brief History of Humankind</em>, menegaskan bahwa kemampuan menciptakan fiksi bersama inilah yang menjadi keunggulan Homo sapiens. Kita bisa berbicara bukan hanya tentang singa yang ada di depan mata (objektif), tetapi juga tentang “roh singa” leluhur pelindung suku (intersubjektif).</p>
-    <p>Kekuatan ini memberi kita kemampuan untuk bekerja sama secara fleksibel dalam jumlah besar. Namun, ia juga membawa kesadaran paling berat: kesadaran akan kefanaan diri, bahwa suatu hari, kita akan tiada.</p>
+    <p>Antonio Damasio menunjukkan bahwa tanpa emosi, manusia lumpuh dalam mengambil keputusan. Subjektifitas ini adalah peta internal kita—dunia dirasakan jauh sebelum dunia dipikirkan.</p>
 
-    <h2 id="hukum-tuhan">Dari Aturan Suku ke Hukum Tuhan: Membangun Tatanan Intersubjektif</h2>
-    <p>Bahasa membuat kelompok manusia bisa tumbuh lebih besar. Namun, menurut antropolog Robin Dunbar, otak manusia hanya mampu mempertahankan hubungan sosial yang stabil dengan sekitar 150 orang (dikenal sebagai “Angka Dunbar”). Di komunitas kecil ini, gosip dan reputasi pribadi sudah cukup untuk menegakkan aturan.</p>
-    <p>Namun, bagaimana menyatukan ribuan atau jutaan orang? Diperlukan otoritas yang lebih kuat daripada sekadar gosip. Maka lahirlah narasi-narasi besar: aturan bukan lagi dari kepala suku, melainkan dari leluhur, roh-roh alam, lalu dewa-dewi. Hingga akhirnya, dari Tuhan Sang Pencipta alam semesta.</p>
-    <p>Dengan cara ini, moralitas—yang tadinya bersifat lokal dan negosiabel—menjadi absolut dan universal dalam lingkup kelompok tersebut. Ia menjadi kebenaran intersubjektif yang kuat. Membunuh bukan lagi salah karena merugikan suku, tetapi salah karena itu adalah dosa di hadapan Tuhan. Aturan ini tidak bisa ditawar, berlaku untuk semua orang, di mana pun, kapan pun.</p>
+    <!-- Diagram triad realitas -->
+    <div class="figure" aria-label="Diagram tiga realitas: objektif, subjektif, intersubjektif">
+      <svg class="diagram" viewBox="0 0 640 260">
+        <defs>
+          <style>
+            .lbl{font: 14px system-ui, -apple-system, Segoe UI, Inter, Arial}
+          </style>
+        </defs>
+        <circle cx="220" cy="130" r="90" fill="none" stroke="currentColor" stroke-width="2"/>
+        <text x="220" y="130" text-anchor="middle" dominant-baseline="middle" class="lbl">Objektif</text>
+        <circle cx="320" cy="130" r="90" fill="none" stroke="currentColor" stroke-width="2"/>
+        <text x="320" y="130" text-anchor="middle" dominant-baseline="middle" class="lbl">Subjektif</text>
+        <circle cx="420" cy="130" r="90" fill="none" stroke="currentColor" stroke-width="2"/>
+        <text x="420" y="130" text-anchor="middle" dominant-baseline="middle" class="lbl">Intersubjektif</text>
+        <circle cx="320" cy="130" r="18" fill="var(--accent)"/>
+      </svg>
+    </div>
 
-    <h2 id="agama-sistem">Agama: Sistem Operasi Intersubjektif Terpadu</h2>
-    <p>Agama bukanlah sesuatu yang jatuh begitu saja dari langit. Ia adalah puncak dari evolusi pikiran manusia dalam membangun realitas intersubjektif yang koheren dan kokoh.</p>
-    <p><strong>Agama adalah Sistem Operasi Intersubjektif Terpadu:</strong></p>
+    <hr>
+
+    <!-- Bahasa -->
+    <h2 id="bahasa">Bahasa: Lahirnya Realitas Intersubjektif</h2>
+    <div class="figure" aria-hidden="true">
+      <!-- Ikon dua balon bicara beririsan -->
+      <svg class="icon" viewBox="0 0 96 96">
+        <rect x="10" y="16" width="34" height="22" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M18 38l-6 8 10-6" fill="none" stroke="currentColor" stroke-width="2"/>
+        <rect x="36" y="34" width="50" height="26" rx="8" fill="none" stroke="var(--accent)" stroke-width="2"/>
+        <path d="M64 60l-8 10 14-8" fill="none" stroke="var(--accent)" stroke-width="2"/>
+      </svg>
+    </div>
+    <p>Lompatan besar datang ketika manusia menemukan bahasa yang kompleks. Bahasa membuka pintu bagi realitas intersubjektif: dunia imajiner yang hanya ada karena kita bersama-sama percaya.</p>
+    <p><strong>Objektif:</strong> ada singa di depan gua.<br>
+       <strong>Subjektif:</strong> aku takut singa itu.<br>
+       <strong>Intersubjektif:</strong> roh singa leluhur menjaga hutan, kita harus membuat ritual.</p>
+    <p>Dengan bahasa, kita bisa mengikat ratusan bahkan ribuan orang pada narasi yang sama. Yuval Noah Harari menyebut ini keunggulan Homo sapiens: kemampuan membangun fiksi kolektif yang mempersatukan.</p>
+
+    <hr>
+
+    <!-- Dari suku ke Tuhan -->
+    <h2 id="suku-ke-tuhan">Dari Suku ke Tuhan</h2>
+    <div class="figure" aria-hidden="true">
+      <!-- Ikon lingkaran manusia → pilar -->
+      <svg class="icon" viewBox="0 0 96 96">
+        <circle cx="24" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="48" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="72" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M16 26h64M32 70v16M64 70v16" stroke="var(--accent)" stroke-width="2"/>
+      </svg>
+    </div>
+    <p>Antropolog Robin Dunbar menjelaskan bahwa manusia hanya bisa mempertahankan sekitar 150 relasi stabil (Angka Dunbar). Lebih dari itu, gosip tidak cukup untuk menjaga keteraturan.</p>
+    <p>Maka lahir mitos, hukum, dan akhirnya agama. Dari aturan kepala suku → mitos leluhur → hukum raja → perintah Tuhan.</p>
+    <p>Di titik ini, moralitas tidak lagi negosiabel. Membunuh salah bukan karena merugikan suku, tapi karena itu dosa di hadapan Tuhan.</p>
+
+    <hr>
+
+    <!-- Agama -->
+    <h2 id="agama">Agama: Sistem Operasi Intersubjektif</h2>
+    <div class="figure" aria-hidden="true">
+      <!-- Ikon lingkaran konsentris -->
+      <svg class="icon" viewBox="0 0 96 96">
+        <circle cx="48" cy="48" r="26" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="48" cy="48" r="16" fill="none" stroke="var(--accent)" stroke-width="2"/>
+        <circle cx="48" cy="48" r="6" fill="var(--accent)"/>
+      </svg>
+    </div>
+    <p>Agama adalah puncak evolusi imajinasi kolektif:</p>
     <ul>
-      <li><strong>Menghubungkan Tiga Realitas:</strong> Agama memberikan narasi yang menjelaskan bagaimana realitas objektif (alam semesta) diciptakan dan diatur oleh sebuah kekuatan yang lebih tinggi, serta memberikan makna pada realitas subjektif (penderitaan, cinta, kematian).</li>
-      <li><strong>Fondasi Moral Skala Besar:</strong> Ia menyediakan seperangkat aturan (hukum Tuhan) yang mengikat jutaan orang asing untuk saling percaya dan bekerja sama di bawah satu payung kebenaran bersama.</li>
-      <li><strong>Memberi Jawaban Eksistensial:</strong> Ia menjawab pertanyaan yang muncul dari kesadaran diri kita—“Mengapa aku di sini?” dan “Apa yang terjadi setelah kematian?”—dengan sebuah cerita yang menenangkan dan memberi harapan.</li>
+      <li>Menghubungkan tiga realitas: menjelaskan alam semesta (objektif), memberi makna penderitaan (subjektif), dan menyatukan masyarakat (intersubjektif).</li>
+      <li>Membangun hukum skala besar: jutaan orang asing bisa saling percaya.</li>
+      <li>Menjawab kegelisahan eksistensial: dari “mengapa aku di sini” hingga “apa yang terjadi setelah mati.”</li>
     </ul>
-    <p>Memahami hal ini bukanlah meremehkan agama. Sebaliknya, inilah cara menghargainya: sebagai mahakarya kolektif imajinasi manusia yang paling ambisius. Agama adalah monumen pikiran kita—bukti bahwa manusia tidak hanya merespons realitas objektif untuk bertahan hidup, tetapi secara aktif menciptakan lapisan makna intersubjektif untuk hidup bersama dalam tujuan dan harapan. Kita adalah spesies yang terlahir dari lumpur evolusi, namun mampu menatap bintang-bintang dan membangun katedral makna di dalam pikiran kita bersama.</p>
+    <p>Ia adalah monumen pikiran manusia, sistem operasi yang paling terpadu dalam sejarah.</p>
 
-    <h2 id="referensi">Referensi untuk Pengembangan</h2>
-    <ul>
-      <li>Harari, Yuval Noah. <em>Sapiens: A Brief History of Humankind</em>. Mengulas realitas objektif, subjektif, dan intersubjektif sebagai kunci memahami sejarah manusia.</li>
-      <li>Kahneman, Daniel. <em>Thinking, Fast and Slow</em>. Dasar ilmiah dua sistem kognisi; menjelaskan “mesin survival” intuitif.</li>
-      <li>Damasio, Antonio. <em>Descartes’ Error: Emotion, Reason, and the Human Brain</em>. Emosi sebagai komponen esensial rasionalitas.</li>
-      <li>Dunbar, Robin. <em>Grooming, Gossip, and the Evolution of Language</em>. Hipotesis otak sosial dan batas kognitif (Angka Dunbar).</li>
-    </ul>
+    <hr>
+
+    <!-- Paradoks -->
+    <h2 id="paradoks">Dari Tuhan ke Uang: Paradoks Intersubjektif</h2>
+    <div class="figure" aria-label="Diagram paradoks: emosi pembelaan vs manfaat nyata">
+      <!-- Neraca sederhana: emosi vs manfaat -->
+      <svg class="diagram" viewBox="0 0 640 220">
+        <line x1="60" y1="160" x2="580" y2="160" stroke="currentColor" stroke-width="2"/>
+        <line x1="320" y1="40" x2="320" y2="160" stroke="currentColor" stroke-width="2"/>
+        <circle cx="200" cy="140" r="34" fill="none" stroke="var(--accent)" stroke-width="2"/>
+        <text x="200" y="145" text-anchor="middle" font-size="12">Emosi</text>
+        <circle cx="440" cy="120" r="34" fill="none" stroke="currentColor" stroke-width="2"/>
+        <text x="440" y="125" text-anchor="middle" font-size="12">Manfaat</text>
+        <line x1="140" y1="120" x2="500" y2="120" stroke="currentColor" stroke-width="2" transform="rotate(-8 320 120)"/>
+      </svg>
+    </div>
+    <p>Namun ada paradoks. Uang—yang sering diremehkan sebagai kertas atau angka digital—diam saja ketika dihina. Ia tidak pernah tersinggung, tidak pernah marah. Ia tetap berguna, karena manfaatnya terasa nyata: mengenyangkan perut, membangun rumah, menyelamatkan nyawa.</p>
+    <p>Tuhan, sebaliknya, sering kali memicu amarah ketika diremehkan. Orang beriman merasa wajib membela-Nya, seakan-akan kebenaran Tuhan rapuh jika tidak disangga emosi manusia.</p>
+    <p>Pertanyaannya: jika manfaat Tuhan seterang cahaya, bukankah seharusnya kita bisa tenang sebagaimana uang tenang? Bukankah kebenaran sejati tidak butuh dibela? Apakah kita sungguh merasakan manfaat Tuhan dalam hidup, atau hanya menjaga cerita tentang-Nya dengan kemarahan?</p>
+
+    <hr>
+
+    <!-- Skala intersubjektif -->
+    <h2 id="skala">Skala Realitas Intersubjektif</h2>
+    <div class="figure" aria-label="Tangga skala intersubjektif dari keluarga hingga uang">
+      <svg class="diagram" viewBox="0 0 640 220">
+        <defs>
+          <style>.t{font:12px system-ui, -apple-system, Segoe UI, Inter, Arial}</style>
+        </defs>
+        <line x1="80" y1="180" x2="560" y2="180" stroke="currentColor" stroke-width="2"/>
+        <!-- tangga -->
+        <g stroke="var(--accent)" stroke-width="2" fill="none">
+          <path d="M120 180v-20h60v-20h60v-20h60v-20h60v-20h60v-20h60"/>
+        </g>
+        <!-- label -->
+        <text class="t" x="120" y="195" text-anchor="middle">Keluarga</text>
+        <text class="t" x="180" y="175" text-anchor="middle">Suku</text>
+        <text class="t" x="240" y="155" text-anchor="middle">Kedatuan</text>
+        <text class="t" x="300" y="135" text-anchor="middle">Negara</text>
+        <text class="t" x="360" y="115" text-anchor="middle">Tuhan</text>
+        <text class="t" x="420" y="95"  text-anchor="middle">Uang</text>
+      </svg>
+    </div>
+    <p>Jika ditarik sebagai garis evolusi, inilah urutannya:</p>
+    <p><strong>Keluarga → Suku → Kedatuan → Negara → Tuhan → Uang</strong></p>
+    <p>Keluarga: lingkaran kecil solidaritas. Suku: diperluas dengan mitos leluhur. Kedatuan/kerajaan: legitimasi lewat simbol dan ritual. Negara: kontrak imajiner modern. Tuhan: narasi transenden yang menyatukan jutaan orang. Uang: bahasa global yang melintasi batas agama, negara, bahkan ideologi.</p>
+
+    <hr>
+
+    <!-- Penutup -->
+    <h2 id="penutup">Penutup: Katedral Makna</h2>
+    <div class="figure" aria-hidden="true">
+      <!-- Ikon katedral abstrak -->
+      <svg class="icon" viewBox="0 0 96 96">
+        <path d="M20 72h56M30 72V44l18-14 18 14v28" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="48" cy="50" r="6" fill="var(--accent)"/>
+      </svg>
+    </div>
+    <p>Dari mesin survival, ke emosi subjektif, ke bahasa, hingga ke imajinasi kolektif—manusia bergerak dari lumpur evolusi menuju bintang-bintang makna.</p>
+    <p>Kita hidup bukan hanya di dunia singa dan sungai, tetapi juga di dunia cerita bersama. Cerita yang mampu membuat orang rela mati demi Tuhan, dan rela hidup demi uang.</p>
+    <p>Di situlah letak keanehan sekaligus keagungan kita: Homo sapiens, spesies yang menciptakan katedral makna di atas tanah lumpur.</p>
   </article>
 </main>
 
 <script>
-/* ====== TOC Auto-build ====== */
+/* Build TOC */
 (function(){
-  const tocList = document.getElementById('toc-list');
-  if(!tocList) return;
-  const sections = document.querySelectorAll('article h2[id]');
-  sections.forEach((h2) => {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = `#${h2.id}`;
-    a.textContent = h2.textContent;
-    a.setAttribute('aria-label', `Loncat ke bagian ${h2.textContent}`);
-    li.appendChild(a);
-    tocList.appendChild(li);
+  const toc = document.getElementById('toc-list');
+  document.querySelectorAll('article h2[id]').forEach(h=>{
+    const li=document.createElement('li'); const a=document.createElement('a');
+    a.href = '#'+h.id; a.textContent = h.textContent; li.appendChild(a); toc.appendChild(li);
   });
 })();
-
-/* ====== Reading Progress ====== */
+/* Reading progress */
 (function(){
-  const bar = document.querySelector('.progress');
-  if(!bar) return;
-  const update = () => {
-    const article = document.querySelector('article');
-    if(!article) return;
-    const rect = article.getBoundingClientRect();
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const start = article.offsetTop;
-    const height = article.offsetHeight - window.innerHeight;
-    const progress = Math.min(100, Math.max(0, ((scrollTop - start) / height) * 100));
-    bar.style.backgroundSize = `${progress}% 100%`;
+  const bar=document.querySelector('.progress');
+  const article=document.querySelector('article');
+  const update=()=>{
+    const start=article.offsetTop, h=article.offsetHeight-window.innerHeight;
+    const y=window.scrollY||document.documentElement.scrollTop;
+    const p=Math.min(100,Math.max(0,((y-start)/h)*100));
+    bar.style.backgroundSize=`${p}% 100%`;
   };
-  update();
-  document.addEventListener('scroll', update, {passive:true});
-  window.addEventListener('resize', update);
+  update(); addEventListener('scroll',update,{passive:true}); addEventListener('resize',update);
 })();
 </script>
 </body>
