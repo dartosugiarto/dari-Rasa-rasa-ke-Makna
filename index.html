@@ -7,30 +7,28 @@
 <title>Di Antara Jutaan Spesies — Minimalis</title>
 <style>
 :root{
-  --bg:#ffffff;
-  --paper:#fafbff;
-  --ink:#0b0f19;
-  --muted:#586074;
-  --accent:#2e6bff;
-  --line:#e7eaf2;
+  --bg:#0b0f14;
+  --paper:#10141b;
+  --ink:#e9ecf1;
+  --muted:#a6b0c2;
+  --accent:#7ea2ff;    /* biru-ungu lembut ala cover */
+  --line:#1b2230;
   --radius:14px;
-  --halo:#9ab3ff;
 }
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: light){
   :root{
-    --bg:#0c0f14;
-    --paper:#10141b;
-    --ink:#e9ecf1;
-    --muted:#a6b0c2;
-    --accent:#74a0ff;
-    --line:#1b2230;
-    --halo:#3d66ff;
+    --bg:#ffffff;
+    --paper:#fafbff;
+    --ink:#0b0f19;
+    --muted:#586074;
+    --accent:#2e6bff;
+    --line:#e7eaf2;
   }
 }
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Inter,Segoe UI,Roboto,system-ui,Arial,sans-serif;
+  font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text","SF Pro Display", Inter, Segoe UI, Roboto, system-ui, Arial, sans-serif;
   background:var(--bg);
   color:var(--ink);
   -webkit-font-smoothing:antialiased;
@@ -42,7 +40,7 @@ main{
   padding:clamp(20px,3vw,40px);
 }
 
-/* Cover abstrak non-teks */
+/* ===== COVER ===== */
 .cover{
   margin: clamp(12px,3vw,24px) 0 24px;
   border:1px solid var(--line);
@@ -50,61 +48,33 @@ main{
   overflow:hidden;
   aspect-ratio:3/4;
   position:relative;
-  background:
-    radial-gradient(circle at 50% 40%, color-mix(in srgb,var(--accent) 22%, transparent) 0%, transparent 60%),
-    linear-gradient(180deg, color-mix(in srgb,var(--bg) 90%, var(--paper) 10%), var(--paper));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--paper) 98%, var(--bg) 2%), var(--paper));
 }
-.cover::before{
-  content:"";
-  position:absolute; inset:0;
-  background:
-    radial-gradient(circle at 50% 65%, var(--halo) 0%, transparent 40%),
-    radial-gradient(circle at 50% 65%, transparent 0%, var(--accent) 1px, transparent 60%);
-  mix-blend-mode:screen;
-  opacity:.35;
-}
+.cover svg, .cover-img{width:100%; height:100%; display:block}
+
+/* butiran halus di atas cover */
 .cover::after{
-  content:"";
-  position:absolute; inset:0;
+  content:""; position:absolute; inset:0; pointer-events:none;
   background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAMUlEQVQYV2NkwA7+z8DAwMDAJ0YbGJgYmCwYQfEwMDwGZCwB0wZDJgYyBqgJQwABgC4Qw4b2e9ZgQAAAABJRU5ErkJggg==');
-  opacity:.07;
-  pointer-events:none;
-}
-.cover .dot{
-  position:absolute;
-  top:65%; left:50%;
-  width:14px; height:14px;
-  background:var(--accent);
-  border-radius:50%;
-  transform:translate(-50%,-50%);
-  box-shadow:0 0 16px 6px color-mix(in srgb,var(--accent) 30%, transparent);
+  opacity:.06; mix-blend-mode:soft-light;
 }
 
-/* Header */
+/* ===== HEADER ===== */
 .header{
   padding-block:8px 18px;
   border-bottom:1px solid var(--line);
   margin-bottom:24px;
 }
 .kicker{
-  font-size:.95rem;
-  color:var(--muted);
-  letter-spacing:.02em;
-  margin-bottom:6px;
+  font-size:.95rem; color:var(--muted); letter-spacing:.02em; margin-bottom:6px;
 }
 .title{
   font-size:clamp(1.6rem,1.3rem + 1.6vw,2.15rem);
-  line-height:1.2;
-  letter-spacing:-.015em;
-  margin:0 0 .4rem 0;
-  text-wrap:balance;
+  line-height:1.2; letter-spacing:-.015em; margin:0 0 .4rem 0; text-wrap:balance;
 }
-.byline{
-  font-size:.95rem;
-  color:var(--muted);
-}
+.byline{font-size:.95rem; color:var(--muted)}
 
-/* Artikel */
+/* ===== ARTIKEL ===== */
 article{
   background:var(--paper);
   border:1px solid var(--line);
@@ -113,38 +83,107 @@ article{
 }
 h2{
   font-size:clamp(1.25rem,1.05rem + .7vw,1.6rem);
-  line-height:1.25;
-  margin:2rem 0 .75rem;
-  text-wrap:balance;
+  line-height:1.25; margin:2rem 0 .75rem; text-wrap:balance;
 }
 p{
   font-size:clamp(1.05rem,1rem + .25vw,1.18rem);
-  line-height:1.75;
-  margin:.9rem 0;
-  text-wrap:pretty;
+  line-height:1.75; margin:.9rem 0; text-wrap:pretty;
 }
 ul{margin:.6rem 0 .9rem 1.1rem}
-li{margin:.35rem 0;line-height:1.7}
+li{margin:.35rem 0; line-height:1.7}
 
-/* Ikon minimalis tanpa caption */
+/* ikon inline sederhana */
 figure{
-  margin:1.1rem 0 1.2rem;
-  padding:14px;
-  border:1px solid var(--line);
-  border-radius:12px;
+  margin:1.1rem 0 1.2rem; padding:14px;
+  border:1px solid var(--line); border-radius:12px;
   background:color-mix(in srgb, var(--paper) 92%, var(--bg) 8%);
-  display:flex;justify-content:center;align-items:center;
+  display:flex; justify-content:center; align-items:center;
 }
-svg{width:90px;height:90px}
+svg.icon{width:90px; height:90px}
 
-::selection{background:color-mix(in srgb, var(--accent) 20%, transparent)}
+::selection{background:color-mix(in srgb, var(--accent) 22%, transparent)}
 </style>
 </head>
 <body>
 <main>
 
+  <!-- ====== COVER: Siluet Kepala + Galaksi (SVG dengan mask) ====== -->
   <div class="cover" aria-hidden="true">
-    <div class="dot"></div>
+    <svg viewBox="0 0 960 1280" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Siluet kepala sebagai MASK -->
+        <mask id="head-mask">
+          <rect width="100%" height="100%" fill="black"/>
+          <!-- Siluet kepala (stylized, smooth) -->
+          <path fill="white" d="
+            M360,290
+            C430,260 520,290 560,350
+            C640,360 710,430 710,520
+            C710,600 665,645 642,700
+            C628,733 645,780 648,830
+            C615,860 560,885 500,890
+            C445,894 410,870 395,835
+            C357,829 325,806 323,775
+            C321,755 334,736 357,728
+            C356,700 353,662 323,642
+            C260,600 260,520 303,480
+            C318,430 340,330 360,290 Z"/>
+        </mask>
+
+        <!-- Gradien inti galaksi -->
+        <radialGradient id="core" cx="50%" cy="50%" r="55%">
+          <stop offset="0%"  stop-color="#fff6f2"/>
+          <stop offset="25%" stop-color="#ffd6bf"/>
+          <stop offset="50%" stop-color="#b38bff"/>
+          <stop offset="100%" stop-color="#0b0f14"/>
+        </radialGradient>
+
+        <!-- Nebula biru-ungu -->
+        <radialGradient id="nebulaB" cx="50%" cy="50%" r="65%">
+          <stop offset="0%" stop-color="#7ea2ff88"/>
+          <stop offset="60%" stop-color="#586bff33"/>
+          <stop offset="100%" stop-color="transparent"/>
+        </radialGradient>
+        <radialGradient id="nebulaP" cx="60%" cy="48%" r="70%">
+          <stop offset="0%" stop-color="#c084ff66"/>
+          <stop offset="60%" stop-color="#b983ff22"/>
+          <stop offset="100%" stop-color="transparent"/>
+        </radialGradient>
+      </defs>
+
+      <!-- Backdrop gelap tipis -->
+      <rect width="100%" height="100%" fill="#0b0f14"/>
+
+      <!-- Grup galaksi DI DALAM kepala -->
+      <g mask="url(#head-mask)">
+        <rect width="100%" height="100%" fill="#0b0f14"/>
+        <!-- kabut nebula -->
+        <ellipse cx="480" cy="560" rx="360" ry="260" fill="url(#nebulaB)"/>
+        <ellipse cx="510" cy="560" rx="300" ry="220" fill="url(#nebulaP)"/>
+        <!-- inti galaksi -->
+        <ellipse cx="500" cy="560" rx="220" ry="150" fill="url(#core)" transform="rotate(-12 500 560)"/>
+        <!-- lengan spiral sederhana -->
+        <ellipse cx="520" cy="560" rx="260" ry="40" fill="#8aa2ff22" transform="rotate(18 520 560)"/>
+        <ellipse cx="470" cy="560" rx="230" ry="36" fill="#c18bff1f" transform="rotate(-14 470 560)"/>
+        <!-- bintang-bintang -->
+        <g fill="#dbe3ff">
+          <circle cx="610" cy="520" r="2.2"/>
+          <circle cx="430" cy="600" r="1.9"/>
+          <circle cx="560" cy="620" r="1.6"/>
+          <circle cx="520" cy="500" r="1.8"/>
+          <circle cx="585" cy="565" r="1.4"/>
+          <circle cx="455" cy="540" r="1.4"/>
+          <circle cx="500" cy="640" r="1.2"/>
+        </g>
+      </g>
+
+      <!-- Garis-garis kontur di luar kepala (sangat halus) -->
+      <g opacity=".18" stroke="url(#nebulaB)" fill="none" stroke-width="3">
+        <path d="M300,240 C450,200 660,280 740,420" />
+        <path d="M260,300 C440,230 690,340 760,520" />
+        <path d="M260,980 C420,920 680,920 800,980" />
+      </g>
+    </svg>
   </div>
 
   <header class="header">
@@ -160,7 +199,7 @@ svg{width:90px;height:90px}
 
     <h2>Mengenal Mesin di Kepala Kita: Bertahan Hidup dalam Realitas Objektif</h2>
     <figure>
-      <svg viewBox="0 0 96 96" aria-hidden="true">
+      <svg class="icon" viewBox="0 0 96 96" aria-hidden="true">
         <circle cx="36" cy="40" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
         <circle cx="60" cy="40" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
         <path d="M16 64c6-10 18-16 32-16s26 6 32 16" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
@@ -174,7 +213,7 @@ svg{width:90px;height:90px}
 
     <h2>Perasaan: Kompas Subjektif di Dunia Objektif</h2>
     <figure>
-      <svg viewBox="0 0 96 96" aria-hidden="true">
+      <svg class="icon" viewBox="0 0 96 96" aria-hidden="true">
         <path d="M48 74s-24-16-24-34a12 12 0 0 1 24-7 12 12 0 0 1 24 7c0 18-24 34-24 34z" fill="none" stroke="currentColor" stroke-width="2"/>
         <circle cx="48" cy="52" r="8" fill="none" stroke="var(--accent)" stroke-width="2"/>
       </svg>
@@ -191,7 +230,7 @@ svg{width:90px;height:90px}
 
     <h2>Ledakan Bahasa: Lahirnya Realitas Intersubjektif</h2>
     <figure>
-      <svg viewBox="0 0 96 96" aria-hidden="true">
+      <svg class="icon" viewBox="0 0 96 96" aria-hidden="true">
         <rect x="10" y="16" width="44" height="28" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
         <path d="M22 44l-8 10 14-8" fill="none" stroke="currentColor" stroke-width="2"/>
         <rect x="42" y="44" width="44" height="28" rx="8" fill="none" stroke="var(--accent)" stroke-width="2"/>
@@ -211,7 +250,7 @@ svg{width:90px;height:90px}
 
     <h2>Dari Aturan Suku ke Hukum Tuhan: Membangun Tatanan Intersubjektif</h2>
     <figure>
-      <svg viewBox="0 0 96 96" aria-hidden="true">
+      <svg class="icon" viewBox="0 0 96 96" aria-hidden="true">
         <path d="M16 26h64" stroke="currentColor" stroke-width="2"/>
         <circle cx="30" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
         <circle cx="66" cy="48" r="10" fill="none" stroke="var(--accent)" stroke-width="2"/>
@@ -224,7 +263,7 @@ svg{width:90px;height:90px}
 
     <h2>Agama: Sistem Operasi Intersubjektif Terpadu</h2>
     <figure>
-      <svg viewBox="0 0 96 96" aria-hidden="true">
+      <svg class="icon" viewBox="0 0 96 96" aria-hidden="true">
         <circle cx="48" cy="48" r="26" fill="none" stroke="currentColor" stroke-width="2"/>
         <circle cx="48" cy="48" r="16" fill="none" stroke="var(--accent)" stroke-width="2"/>
         <circle cx="48" cy="48" r="6" fill="var(--accent)"/>
