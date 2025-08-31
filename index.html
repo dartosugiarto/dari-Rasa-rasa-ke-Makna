@@ -7,225 +7,144 @@
 <title>Di Antara Jutaan Spesies</title>
 <style>
 :root{
-  --bg: #0b0c0f;
-  --surface: #0f1115;
-  --fg: #e9ecf1;
-  --muted: #b4bcc9;
-  --accent: hsl(212 100% 57%);
-  --accentSoft: hsl(212 100% 57% / .14);
-  --shadow: 0 1px 2px rgb(0 0 0 / .16), 0 8px 24px rgb(0 0 0 / .22);
+  --bg:#ffffff;
+  --fg:#0b0f19;
+  --muted:#4b5565;
+  --surface:#fafbff;
+  --divider:#e6e9f0;
 }
-@media (prefers-color-scheme: light){
+@media (prefers-color-scheme: dark){
   :root{
-    --bg: #f7f8fb;
-    --surface: #ffffff;
-    --fg: #0e1220;
-    --muted: #4b5565;
-    --accent: hsl(212 100% 46%);
-    --accentSoft: hsl(212 100% 46% / .12);
-    --shadow: 0 1px 2px rgb(0 0 0 / .06), 0 6px 20px rgb(16 24 40 / .08);
+    --bg:#0b0c0f;
+    --fg:#e9ecf1;
+    --muted:#a8b0bd;
+    --surface:#101318;
+    --divider:#1c212a;
   }
 }
 *{box-sizing:border-box}
 html,body{height:100%}
-html{scroll-behavior:smooth;text-size-adjust:100%}
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Segoe UI,Roboto,Inter,system-ui,Arial,sans-serif;
-  font-kerning:normal;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Inter,Segoe UI,Roboto,system-ui,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--fg);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  background:radial-gradient(1200px 800px at 20% 0%,var(--accentSoft),transparent 60%),radial-gradient(900px 700px at 120% 20%,var(--accentSoft),transparent 60%),var(--bg);
-  color:var(--fg);
 }
-.container{
-  max-width:68ch;
+.main{
+  max-width:70ch;
   margin-inline:auto;
-  padding-inline:clamp(16px,4vw,28px);
-  padding-block:clamp(24px,5vh,48px);
+  padding:clamp(20px,3vw,40px);
 }
 .header{
-  position:sticky;
-  top:0;
-  backdrop-filter:saturate(150%) blur(10px);
-  background:linear-gradient(to bottom, color-mix(in srgb, var(--surface) 80%, transparent), transparent);
-  z-index:10;
-}
-.progress{
-  position:fixed;
-  inset:0 0 auto 0;
-  height:3px;
-  background:transparent;
-  z-index:20;
-}
-.progressBar{
-  height:100%;
-  width:0%;
-  background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 75%,white 25%));
-  box-shadow:0 0 12px var(--accent);
-  transform:translateZ(0);
-}
-.hero{
-  max-width:68ch;
-  margin:0 auto;
-  padding:clamp(20px,8vh,80px) clamp(16px,4vw,28px) 0;
+  padding-block:12px 6px;
+  border-bottom:1px solid var(--divider);
+  margin-bottom:28px;
 }
 .title{
-  font-weight:800;
-  font-size:clamp(2rem,1.4rem + 3vw,3.2rem);
-  line-height:1.08;
-  letter-spacing:-0.02em;
-  margin:0 0 .4em;
+  font-size:clamp(1.8rem,1.35rem + 2.2vw,2.4rem);
+  line-height:1.15;
+  letter-spacing:-0.015em;
+  margin:0;
   text-wrap:balance;
 }
-.subtitle{
-  font-size:clamp(1rem,.95rem + .25vw,1.125rem);
+.kicker{
+  font-size:.95rem;
   color:var(--muted);
-  margin:0 0 1.5rem;
-  text-wrap:pretty;
-}
-.card{
-  background:linear-gradient(180deg, color-mix(in srgb,var(--surface) 92%, transparent), color-mix(in srgb,var(--surface) 98%, transparent));
-  border:1px solid color-mix(in srgb, var(--accent) 12%, var(--surface) 88%);
-  border-radius:18px;
-  padding:clamp(18px,2.6vw,28px);
-  box-shadow:var(--shadow);
+  margin-bottom:8px;
 }
 article{
-  max-width:68ch;
-  margin:0 auto;
-  padding:clamp(16px,3.5vh,28px) clamp(16px,4vw,28px) clamp(72px,12vh,120px);
+  background:var(--surface);
+  border:1px solid var(--divider);
+  border-radius:14px;
+  padding:clamp(18px,2.6vw,28px);
 }
 h2{
-  font-weight:740;
-  font-size:clamp(1.25rem,1.05rem + .9vw,1.75rem);
-  line-height:1.2;
-  letter-spacing:-.01em;
+  font-size:clamp(1.25rem,1.05rem + .6vw,1.5rem);
+  line-height:1.25;
+  letter-spacing:-.005em;
   margin:1.8rem 0 .8rem;
   text-wrap:balance;
 }
 p{
-  font-size:clamp(1.025rem,1rem + .25vw,1.18rem);
+  font-size:clamp(1.05rem,1rem + .25vw,1.18rem);
   line-height:1.75;
-  letter-spacing:.002em;
   margin:0 0 1.05em;
   text-wrap:pretty;
 }
-strong,em{font-weight:600}
+strong{font-weight:700}
 em{font-style:italic}
-.kicker{
-  display:inline-block;
-  font-size:.92rem;
-  color:var(--muted);
-  padding:.35rem .7rem;
-  background:color-mix(in srgb,var(--accent) 10%, var(--surface) 90%);
-  border:1px solid color-mix(in srgb,var(--accent) 18%, var(--surface) 82%);
-  border-radius:999px;
-  box-shadow:0 1px 2px rgb(0 0 0 / .06), inset 0 -1px 0 rgb(255 255 255 / .06);
-  margin-bottom:1rem;
+hr{
+  height:1px;
+  border:0;
+  background:var(--divider);
+  margin:24px 0;
 }
-.reveal{opacity:0;transform:translateY(8px);will-change:opacity,transform;filter:saturate(.96)}
-.reveal.in{opacity:1;transform:none;filter:none;transition:opacity .6s ease,transform .6s ease,filter .6s ease}
-@media (prefers-reduced-motion: reduce){
-  .reveal,.reveal.in{opacity:1;transform:none;transition:none;filter:none}
-  .progressBar{transition:none}
-}
-::selection{background:var(--accentSoft)}
-a{color:inherit}
+::selection{background:#bcd3ff66}
 </style>
 </head>
 <body>
-<div class="progress"><div id="progressBar" class="progressBar"></div></div>
+<main class="main">
+  <header class="header">
+    <div class="kicker">Esai</div>
+    <h1 class="title">Di Antara Jutaan Spesies</h1>
+  </header>
 
-<header class="header">
-  <div class="hero">
-    <div class="card reveal">
-      <div class="kicker">Esai</div>
-      <h1 class="title">Di Antara Jutaan Spesies</h1>
-      <p class="subtitle">Sebuah perjalanan dari insting ke imajinasi—dari mesin survival menuju makna.</p>
-    </div>
-  </div>
-</header>
-
-<main class="container">
   <article>
-    <p class="reveal">Di antara miliaran makhluk di planet ini, hanya ada satu yang menatap langit malam dan bertanya: “Mengapa aku di sini?”</p>
-    <p class="reveal">Hanya ada satu yang menciptakan musik untuk menenangkan jiwa, membangun monumen untuk yang telah tiada, dan merumuskan aturan tentang apa itu baik dan jahat.</p>
-    <p class="reveal"><strong>Spesies itu adalah kita—manusia.</strong></p>
-    <p class="reveal">Bagaimana kita sampai di titik ini? Bagaimana seekor primata bisa berubah menjadi makhluk pencari makna? Untuk menjawabnya, kita harus menelusuri jejak panjang evolusi. Perjalanan ini dimulai bukan dari filsafat atau doa, melainkan dari sesuatu yang jauh lebih mendasar: mesin biologis yang kita bawa di dalam kepala kita.</p>
+    <p>Di antara miliaran makhluk di planet ini, hanya ada satu yang menatap langit malam dan bertanya: “Mengapa aku di sini?”</p>
+    <p>Hanya ada satu yang menciptakan musik untuk menenangkan jiwa, membangun monumen untuk yang telah tiada, dan merumuskan aturan tentang apa itu baik dan jahat.</p>
+    <p><strong>Spesies itu adalah kita—manusia.</strong></p>
+    <p>Bagaimana kita sampai di titik ini? Bagaimana seekor primata bisa berubah menjadi makhluk pencari makna? Untuk menjawabnya, kita harus menelusuri jejak panjang evolusi. Perjalanan ini dimulai bukan dari filsafat atau doa, melainkan dari sesuatu yang jauh lebih mendasar: mesin biologis yang kita bawa di dalam kepala kita.</p>
 
-    <h2 class="reveal">Mengenal Mesin di Kepala Kita</h2>
-    <p class="reveal">Sebelum ada puisi, filsafat, atau doa, otak kita sudah ada.</p>
-    <p class="reveal">Ia bukan mesin untuk mencari kebenaran atau kebahagiaan. Ia adalah <em>Mesin Survival</em>.</p>
-    <p class="reveal">Selama jutaan tahun, otak ditempa dengan satu misi brutal: menjaga tubuh ini tetap hidup cukup lama untuk meneruskan keturunan.</p>
-    <p class="reveal">Berpikir mendalam boros energi. Karena itu otak membangun mode hemat daya: sistem otomatis berbasis emosi dan insting.</p>
-    <p class="reveal">Melihat ular — langsung takut.</p>
-    <p class="reveal">Mencium bau makanan — langsung lapar.</p>
-    <p class="reveal">Cepat, instingtif, dan efektif. Itulah sistem operasi dasar manusia.</p>
+    <h2>Mengenal Mesin di Kepala Kita</h2>
+    <p>Sebelum ada puisi, filsafat, atau doa, otak kita sudah ada.</p>
+    <p>Ia bukan mesin untuk mencari kebenaran atau kebahagiaan. Ia adalah <em>Mesin Survival</em>.</p>
+    <p>Selama jutaan tahun, otak ditempa dengan satu misi brutal: menjaga tubuh ini tetap hidup cukup lama untuk meneruskan keturunan.</p>
+    <p>Berpikir mendalam boros energi. Karena itu otak membangun mode hemat daya: sistem otomatis berbasis emosi dan insting.</p>
+    <p>Melihat ular — langsung takut.</p>
+    <p>Mencium bau makanan — langsung lapar.</p>
+    <p>Cepat, instingtif, dan efektif. Itulah sistem operasi dasar manusia.</p>
 
-    <h2 class="reveal">Perasaan: Kompas, Bukan Hiasan</h2>
-    <p class="reveal">Bagi nenek moyang kita, dunia dipahami lewat rasa. Emosi bukan sekadar hiasan; ia adalah kompas survival.</p>
-    <p class="reveal">Takut: “Ada bahaya, waspadalah.”</p>
-    <p class="reveal">Jijik: “Jangan makan itu, mungkin beracun.”</p>
-    <p class="reveal">Senang: “Buah manis ini sumber energi, ingat tempatnya.”</p>
-    <p class="reveal">Kesepian: “Berbahaya sendirian, segera cari kelompok.”</p>
-    <p class="reveal">Ribuan tahun lamanya, kita menavigasi hidup dengan data emosional ini. Dunia <em>merasa</em> lebih dahulu hadir, sebelum dunia <em>berpikir</em>.</p>
+    <h2>Perasaan: Kompas, Bukan Hiasan</h2>
+    <p>Bagi nenek moyang kita, dunia dipahami lewat rasa. Emosi bukan sekadar hiasan; ia adalah kompas survival.</p>
+    <p>Takut: “Ada bahaya, waspadalah.”</p>
+    <p>Jijik: “Jangan makan itu, mungkin beracun.”</p>
+    <p>Senang: “Buah manis ini sumber energi, ingat tempatnya.”</p>
+    <p>Kesepian: “Berbahaya sendirian, segera cari kelompok.”</p>
+    <p>Ribuan tahun lamanya, kita menavigasi hidup dengan data emosional ini. Dunia <em>merasa</em> lebih dahulu hadir, sebelum dunia <em>berpikir</em>.</p>
 
-    <h2 class="reveal">Percikan Awal: Dari Merasa ke Berpikir</h2>
-    <p class="reveal">Lambat-laun, percikan baru muncul: kemampuan mengingat pola dan menghubungkan sebab-akibat.</p>
-    <p class="reveal">“Awan gelap selalu diikuti hujan.”</p>
-    <p class="reveal">“Anak itu makan jamur merah, lalu sakit. Jamurnya penyebab.”</p>
-    <p class="reveal">“Jejak kaki ini milik hewan berbahaya. Menghindar lebih aman.”</p>
-    <p class="reveal">Masih seputar kelangsungan hidup, tetapi sebuah lompatan besar: kita mulai memetakan dunia di dalam pikiran.</p>
+    <h2>Percikan Awal: Dari Merasa ke Berpikir</h2>
+    <p>Lambat-laun, percikan baru muncul: kemampuan mengingat pola dan menghubungkan sebab-akibat.</p>
+    <p>“Awan gelap selalu diikuti hujan.”</p>
+    <p>“Anak itu makan jamur merah, lalu sakit. Jamurnya penyebab.”</p>
+    <p>“Jejak kaki ini milik hewan berbahaya. Menghindar lebih aman.”</p>
+    <p>Masih seputar kelangsungan hidup, tetapi sebuah lompatan besar: kita mulai memetakan dunia di dalam pikiran.</p>
 
-    <h2 class="reveal">Ledakan Bahasa: Dunia Menjadi Dua</h2>
-    <p class="reveal">Puncak transformasi datang ketika kita menemukan bahasa kompleks. Bahasa mengubah segalanya.</p>
-    <p class="reveal">Untuk pertama kalinya, manusia bisa berbicara bukan hanya tentang singa yang ada di depan mata, tetapi juga singa kemarin, atau singa yang mungkin muncul besok.</p>
-    <p class="reveal">Sejak itu, dunia manusia terbelah dua:</p>
-    <p class="reveal"><strong>Dunia Nyata</strong> — realitas fisik yang bisa disentuh.</p>
-    <p class="reveal"><strong>Dunia Cerita</strong> — realitas imajinasi: masa lalu, masa depan, dan segala “bagaimana jika”.</p>
-    <p class="reveal">Bahasa memberi kita kekuatan membangun pengetahuan bersama. Namun ia juga membawa kesadaran paling berat: bahwa suatu hari, kita akan tiada.</p>
+    <h2>Ledakan Bahasa: Dunia Menjadi Dua</h2>
+    <p>Puncak transformasi datang ketika kita menemukan bahasa kompleks. Bahasa mengubah segalanya.</p>
+    <p>Untuk pertama kalinya, manusia bisa berbicara bukan hanya tentang singa yang ada di depan mata, tetapi juga singa kemarin, atau singa yang mungkin muncul besok.</p>
+    <p>Sejak itu, dunia manusia terbelah dua:</p>
+    <p><strong>Dunia Nyata</strong> — realitas fisik yang bisa disentuh.</p>
+    <p><strong>Dunia Cerita</strong> — realitas imajinasi: masa lalu, masa depan, dan segala “bagaimana jika”.</p>
+    <p>Bahasa memberi kita kekuatan membangun pengetahuan bersama. Namun ia juga membawa kesadaran paling berat: bahwa suatu hari, kita akan tiada.</p>
 
-    <h2 class="reveal">Dari Aturan Suku ke Hukum Tuhan</h2>
-    <p class="reveal">Bahasa membuat kelompok manusia bisa tumbuh lebih besar. Tapi semakin besar kelompok, semakin sulit menjaga ketertiban.</p>
-    <p class="reveal">Di komunitas kecil, gosip cukup untuk menegakkan aturan.</p>
-    <p class="reveal">Namun pada ribuan orang, dibutuhkan otoritas yang lebih kuat.</p>
-    <p class="reveal">Maka lahirlah narasi: aturan bukan dari kepala suku, melainkan dari leluhur, roh, lalu dewa-dewi. Hingga akhirnya, dari Tuhan Sang Pencipta.</p>
-    <p class="reveal">Dengan cara ini, moralitas menjadi absolut. Tidak bisa ditawar. Ia berlaku untuk semua orang, di mana pun, kapan pun.</p>
+    <h2>Dari Aturan Suku ke Hukum Tuhan</h2>
+    <p>Bahasa membuat kelompok manusia bisa tumbuh lebih besar. Tapi semakin besar kelompok, semakin sulit menjaga ketertiban.</p>
+    <p>Di komunitas kecil, gosip cukup untuk menegakkan aturan.</p>
+    <p>Namun pada ribuan orang, dibutuhkan otoritas yang lebih kuat.</p>
+    <p>Maka lahirlah narasi: aturan bukan dari kepala suku, melainkan dari leluhur, roh, lalu dewa-dewi. Hingga akhirnya, dari Tuhan Sang Pencipta.</p>
+    <p>Dengan cara ini, moralitas menjadi absolut. Tidak bisa ditawar. Ia berlaku untuk semua orang, di mana pun, kapan pun.</p>
 
-    <h2 class="reveal">Agama: Sistem Operasi Terpadu</h2>
-    <p class="reveal">Agama bukanlah sesuatu yang jatuh begitu saja dari langit. Ia adalah puncak perjalanan panjang pikiran manusia.</p>
-    <p class="reveal">Agama adalah <em>Sistem Operasi Terpadu</em>:</p>
-    <p class="reveal">Mengendalikan mesin instingtif melalui moral dan disiplin.</p>
-    <p class="reveal">Memberi jawaban atas pertanyaan eksistensial, termasuk kematian.</p>
-    <p class="reveal">Menjadi fondasi kokoh bagi hukum moral yang menopang peradaban.</p>
-    <p class="reveal">Memahami hal ini bukanlah meremehkan agama. Sebaliknya, inilah cara menghargainya: sebagai mahakarya kolektif umat manusia.</p>
-    <p class="reveal">Agama adalah monumen pikiran kita—bukti bahwa manusia tidak sekadar bertahan hidup, tetapi juga menciptakan makna, tujuan, dan harapan.</p>
+    <h2>Agama: Sistem Operasi Terpadu</h2>
+    <p>Agama bukanlah sesuatu yang jatuh begitu saja dari langit. Ia adalah puncak perjalanan panjang pikiran manusia.</p>
+    <p>Agama adalah <em>Sistem Operasi Terpadu</em>:</p>
+    <p>Mengendalikan mesin instingtif melalui moral dan disiplin.</p>
+    <p>Memberi jawaban atas pertanyaan eksistensial, termasuk kematian.</p>
+    <p>Menjadi fondasi kokoh bagi hukum moral yang menopang peradaban.</p>
+    <p>Memahami hal ini bukanlah meremehkan agama. Sebaliknya, inilah cara menghargainya: sebagai mahakarya kolektif umat manusia.</p>
+    <p>Agama adalah monumen pikiran kita—bukti bahwa manusia tidak sekadar bertahan hidup, tetapi juga menciptakan makna, tujuan, dan harapan.</p>
   </article>
 </main>
-
-<script>
-const progressBar=document.getElementById('progressBar')
-let lastKnownScrollY=0, ticking=false
-function onScroll(){
-  lastKnownScrollY=window.scrollY||window.pageYOffset
-  if(!ticking){
-    window.requestAnimationFrame(()=>{
-      const max= document.documentElement.scrollHeight - window.innerHeight
-      const p= max>0 ? (lastKnownScrollY/max)*100 : 0
-      progressBar.style.width=p+'%'
-      ticking=false
-    })
-    ticking=true
-  }
-}
-window.addEventListener('scroll',onScroll,{passive:true})
-
-const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches
-const io=!reduceMotion? new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target) } })
-},{threshold:.08,rootMargin:'0px 0px -8% 0px'}) : null
-document.querySelectorAll('.reveal').forEach(el=>{ if(io){ io.observe(el) } else { el.classList.add('in') } })
-</script>
 </body>
 </html>
