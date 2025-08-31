@@ -102,9 +102,6 @@ p{margin-bottom:1.15rem;font-size:1.06rem;letter-spacing:.003em;text-wrap:pretty
 ul{margin:.4rem 0 1.2rem 0;padding-left:0;list-style:none}
 li{margin:.45rem 0;padding-left:1.2rem;position:relative}
 li::before{content:'›';position:absolute;left:0;top:0;color:var(--accent);font-weight:700}
-.figure{display:flex;justify-content:center;margin:1.2rem 0 1rem}
-.diagram{width:100%;max-width:720px;height:auto;opacity:.98;display:block}
-svg{stroke-linecap:round;stroke-linejoin:round;max-width:100%}
 .callout{background:color-mix(in srgb,var(--accent) 6%, transparent);border:1px solid color-mix(in srgb,var(--accent) 20%, transparent);padding:1rem;border-radius:14px;margin:1rem 0}
 .progress{height:4px;position:sticky;top:0;left:0;z-index:100;background:linear-gradient(to right,var(--accent),var(--accent)) no-repeat;background-size:0% 100%}
 .small{color:var(--muted);font-size:.95rem}
@@ -144,26 +141,23 @@ section{content-visibility:auto;contain-intrinsic-size:0 800px}
 
       <section id="pengantar">
         <h2>Mengapa Kita Mencari Arti?</h2>
-        <p>Manusia bertanya lebih jauh dari selamat hari ini: kita ingin tahu apa artinya hidup bersama. Pikiran tumbuh bertahap—dari kompas cepat emosi, ke cerita bersama, ke argumen rapi, hingga uji empiris.</p>
+        <p>Manusia bertanya lebih jauh dari sekadar selamat hari ini: kita ingin tahu apa artinya hidup bersama. Pikiran tumbuh bertahap—dari kompas cepat emosi, ke cerita bersama, ke argumen rapi, hingga uji empiris.</p>
         <p>Buku mini ini menelusuri tangga <strong>rasa → kepercayaan → filsafat → sains</strong>, lalu menautkannya ke fungsi sosial <strong>keluarga → suku → negara → Tuhan → uang → algoritma</strong>.</p>
       </section>
 
       <section id="rasa">
         <h2>Rasa: Bahasa Pertama Otak</h2>
-        <p>Emosi memprioritaskan selamat lebih dulu daripada akurat. Ia cepat, hemat, dan sering benar cukupnya.</p>
-        <h3>Contoh</h3>
+        <p>Emosi memprioritaskan selamat lebih dulu daripada akurat. Ia cepat, hemat, dan sering cukup benar.</p>
         <ul>
           <li>Kilat menderas → takut → berteduh.</li>
           <li>Rasa manis → suka → mengingat lokasi.</li>
           <li>Bau busuk → jijik → menghindar.</li>
         </ul>
-        <p class="emph">Rasa memberi sinyal, bukan penjelasan.</p>
       </section>
 
       <section id="kepercayaan">
         <h2>Kepercayaan: Cerita Yang Menyatukan</h2>
         <p>Cerita kolektif mengurangi biaya curiga dan menyinkronkan tindakan. Fungsional meski tak selalu akurat.</p>
-        <h3>Rangka Singkat</h3>
         <ul>
           <li>Animisme: alam berjiwa.</li>
           <li>Politeisme: dewa fungsional.</li>
@@ -223,22 +217,6 @@ section{content-visibility:auto;contain-intrinsic-size:0 800px}
   const revealToc = () => { const y = scrollY || document.documentElement.scrollTop; tocEl.hidden = y < innerHeight * 0.3; };
   addEventListener('scroll', revealToc, {passive:true});
   revealToc();
-})();
-(() => {
-  const img = document.getElementById('heroImg');
-  if (!img) return;
-  const applyAccent = rgb => document.documentElement.style.setProperty('--accent', rgb);
-  const extract = () => {
-    try{
-      const c = document.createElement('canvas'); const ctx = c.getContext('2d');
-      c.width = 32; c.height = 32; ctx.drawImage(img, 0, 0, 32, 32);
-      const data = ctx.getImageData(0,0,32,32).data;
-      let r=0,g=0,b=0,count=0;
-      for(let i=0;i<data.length;i+=4){const rr=data[i],gg=data[i+1],bb=data[i+2],aa=data[i+3]; if(aa<200) continue; r+=rr; g+=gg; b+=bb; count++; }
-      if(count){r=Math.round(r/count); g=Math.round(g/count); b=Math.round(b/count); applyAccent(`rgb(${r},${g},${b})`);}
-    }catch(e){}
-  };
-  if (img.complete) extract(); else img.addEventListener('load', extract, {once:true});
 })();
 </script>
 </body>
