@@ -11,9 +11,10 @@
   --paper:#fafbff;
   --ink:#0b0f19;
   --muted:#586074;
-  --accent:#2e6bff;
+  --accent:#2e6bff;           /* aksen filsafat: biru tegas */
   --line:#e7eaf2;
   --radius:14px;
+  --halo:#9ab3ff;             /* untuk halo ring */
 }
 @media (prefers-color-scheme: dark){
   :root{
@@ -23,6 +24,7 @@
     --muted:#a6b0c2;
     --accent:#74a0ff;
     --line:#1b2230;
+    --halo:#3d66ff;
   }
 }
 *{box-sizing:border-box}
@@ -35,6 +37,81 @@ body{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
 }
+
+/* ====== COVER NON-SVG (CSS-only) ====== */
+.cover{
+  margin: clamp(12px,3vw,24px) 0 24px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  position:relative;
+  aspect-ratio:3/4;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(120% 80% at 70% 10%, color-mix(in srgb,var(--accent) 16%, transparent), transparent 60%),
+    radial-gradient(100% 70% at 10% 0%, color-mix(in srgb,var(--accent) 10%, transparent), transparent 60%),
+    linear-gradient(180deg, color-mix(in srgb, var(--paper) 92%, var(--bg) 8%), var(--paper));
+}
+/* Grain halus (data URI png kecil) */
+.cover::after{
+  content:"";
+  position:absolute; inset:0;
+  background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAMUlEQVQYV2NkwA7+z8DAwMDAJ0YbGJgYmCwYQfEwMDwGZCwB0wZDJgYyBqgJQwABgC4Qw4b2e9ZgQAAAABJRU5ErkJggg==');
+  opacity:.08; mix-blend-mode:multiply; pointer-events:none;
+}
+
+/* Elemen simbolik: halo, garis, titik inti */
+.cover .halo{
+  position:absolute; inset:0;
+  --r1: 38%;
+  --r2: 25%;
+  --r3: 12%;
+  background:
+    radial-gradient(circle at 50% 62%, transparent calc(var(--r1) - 1.5px), color-mix(in srgb, var(--halo) 75%, transparent) calc(var(--r1) - 1.5px) calc(var(--r1) + 1.5px), transparent calc(var(--r1) + 1.6px)),
+    radial-gradient(circle at 50% 62%, transparent calc(var(--r2) - 1.5px), color-mix(in srgb, var(--halo) 85%, transparent) calc(var(--r2) - 1.5px) calc(var(--r2) + 1.5px), transparent calc(var(--r2) + 1.6px)),
+    radial-gradient(circle at 50% 62%, transparent calc(var(--r3) - 2px), var(--accent) calc(var(--r3) - 2px) calc(var(--r3) - 1px), transparent calc(var(--r3) - 1px));
+  filter:saturate(110%);
+}
+.cover .axis{
+  position:absolute; left:50%; top:10%; bottom:18%;
+  width:1.5px; transform:translateX(-50%);
+  background:linear-gradient(180deg, color-mix(in srgb,var(--accent) 60%, transparent), color-mix(in srgb,var(--accent) 10%, transparent));
+  border-radius:2px;
+  opacity:.7;
+}
+.cover .dot{
+  position:absolute; left:50%; top:62%;
+  width:10px; height:10px; transform:translate(-50%,-50%);
+  background:var(--accent); border-radius:50%;
+  box-shadow:0 0 0 8px color-mix(in srgb,var(--accent) 18%, transparent);
+}
+
+/* Judul di cover */
+.cover .title-wrap{
+  position:relative;
+  z-index:1;
+  text-align:center;
+  padding: clamp(16px, 3vw, 28px);
+  color:var(--ink);
+  mix-blend-mode:normal;
+}
+.cover .title{
+  font-weight:800;
+  letter-spacing:-0.02em;
+  line-height:1.08;
+  font-size:clamp(1.6rem,1.2rem + 2.2vw,2.4rem);
+  margin:0 0 .35em 0;
+  text-wrap:balance;
+}
+.cover .subtitle{
+  font-size:clamp(.98rem,.9rem + .3vw,1.05rem);
+  color:var(--muted);
+  margin:0;
+  text-wrap:pretty;
+}
+
+/* ====== LAYOUT ARTIKEL ====== */
 main{
   max-width:70ch;
   margin-inline:auto;
@@ -92,61 +169,20 @@ hr{height:1px;border:0;background:var(--line);margin:24px 0}
 strong{font-weight:700}
 em{font-style:italic}
 ::selection{background:color-mix(in srgb, var(--accent) 20%, transparent)}
-/* COVER */
-.cover{
-  margin-bottom:24px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  overflow:hidden;
-  background:color-mix(in srgb, var(--paper) 92%, var(--bg) 8%);
-}
-.cover svg{width:100%;height:auto;display:block;aspect-ratio:3/4}
 </style>
 </head>
 <body>
 <main>
 
-  <!-- Cover Buku SVG Minimalis -->
-  <div class="cover">
-    <svg viewBox="0 0 960 1280" role="img" aria-label="Sampul abstrak minimalis: pikiran, emosi, bahasa, dan sistem">
-      <defs>
-        <radialGradient id="glow" cx="50%" cy="38%" r="60%">
-          <stop offset="0" stop-color="var(--accent)" stop-opacity=".18"/>
-          <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
-        </radialGradient>
-        <linearGradient id="lineAcc" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="var(--accent)"/>
-          <stop offset="1" stop-color="currentColor"/>
-        </linearGradient>
-      </defs>
-
-      <rect x="0" y="0" width="960" height="1280" fill="url(#glow)"/>
-
-      <!-- Lingkar konsentris (sistem terpadu) -->
-      <circle cx="480" cy="740" r="320" fill="none" stroke="color-mix(in srgb, var(--accent) 30%, currentColor 70%)" stroke-width="2"/>
-      <circle cx="480" cy="740" r="210" fill="none" stroke="color-mix(in srgb, var(--accent) 40%, currentColor 60%)" stroke-width="2"/>
-      <circle cx="480" cy="740" r="110" fill="none" stroke="var(--accent)" stroke-width="2"/>
-
-      <!-- Balon bicara (bahasa & cerita) -->
-      <rect x="188" y="250" width="350" height="210" rx="36" fill="none" stroke="currentColor" stroke-width="2"/>
-      <path d="M258 460l-48 64 84-44" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-
-      <!-- Hati-kompas (emosi sebagai kompas) -->
-      <path d="M640 370c0 80-160 160-160 160S320 450 320 370a80 80 0 0 1 160-40 80 80 0 0 1 160 40z" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle cx="480" cy="410" r="28" fill="none" stroke="var(--accent)" stroke-width="2"/>
-      <path d="M480 394l12 12-12 12-12-12z" fill="var(--accent)"/>
-
-      <!-- Bintang kecil (menatap langit) -->
-      <circle cx="760" cy="180" r="4" fill="url(#lineAcc)"/>
-      <circle cx="710" cy="220" r="3" fill="url(#lineAcc)"/>
-      <circle cx="820" cy="260" r="3.5" fill="url(#lineAcc)"/>
-
-      <!-- Titik inti (pencarian makna) -->
-      <circle cx="480" cy="740" r="10" fill="var(--accent)"/>
-
-      <!-- Garis lembut pengarah -->
-      <path d="M200 980c120-60 240-90 360-90s240 30 360 90" fill="none" stroke="color-mix(in srgb, var(--accent) 30%, currentColor 70%)" stroke-width="2" stroke-linecap="round"/>
-    </svg>
+  <!-- COVER NON-SVG: simbolik, simpel, mendalam -->
+  <div class="cover" aria-label="Sampul minimalis bertema pencarian makna">
+    <div class="halo"></div>
+    <div class="axis"></div>
+    <div class="dot" aria-hidden="true"></div>
+    <div class="title-wrap">
+      <h2 class="title">Di Antara Jutaan Spesies</h2>
+      <p class="subtitle">Dari insting ke imajinasi. Dari bertahan hidup ke pencarian makna.</p>
+    </div>
   </div>
 
   <header>
