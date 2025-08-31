@@ -4,22 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Di Antara Jutaan Spesies</title>
+<title>Di Antara Jutaan Spesies — Edisi Minimalis</title>
 <style>
 :root{
   --bg:#ffffff;
-  --fg:#0b0f19;
-  --muted:#4b5565;
-  --surface:#fafbff;
-  --divider:#e6e9f0;
+  --paper:#fafbff;
+  --ink:#0b0f19;
+  --muted:#586074;
+  --accent:#2e6bff;
+  --line:#e7eaf2;
+  --radius:14px;
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#0b0c0f;
-    --fg:#e9ecf1;
-    --muted:#a8b0bd;
-    --surface:#101318;
-    --divider:#1c212a;
+    --bg:#0c0f14;
+    --paper:#10141b;
+    --ink:#e9ecf1;
+    --muted:#a6b0c2;
+    --accent:#74a0ff;
+    --line:#1b2230;
   }
 }
 *{box-sizing:border-box}
@@ -28,122 +31,205 @@ body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Inter,Segoe UI,Roboto,system-ui,Arial,sans-serif;
   background:var(--bg);
-  color:var(--fg);
+  color:var(--ink);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
 }
-.main{
+main{
   max-width:70ch;
   margin-inline:auto;
   padding:clamp(20px,3vw,40px);
 }
-.header{
-  padding-block:12px 6px;
-  border-bottom:1px solid var(--divider);
-  margin-bottom:28px;
-}
-.title{
-  font-size:clamp(1.8rem,1.35rem + 2.2vw,2.4rem);
-  line-height:1.15;
-  letter-spacing:-0.015em;
-  margin:0;
-  text-wrap:balance;
+header{
+  padding-block:8px 18px;
+  border-bottom:1px solid var(--line);
+  margin-bottom:24px;
 }
 .kicker{
   font-size:.95rem;
   color:var(--muted);
-  margin-bottom:8px;
+  letter-spacing:.02em;
+  margin-bottom:6px;
+}
+h1{
+  font-size:clamp(1.9rem,1.4rem + 2vw,2.6rem);
+  line-height:1.18;
+  letter-spacing:-.015em;
+  margin:0;
+  text-wrap:balance;
 }
 article{
-  background:var(--surface);
-  border:1px solid var(--divider);
-  border-radius:14px;
-  padding:clamp(18px,2.6vw,28px);
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:clamp(18px,2.4vw,28px);
 }
 h2{
-  font-size:clamp(1.25rem,1.05rem + .6vw,1.5rem);
+  font-size:clamp(1.25rem,1.05rem + .7vw,1.6rem);
   line-height:1.25;
   letter-spacing:-.005em;
-  margin:1.8rem 0 .8rem;
+  margin:2rem 0 .75rem;
   text-wrap:balance;
 }
 p{
   font-size:clamp(1.05rem,1rem + .25vw,1.18rem);
   line-height:1.75;
-  margin:0 0 1.05em;
+  margin:.9rem 0;
   text-wrap:pretty;
+}
+figure{
+  margin:1.1rem 0 1.2rem;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:color-mix(in srgb, var(--paper) 92%, var(--bg) 8%);
+}
+.figwrap{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+svg{
+  flex:0 0 auto;
+  width:90px;
+  height:90px;
+}
+.caption{
+  font-size:.98rem;
+  color:var(--muted);
+  line-height:1.55;
+}
+hr{
+  height:1px;border:0;background:var(--line);
+  margin:24px 0;
 }
 strong{font-weight:700}
 em{font-style:italic}
-hr{
-  height:1px;
-  border:0;
-  background:var(--divider);
-  margin:24px 0;
-}
-::selection{background:#bcd3ff66}
+::selection{background:color-mix(in srgb, var(--accent) 20%, transparent)}
+/* aksesibilitas fokus */
+a:focus,button:focus,svg:focus{outline:2px solid var(--accent);outline-offset:4px}
 </style>
 </head>
 <body>
-<main class="main">
-  <header class="header">
+<main>
+  <header>
     <div class="kicker">Esai</div>
-    <h1 class="title">Di Antara Jutaan Spesies</h1>
+    <h1>Di Antara Jutaan Spesies</h1>
   </header>
 
   <article>
     <p>Di antara miliaran makhluk di planet ini, hanya ada satu yang menatap langit malam dan bertanya: “Mengapa aku di sini?”</p>
     <p>Hanya ada satu yang menciptakan musik untuk menenangkan jiwa, membangun monumen untuk yang telah tiada, dan merumuskan aturan tentang apa itu baik dan jahat.</p>
     <p><strong>Spesies itu adalah kita—manusia.</strong></p>
+
+    <figure>
+      <div class="figwrap">
+        <svg viewBox="0 0 96 96" role="img" aria-label="Manusia memandang bintang">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="var(--accent)"/>
+              <stop offset="1" stop-color="currentColor"/>
+            </linearGradient>
+          </defs>
+          <circle cx="30" cy="30" r="12" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M14 82c2-14 12-24 27-24s25 10 27 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="72" cy="18" r="2.5" fill="url(#g1)"/>
+          <path d="M36 26c10-8 20-8 34-4" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <figcaption class="caption">Ilustrasi pembuka: manusia menatap bintang—tanda lahirnya rasa ingin tahu dan pertanyaan “mengapa”.</figcaption>
+      </div>
+    </figure>
+
     <p>Bagaimana kita sampai di titik ini? Bagaimana seekor primata bisa berubah menjadi makhluk pencari makna? Untuk menjawabnya, kita harus menelusuri jejak panjang evolusi. Perjalanan ini dimulai bukan dari filsafat atau doa, melainkan dari sesuatu yang jauh lebih mendasar: mesin biologis yang kita bawa di dalam kepala kita.</p>
 
     <h2>Mengenal Mesin di Kepala Kita</h2>
-    <p>Sebelum ada puisi, filsafat, atau doa, otak kita sudah ada.</p>
-    <p>Ia bukan mesin untuk mencari kebenaran atau kebahagiaan. Ia adalah <em>Mesin Survival</em>.</p>
-    <p>Selama jutaan tahun, otak ditempa dengan satu misi brutal: menjaga tubuh ini tetap hidup cukup lama untuk meneruskan keturunan.</p>
-    <p>Berpikir mendalam boros energi. Karena itu otak membangun mode hemat daya: sistem otomatis berbasis emosi dan insting.</p>
-    <p>Melihat ular — langsung takut.</p>
-    <p>Mencium bau makanan — langsung lapar.</p>
-    <p>Cepat, instingtif, dan efektif. Itulah sistem operasi dasar manusia.</p>
+    <figure>
+      <div class="figwrap">
+        <svg viewBox="0 0 96 96" role="img" aria-label="Otak sebagai mesin survival">
+          <circle cx="36" cy="40" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="60" cy="40" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M16 64c6-10 18-16 32-16s26 6 32 16" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <figcaption class="caption">Dua hemisfer sederhana + kurva “survival”: otak dibentuk untuk bertahan hidup lebih dulu, baru mencari kebenaran.</figcaption>
+      </div>
+    </figure>
+    <p>Sebelum ada puisi, filsafat, atau doa, otak kita sudah ada. Ia bukan mesin untuk mencari kebenaran atau kebahagiaan. Ia adalah <em>Mesin Survival</em>.</p>
+    <p>Selama jutaan tahun, otak ditempa dengan satu misi brutal: menjaga tubuh ini tetap hidup cukup lama untuk meneruskan keturunan. Berpikir mendalam boros energi, maka lahir sistem otomatis berbasis emosi dan insting.</p>
 
     <h2>Perasaan: Kompas, Bukan Hiasan</h2>
-    <p>Bagi nenek moyang kita, dunia dipahami lewat rasa. Emosi bukan sekadar hiasan; ia adalah kompas survival.</p>
-    <p>Takut: “Ada bahaya, waspadalah.”</p>
-    <p>Jijik: “Jangan makan itu, mungkin beracun.”</p>
-    <p>Senang: “Buah manis ini sumber energi, ingat tempatnya.”</p>
-    <p>Kesepian: “Berbahaya sendirian, segera cari kelompok.”</p>
-    <p>Ribuan tahun lamanya, kita menavigasi hidup dengan data emosional ini. Dunia <em>merasa</em> lebih dahulu hadir, sebelum dunia <em>berpikir</em>.</p>
+    <figure>
+      <div class="figwrap">
+        <svg viewBox="0 0 96 96" role="img" aria-label="Hati seperti kompas">
+          <path d="M48 74s-24-16-24-34a12 12 0 0 1 24-7 12 12 0 0 1 24 7c0 18-24 34-24 34z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="48" cy="52" r="8" fill="none" stroke="var(--accent)" stroke-width="2"/>
+          <path d="M48 44l6 6-6 6-6-6z" fill="var(--accent)"/>
+        </svg>
+        <figcaption class="caption">Hati berjarum kompas: emosi memberi sinyal arah—takut, jijik, senang, kesepian—untuk keputusan cepat.</figcaption>
+      </div>
+    </figure>
+    <p>Ribuan tahun lamanya, kita menavigasi hidup dengan data emosional. Dunia <em>merasa</em> hadir lebih dulu sebelum dunia <em>berpikir</em>.</p>
 
     <h2>Percikan Awal: Dari Merasa ke Berpikir</h2>
-    <p>Lambat-laun, percikan baru muncul: kemampuan mengingat pola dan menghubungkan sebab-akibat.</p>
-    <p>“Awan gelap selalu diikuti hujan.”</p>
-    <p>“Anak itu makan jamur merah, lalu sakit. Jamurnya penyebab.”</p>
-    <p>“Jejak kaki ini milik hewan berbahaya. Menghindar lebih aman.”</p>
-    <p>Masih seputar kelangsungan hidup, tetapi sebuah lompatan besar: kita mulai memetakan dunia di dalam pikiran.</p>
+    <figure>
+      <div class="figwrap">
+        <svg viewBox="0 0 96 96" role="img" aria-label="Rantai sebab-akibat">
+          <rect x="14" y="38" width="14" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+          <rect x="36" y="38" width="14" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+          <rect x="58" y="38" width="14" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+          <rect x="80" y="38" width="14" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M28 48h8M50 48h8M72 48h8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <figcaption class="caption">Domino minimalis: mengingat pola dan menghubungkan sebab–akibat adalah lompatan dari insting ke pemetaan mental.</figcaption>
+      </div>
+    </figure>
+    <p>Kita mulai menyadari pola: awan gelap → hujan, jamur merah → sakit, jejak tertentu → bahaya. Pemetaan ini tetap soal bertahan hidup, namun kualitasnya baru.</p>
 
     <h2>Ledakan Bahasa: Dunia Menjadi Dua</h2>
-    <p>Puncak transformasi datang ketika kita menemukan bahasa kompleks. Bahasa mengubah segalanya.</p>
-    <p>Untuk pertama kalinya, manusia bisa berbicara bukan hanya tentang singa yang ada di depan mata, tetapi juga singa kemarin, atau singa yang mungkin muncul besok.</p>
-    <p>Sejak itu, dunia manusia terbelah dua:</p>
-    <p><strong>Dunia Nyata</strong> — realitas fisik yang bisa disentuh.</p>
-    <p><strong>Dunia Cerita</strong> — realitas imajinasi: masa lalu, masa depan, dan segala “bagaimana jika”.</p>
-    <p>Bahasa memberi kita kekuatan membangun pengetahuan bersama. Namun ia juga membawa kesadaran paling berat: bahwa suatu hari, kita akan tiada.</p>
+    <figure>
+      <div class="figwrap">
+        <svg viewBox="0 0 96 96" role="img" aria-label="Dua balon bicara: dunia nyata dan dunia cerita">
+          <rect x="10" y="16" width="44" height="28" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M22 44l-8 10 14-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <rect x="42" y="44" width="44" height="28" rx="8" fill="none" stroke="var(--accent)" stroke-width="2"/>
+          <path d="M64 72l-8 10 14-8" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <figcaption class="caption">Dua balon bicara: bahasa memungkinkan bicara tentang “yang ada” dan “yang mungkin”—memecah dunia menjadi nyata dan cerita.</figcaption>
+      </div>
+    </figure>
+    <p>Bahasa mengubah segalanya: kita bisa berbagi masa lalu, memprediksi masa depan, dan membangun pengetahuan bersama—beserta kesadaran akan kefanaan.</p>
 
     <h2>Dari Aturan Suku ke Hukum Tuhan</h2>
-    <p>Bahasa membuat kelompok manusia bisa tumbuh lebih besar. Tapi semakin besar kelompok, semakin sulit menjaga ketertiban.</p>
-    <p>Di komunitas kecil, gosip cukup untuk menegakkan aturan.</p>
-    <p>Namun pada ribuan orang, dibutuhkan otoritas yang lebih kuat.</p>
-    <p>Maka lahirlah narasi: aturan bukan dari kepala suku, melainkan dari leluhur, roh, lalu dewa-dewi. Hingga akhirnya, dari Tuhan Sang Pencipta.</p>
-    <p>Dengan cara ini, moralitas menjadi absolut. Tidak bisa ditawar. Ia berlaku untuk semua orang, di mana pun, kapan pun.</p>
+    <figure>
+      <div class="figwrap">
+        <svg viewBox="0 0 96 96" role="img" aria-label="Timbangan abstrak: dari aturan lokal menuju moral yang mengikat luas">
+          <path d="M16 26h64" stroke="currentColor" stroke-width="2"/>
+          <circle cx="30" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="66" cy="48" r="10" fill="none" stroke="var(--accent)" stroke-width="2"/>
+          <path d="M48 26v48" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 58h20M56 58h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <figcaption class="caption">Timbangan minimalis: ketika kelompok membesar, aturan perlu otoritas lebih kuat—dari gosip lokal ke hukum yang dianggap lebih tinggi.</figcaption>
+      </div>
+    </figure>
+    <p>Narasi otoritatif muncul: dari leluhur dan roh menuju Tuhan. Moral menjadi absolut dan berlaku lintas kelompok besar.</p>
 
     <h2>Agama: Sistem Operasi Terpadu</h2>
-    <p>Agama bukanlah sesuatu yang jatuh begitu saja dari langit. Ia adalah puncak perjalanan panjang pikiran manusia.</p>
-    <p>Agama adalah <em>Sistem Operasi Terpadu</em>:</p>
-    <p>Mengendalikan mesin instingtif melalui moral dan disiplin.</p>
-    <p>Memberi jawaban atas pertanyaan eksistensial, termasuk kematian.</p>
-    <p>Menjadi fondasi kokoh bagi hukum moral yang menopang peradaban.</p>
-    <p>Memahami hal ini bukanlah meremehkan agama. Sebaliknya, inilah cara menghargainya: sebagai mahakarya kolektif umat manusia.</p>
-    <p>Agama adalah monumen pikiran kita—bukti bahwa manusia tidak sekadar bertahan hidup, tetapi juga menciptakan makna, tujuan, dan harapan.</p>
+    <figure>
+      <div class="figwrap">
+        <svg viewBox="0 0 96 96" role="img" aria-label="Sistem berlapis terpadu">
+          <circle cx="48" cy="48" r="26" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="48" cy="48" r="16" fill="none" stroke="var(--accent)" stroke-width="2"/>
+          <circle cx="48" cy="48" r="6" fill="var(--accent)"/>
+          <path d="M48 16v10M48 70v10M16 48h10M70 48h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <figcaption class="caption">Inti–lingkaran–jejaring: agama mengintegrasikan disiplin moral, jawaban eksistensial, dan tatanan sosial—seperti sistem operasi.</figcaption>
+      </div>
+    </figure>
+    <p>Memahami asal-usulnya bukan meremehkan, melainkan menghargai sebagai karya kolektif yang menopang peradaban dan memberi makna, tujuan, serta harapan.</p>
+
+    <hr>
+
+    <p class="caption">Gaya visual: minimalis, garis bersih, satu aksen warna. Semua SVG inline sehingga ringan, tajam di retina, dan mudah diganti warna sesuai tema.</p>
   </article>
 </main>
 </body>
