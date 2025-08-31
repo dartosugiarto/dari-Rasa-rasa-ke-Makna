@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Katedral Makna — Evolusi Pikiran Manusia</title>
-<meta name="description" content="Esai sains populer: evolusi pikiran manusia dari rasa, kepercayaan, filsafat, hingga sains.">
+<meta name="description" content="Buku mini sains populer: evolusi pikiran manusia dari rasa, kepercayaan, filsafat, hingga sains—lengkap dengan contoh, sejarah animisme–monoteisme, dan diagram.">
 <meta name="author" content="PlayPal.ID">
 <meta property="og:title" content="Katedral Makna: Evolusi Pikiran Manusia">
-<meta property="og:description" content="Dari rasa dan kepercayaan hingga filsafat dan sains—jejak evolusi cara berpikir kita.">
+<meta property="og:description" content="Dari rasa dan kepercayaan hingga filsafat dan sains—jejak evolusi cara berpikir kita, sejarah singkat agama, dan peta logika.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="id_ID">
 <meta property="og:url" content="https://playpal.id/katedral-makna">
@@ -19,9 +19,9 @@
   --paper:#ffffff;
   --ink:#1d1d1f;
   --muted:#6e6e73;
-  --hair:rgba(0,0,0,.15);
+  --hair:rgba(0,0,0,.14);
   --accent:#007aff;
-  --shadow:rgba(0,0,0,.04)
+  --shadow:rgba(0,0,0,.05)
 }
 @media (prefers-color-scheme: dark){
   :root{
@@ -29,9 +29,9 @@
     --paper:#161617;
     --ink:#f5f5f7;
     --muted:#a0a0a6;
-    --hair:rgba(255,255,255,.15);
+    --hair:rgba(255,255,255,.16);
     --accent:#0a84ff;
-    --shadow:rgba(0,0,0,.2)
+    --shadow:rgba(0,0,0,.3)
   }
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -42,61 +42,80 @@ body{
   color:var(--ink);
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   font-size:17px;
-  line-height:1.7;
+  line-height:1.75;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale
 }
-.wrapper{max-width:720px;margin-inline:auto;padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,2rem)}
+.wrapper{max-width:760px;margin-inline:auto;padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,2rem)}
 header{text-align:center;padding-block:1rem 2rem}
-.kicker{font-size:.95rem;font-weight:500;color:var(--muted);letter-spacing:.015em;margin-bottom:.5rem;line-height:1.45}
+.kicker{font-size:1rem;font-weight:500;color:var(--muted);letter-spacing:.015em;margin-bottom:.6rem;line-height:1.5}
 h1{
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:clamp(2.4rem,2rem + 2.5vw,3.4rem);
-  font-weight:700;line-height:1.05;letter-spacing:-.02em;text-wrap:balance;margin-bottom:.75rem
+  font-size:clamp(2.5rem,2rem + 2.8vw,3.6rem);
+  font-weight:700;line-height:1.04;letter-spacing:-.02em;text-wrap:balance;margin-bottom:.8rem
 }
-.byline{color:var(--muted);font-size:.95rem}
+.byline{color:var(--muted);font-size:.96rem}
 .byline strong{font-weight:600;color:var(--ink)}
 main article{
   background:var(--paper);
   border-radius:18px;
   padding:clamp(2rem,5vw,3.5rem);
-  box-shadow:0 1px 2px var(--shadow),0 8px 24px var(--shadow);
+  box-shadow:0 1px 2px var(--shadow),0 10px 28px var(--shadow);
   border:1px solid var(--hair)
 }
-section+section{margin-top:2.5rem}
+section+section{margin-top:2.6rem}
 h2{
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  margin:2.5rem 0 .75rem;
-  font-size:clamp(1.4rem,1.1rem + .9vw,1.8rem);
-  font-weight:600;
-  line-height:1.25;
+  margin:2.6rem 0 .9rem;
+  font-size:clamp(1.45rem,1.1rem + 1vw,1.9rem);
+  font-weight:650;
+  line-height:1.22;
   letter-spacing:-.01em;
   text-wrap:balance;
   border-top:1px solid var(--hair);
-  padding-top:2.5rem;
+  padding-top:2.2rem;
   color:var(--ink)
 }
 section:first-of-type h2{margin-top:0;padding-top:0;border-top:none}
-p{margin-bottom:1.15rem;font-size:1.05rem;line-height:1.75;text-wrap:pretty}
-p:last-child{margin-bottom:0}
-.figure{display:flex;justify-content:center;margin:1.25rem 0 1rem}
+h3{
+  font:600 1.1rem/1.3 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  margin:.6rem 0 .4rem;color:var(--ink)
+}
+p{margin-bottom:1.15rem;font-size:1.06rem;text-wrap:pretty}
+ul{margin:.4rem 0 1.2rem 1.1rem}
+li{margin:.4rem 0}
+.figure{display:flex;justify-content:center;margin:1.2rem 0 1rem}
 .icon{width:64px;height:64px;opacity:.9}
-.diagram{width:100%;max-width:640px;height:auto;opacity:.95}
+.diagram{width:100%;max-width:720px;height:auto;opacity:.98}
 svg{stroke-linecap:round;stroke-linejoin:round}
+.callout{
+  background:color-mix(in srgb,var(--accent) 6%, transparent);
+  border:1px solid color-mix(in srgb,var(--accent) 20%, transparent);
+  padding:1rem;border-radius:14px;margin:1rem 0
+}
 .progress{
   height:4px;position:sticky;top:0;left:0;z-index:100;
   background:linear-gradient(to right,var(--accent),var(--accent)) no-repeat;
   background-size:0% 100%
 }
+.small{color:var(--muted);font-size:.95rem}
+hr{height:1px;border:0;background:var(--hair);margin:1.6rem 0}
 ::selection{background:color-mix(in srgb,var(--accent) 28%, transparent)}
 .srOnly{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media print{
+  body{background:#fff;color:#000;font-size:12pt}
+  .progress,header,footer{display:none}
+  .wrapper{max-width:100%;padding:0}
+  main article{border:0;box-shadow:none;padding:0}
+  h2{border-top:1px solid #ccc}
+}
 </style>
 </head>
 <body>
 <div class="progress" aria-hidden="true"></div>
 <div class="wrapper">
   <header role="banner">
-    <div class="kicker">Jejak evolusi pikiran: dari rasa, kepercayaan, filsafat, hingga sains.</div>
+    <div class="kicker">Jejak evolusi pikiran: dari rasa, kepercayaan, filsafat, hingga sains — berikut sejarah singkat animisme sampai monoteisme.</div>
     <h1>Katedral Makna</h1>
     <div class="byline">Penulis: <strong>PlayPal.ID</strong></div>
   </header>
@@ -104,43 +123,100 @@ svg{stroke-linecap:round;stroke-linejoin:round}
   <main role="main">
     <article role="article">
 
+      <section id="pengantar">
+        <h2>Mengapa Kita Mencari Arti?</h2>
+        <p>Di antara miliaran makhluk, hanya manusia yang menatap langit malam dan bertanya, “Mengapa aku di sini?” Kita membuat musik, menulis doa, menyusun hukum. Pertanyaannya: bagaimana <em>pikiran</em> yang mulanya hanya alat bertahan hidup bisa berevolusi menjadi mesin pencipta makna? Bab-bab berikut menelusuri tangga itu: <strong>rasa → kepercayaan → filsafat → sains</strong>. Setiap tahap lahir dari keterbatasan tahap sebelumnya, dan mendorong kita naik satu anak tangga ke cara paham yang lebih stabil.</p>
+      </section>
+
       <section id="rasa">
         <h2>Rasa: Bahasa Pertama Otak</h2>
-        <p>Pada awalnya manusia membaca dunia lewat <strong>rasa</strong>. Takut, senang, jijik, lapar—itulah algoritma awal survival. Melihat kilat → takut → berlindung. Menemukan buah manis → senang → simpan memori lokasinya. Rasa ini cepat dan hemat energi, meski sering keliru. Lebih baik “salah takut” daripada “salah santai”.</p>
+        <p>Jauh sebelum ada logika, otak kita bekerja hemat energi. Ia memprioritaskan selamat, bukan akurat. Karena itu, <strong>emosi</strong>—takut, senang, jijik, lapar—menjadi kompas cepat untuk memutuskan. Lebih baik “salah takut” daripada “salah santai”.</p>
+        <h3>Contoh pola pikir berbasis rasa</h3>
+        <ul>
+          <li>Melihat kilat → takut → cari tempat berlindung (tak perlu teori listrik).</li>
+          <li>Buah manis → senang → simpan lokasi (memori emosional memperkuat ingatan).</li>
+          <li>Bau busuk → jijik → hindari (pengaman dasar dari racun/patogen).</li>
+        </ul>
+        <div class="callout small">Rasa itu cepat dan murah. Namun harganya: ia mudah salah tafsir. Di sinilah kepercayaan lahir untuk menutup celah penjelasan.</div>
       </section>
 
       <section id="kepercayaan">
-        <h2>Kepercayaan: Cerita untuk Menyatukan</h2>
-        <p>Rasa saja tidak cukup menjelaskan dunia. Maka lahirlah <strong>kepercayaan</strong>—cerita kolektif yang irasional tapi fungsional. Hujan deras dianggap tangisan dewa air, gunung meletus dianggap murka roh leluhur. Ritual panen dijalankan karena dipercaya mengundang hasil melimpah. Mitos dan agama awal bekerja sebagai <em>software sosial</em>: memberi makna sekaligus menertibkan kelompok besar.</p>
+        <h2>Kepercayaan: Cerita yang Menyatukan</h2>
+        <p>Ketika rasa tak cukup menjelaskan fenomena—petir, gempa, panen—kita membuat <strong>cerita</strong>. Cerita itu irasional menurut standar modern, namun fungsional: ia mengikat kelompok, memberi alasan bersama untuk bertindak, dan menenangkan kecemasan akan hal-hal di luar kontrol.</p>
+        <h3>Contoh pola pikir berbasis kepercayaan</h3>
+        <ul>
+          <li>“Gunung meletus karena roh gunung murka.” → Muncul ritual permohonan maaf komunitas.</li>
+          <li>“Air sungai punya penjaga.” → Ada pantangan yang secara tak langsung menjaga kebersihan sumber air.</li>
+          <li>“Ritual panen mendatangkan hasil.” → Koordinasi kerja kolektif menjadi terjadwal.</li>
+        </ul>
+        <hr>
+        <h3>Sejarah singkat: dari animisme ke monoteisme</h3>
+        <p><strong>Animisme</strong> memandang alam berjiwa: pohon, sungai, batu, hewan. Identitas kelompok dipererat oleh <strong>totem</strong> dan <strong>leluhur</strong> sebagai penjaga moral. Saat kota-kota lahir, <strong>politeisme</strong> muncul: dewa-dewi dengan fungsi khusus (perang, kesuburan, matahari, laut). Pada skala politik dan moral yang lebih luas, lahir gagasan berani tentang <strong>monoteisme</strong>: satu Tuhan universal sebagai pusat hukum dan makna. Setiap tahap bukan pembatalan tahap sebelumnya, melainkan adaptasi terhadap skala sosial yang kian besar dan kompleks.</p>
+
+        <figure class="figure">
+          <svg class="diagram" viewBox="0 0 760 210" aria-hidden="true">
+            <style>
+              .tick{stroke:currentColor;stroke-width:2}
+              .dot{fill:var(--accent)}
+              .lab{font:600 12px system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:currentColor}
+              .sub{font:500 11px system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;fill:var(--muted)}
+            </style>
+            <line x1="60" y1="140" x2="700" y2="140" class="tick"/>
+            <circle cx="120" cy="140" r="6" class="dot"/>
+            <text x="120" y="70" text-anchor="middle" class="lab">Animisme</text>
+            <text x="120" y="90" text-anchor="middle" class="sub">alam berjiwa</text>
+            <circle cx="260" cy="140" r="6" class="dot"/>
+            <text x="260" y="70" text-anchor="middle" class="lab">Totem & Leluhur</text>
+            <text x="260" y="90" text-anchor="middle" class="sub">ikatan moral</text>
+            <circle cx="460" cy="140" r="6" class="dot"/>
+            <text x="460" y="70" text-anchor="middle" class="lab">Politeisme</text>
+            <text x="460" y="90" text-anchor="middle" class="sub">dewa fungsional</text>
+            <circle cx="640" cy="140" r="6" class="dot"/>
+            <text x="640" y="70" text-anchor="middle" class="lab">Monoteisme</text>
+            <text x="640" y="90" text-anchor="middle" class="sub">pusat moral tunggal</text>
+          </svg>
+          <figcaption class="srOnly">Garis waktu ide keagamaan: animisme → totem/lembaga leluhur → politeisme → monoteisme.</figcaption>
+        </figure>
+
+        <div class="callout small">Kepercayaan menyatukan, tetapi tetap rentan konflik tafsir dan tidak selalu akurat menjelaskan alam. Dari ketidakpuasan itulah lahir filsafat.</div>
       </section>
 
       <section id="filsafat">
-        <h2>Filsafat: Logika Tanpa Bukti</h2>
-        <p>Seiring berkembangnya masyarakat, sebagian orang mulai ragu: “Apakah cerita ini benar, atau hanya simbol?” Dari sini lahir <strong>filsafat</strong>—upaya menjelaskan dengan logika. Thales berkata semua berasal dari air, bukan dari dewa. Buddha menolak ritual brahmana, mengajarkan jalan batin keluar dari penderitaan. Konfusius menekankan etika sosial daripada mitos. Filsafat melampaui mitos, tapi tetap spekulatif karena logika tanpa uji bisa melayang ke mana saja.</p>
+        <h2>Filsafat: Logika Tanpa Uji</h2>
+        <p>Filsafat muncul ketika manusia bertanya: “Apakah cerita itu benar, atau sekadar simbol?” Ia mencoba menjelaskan dunia dengan <strong>rasio</strong>, bukan sekadar mitos. Namun di tahap ini, kebenaran masih ditimbang lewat argumentasi, belum lewat percobaan sistematis.</p>
+        <h3>Contoh pola pikir berbasis filsafat</h3>
+        <ul>
+          <li><strong>Yunani</strong>: Thales menalar asal-usul dari “air”; Plato menekankan dunia ide; Aristoteles menata logika formal.</li>
+          <li><strong>India</strong>: tradisi Sāṃkhya, Nyāya, hingga Buddha menimbang penderitaan, sebab-akibat batin, dan etika.</li>
+          <li><strong>Cina</strong>: Konfusius menekankan tatanan relasional; Laozi menimbang keseimbangan (Dao) alih-alih mitos kosmogoni detail.</li>
+        </ul>
+        <p>Filsafat memperkenalkan kebiasaan <em>memberi alasan</em>. Namun logika tanpa uji bisa melangit: elegan di kepala, belum tentu benar di alam. Celah inilah yang memunculkan kebutuhan tahap berikutnya.</p>
+        <div class="callout small">Filsafat memekarkan pertanyaan dan menertibkan argumen. Sains mewarisi sikap kritis itu, lalu menambahkan alat verifikasi empiris.</div>
       </section>
 
       <section id="sains">
         <h2>Sains: Logika + Empiris</h2>
-        <p>Dari keterbatasan filsafat, lahirlah <strong>sains</strong>. Ia tidak puas dengan logika saja; setiap klaim harus diuji. Aristoteles berkata benda berat jatuh lebih cepat, tapi Galileo membuktikan sebaliknya lewat percobaan. Mitos penyakit karena roh jahat diganti teori kuman setelah Pasteur membuktikannya dengan mikroskop. Ritual meminta hujan diganti ramalan cuaca berbasis data atmosfer. Sains adalah puncak evolusi pikiran: bukan hanya merasa, bukan hanya percaya, bukan hanya berpikir, tapi <em>menguji</em>.</p>
-      </section>
+        <p>Sains lahir ketika argu­men wajib bertemu <strong>data</strong>. Klaim harus dapat diuji, diulang, dan dipalsukan. Metodenya sederhana namun dahsyat: ajukan hipotesis, turunkan prediksi, lakukan observasi/eksperimen, bandingkan hasil, revisi teori.</p>
+        <h3>Contoh pola pikir berbasis sains</h3>
+        <ul>
+          <li>Aristoteles mengira benda berat jatuh lebih cepat; <strong>Galileo</strong> menguji—hasilnya berbeda.</li>
+          <li>Penyakit dianggap “gangguan roh”; <strong>Pasteur</strong> menunjukkan peran mikroba dengan eksperimen steril.</li>
+          <li>Cuaca “dimohonkan” lewat ritual; <strong>ilmuwan atmosfer</strong> memodelkannya dengan sensor dan data.</li>
+        </ul>
 
-      <section id="diagram">
-        <h2>Diagram Evolusi Pikiran</h2>
         <figure class="figure">
-          <svg viewBox="0 0 720 260" class="diagram">
+          <svg class="diagram" viewBox="0 0 760 280" aria-hidden="true">
             <style>
               .box{fill:none;stroke:currentColor;stroke-width:2}
-              .label{font:600 14px system-ui, sans-serif;fill:currentColor}
-              .desc{font:500 12px system-ui, sans-serif;fill:var(--muted)}
+              .label{font:600 13px system-ui, sans-serif;fill:currentColor}
+              .desc{font:500 11px system-ui, sans-serif;fill:var(--muted)}
               .arrow{stroke:currentColor;stroke-width:2;marker-end:url(#arrow)}
             </style>
             <defs>
-              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
-                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                 <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
               </marker>
             </defs>
-
             <rect x="40" y="40" width="140" height="60" rx="10" class="box"/>
             <text x="110" y="65" text-anchor="middle" class="label">Rasa</text>
             <text x="110" y="85" text-anchor="middle" class="desc">insting & emosi</text>
@@ -160,14 +236,104 @@ svg{stroke-linecap:round;stroke-linejoin:round}
             <line x1="180" y1="70" x2="220" y2="70" class="arrow"/>
             <line x1="380" y1="70" x2="420" y2="70" class="arrow"/>
             <line x1="560" y1="70" x2="600" y2="70" class="arrow"/>
+
+            <rect x="120" y="150" width="200" height="54" rx="10" class="box"/>
+            <text x="220" y="176" text-anchor="middle" class="label">Fungsi Sosial</text>
+            <text x="220" y="194" text-anchor="middle" class="desc">koordinasi & makna</text>
+
+            <rect x="440" y="150" width="200" height="54" rx="10" class="box"/>
+            <text x="540" y="176" text-anchor="middle" class="label">Fungsi Pengetahuan</text>
+            <text x="540" y="194" text-anchor="middle" class="desc">prediksi & kontrol</text>
+
+            <line x1="300" y1="100" x2="220" y2="150" class="arrow"/>
+            <line x1="660" y1="100" x2="540" y2="150" class="arrow"/>
           </svg>
-          <figcaption class="srOnly">Diagram alur: rasa → kepercayaan → filsafat → sains</figcaption>
+          <figcaption class="srOnly">Peta logika: rasa → kepercayaan → filsafat → sains; kepercayaan kuat pada fungsi sosial, sains unggul pada fungsi pengetahuan (prediksi/kontrol).</figcaption>
         </figure>
       </section>
 
+      <section id="perbandingan">
+        <h2>Empat Cara Berpikir: Apa Bedanya?</h2>
+        <p>Untuk merapikan, berikut peta ringkas perbandingan. Keempatnya bukan musuh abadi—mereka sering hidup berdampingan. Namun tujuan dan alatnya berbeda.</p>
+        <ul>
+          <li><strong>Rasa</strong>: cepat, hemat, protektif; rawan bias dan salah tafsir.</li>
+          <li><strong>Kepercayaan</strong>: kohesi sosial tinggi; akurasi alam tak selalu prioritas.</li>
+          <li><strong>Filsafat</strong>: disiplin alasan; tanpa uji, bisa elegan namun salah.</li>
+          <li><strong>Sains</strong>: alasan + bukti; butuh biaya/alat, tapi memberi prediksi yang dapat diuji.</li>
+        </ul>
+        <div class="callout small">Ringkasnya: <em>Rasa membuat kita selamat; Kepercayaan membuat kita bersama; Filsafat merapikan tanya; Sains menguji jawaban.</em></div>
+      </section>
+
+      <section id="implikasi">
+        <h2>Di Mana Agama Berdiri?</h2>
+        <p>Dalam tangga evolusi pikiran ini, <strong>agama</strong> lahir di lapisan kepercayaan sebagai jawaban awal yang menyatukan makna dan moral. Seiring waktu, ia menjadi institusi sosial yang menertibkan hidup bersama. Filsafat lalu menguji konsistensinya, dan sains menguji klaimnya tentang alam. Memahami posisi ini bukan merendahkan agama—justru menempatkannya sebagai <em>teknologi sosial</em> yang pernah paling berhasil mengikat jutaan orang dalam satu cerita bersama.</p>
+        <p>Kini, saat sains memberi peta alam yang lebih akurat, agama tetap relevan selama ia memperkaya etika, solidaritas, dan makna—seraya bersahabat dengan bukti ketika berbicara tentang dunia fisik.</p>
+      </section>
+
       <section id="penutup">
-        <h2>Monumen Pikiran</h2>
-        <p>Melihat pikiran manusia sebagai hasil evolusi bertahap membuat kita sadar: agama, filsafat, dan sains bukan musuh, melainkan tahap-tahap pencarian arti. Dari rasa yang spontan, lahir kepercayaan yang memberi makna, filsafat yang melatih logika, hingga sains yang menguji dunia nyata. Inilah katedral makna yang kita bangun: berdiri di pikiran, tapi dampaknya nyata di dunia.</p>
+        <h2>Katedral Makna</h2>
+        <p>Dari tubuh yang ingin selamat (rasa), ke cerita yang menyatukan (kepercayaan), ke argumen yang menertibkan (filsafat), hingga prosedur yang menguji (sains), manusia membangun sebuah <strong>katedral makna</strong>. Ia berdiri di pikiran, tetapi dampaknya nyata: lebih banyak kerja sama, lebih tajam prediksi, dan—harapannya—lebih bijak keputusan. Tangga ini belum selesai; kita terus memanjatnya.</p>
+      </section>
+
+      <section id="lampiran">
+        <h2>Lampiran Diagram: Alur Komplet</h2>
+        <figure class="figure">
+          <svg class="diagram" viewBox="0 0 820 520" aria-hidden="true">
+            <style>
+              .b{fill:none;stroke:currentColor;stroke-width:2}
+              .k{fill:var(--accent);opacity:.12}
+              .t{font:600 13px system-ui,sans-serif;fill:currentColor}
+              .s{font:500 11px system-ui,sans-serif;fill:var(--muted)}
+              .a{stroke:currentColor;stroke-width:2;marker-end:url(#m)}
+            </style>
+            <defs>
+              <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+              </marker>
+            </defs>
+            <rect x="40" y="40" width="160" height="64" rx="12" class="b"/>
+            <text x="120" y="68" text-anchor="middle" class="t">Rasa</text>
+            <text x="120" y="86" text-anchor="middle" class="s">insting, emosi</text>
+
+            <rect x="240" y="40" width="200" height="64" rx="12" class="b"/>
+            <text x="340" y="68" text-anchor="middle" class="t">Kepercayaan (Agama)</text>
+            <text x="340" y="86" text-anchor="middle" class="s">mitos, ritual, kohesi</text>
+
+            <rect x="480" y="40" width="160" height="64" rx="12" class="b"/>
+            <text x="560" y="68" text-anchor="middle" class="t">Filsafat</text>
+            <text x="560" y="86" text-anchor="middle" class="s">rasio, sistem ide</text>
+
+            <rect x="680" y="40" width="120" height="64" rx="12" class="b"/>
+            <text x="740" y="68" text-anchor="middle" class="t">Sains</text>
+            <text x="740" y="86" text-anchor="middle" class="s">uji empiris</text>
+
+            <line x1="200" y1="72" x2="240" y2="72" class="a"/>
+            <line x1="440" y1="72" x2="480" y2="72" class="a"/>
+            <line x1="640" y1="72" x2="680" y2="72" class="a"/>
+
+            <rect x="240" y="140" width="560" height="80" rx="12" class="b k"/>
+            <rect x="240" y="140" width="560" height="80" rx="12" class="b"/>
+            <text x="520" y="168" text-anchor="middle" class="t">Sejarah Kepercayaan</text>
+            <text x="520" y="188" text-anchor="middle" class="s">animisme → totem/lembaga leluhur → politeisme → monoteisme</text>
+
+            <rect x="40" y="260" width="360" height="80" rx="12" class="b"/>
+            <text x="220" y="288" text-anchor="middle" class="t">Fungsi Sosial</text>
+            <text x="220" y="308" text-anchor="middle" class="s">solidaritas, moral bersama, identitas</text>
+
+            <rect x="440" y="260" width="360" height="80" rx="12" class="b"/>
+            <text x="620" y="288" text-anchor="middle" class="t">Fungsi Pengetahuan</text>
+            <text x="620" y="308" text-anchor="middle" class="s">prediksi, kontrol, teknologi</text>
+
+            <line x1="340" y1="104" x2="220" y2="260" class="a"/>
+            <line x1="740" y1="104" x2="620" y2="260" class="a"/>
+
+            <rect x="40" y="380" width="740" height="80" rx="12" class="b"/>
+            <text x="410" y="408" text-anchor="middle" class="t">Ringkas</text>
+            <text x="410" y="428" text-anchor="middle" class="s">Rasa → Kepercayaan/Agama → Filsafat → Sains</text>
+            <text x="410" y="448" text-anchor="middle" class="s">selamat → bersama → menalar → menguji</text>
+          </svg>
+          <figcaption class="srOnly">Alur lengkap: tangga evolusi pikiran, fungsi sosial vs pengetahuan, dan garis waktu kepercayaan.</figcaption>
+        </figure>
       </section>
 
     </article>
@@ -176,6 +342,8 @@ svg{stroke-linecap:round;stroke-linejoin:round}
 
 <script>
 (function(){
+  const m = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (m && m.matches) return;
   const bar = document.querySelector('.progress');
   const article = document.querySelector('article');
   if (!bar || !article) return;
