@@ -3,448 +3,540 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
 <title>Katedral Makna — Evolusi Pikiran & Fungsi Sosial</title>
-<meta name="description" content="Evolusi pikiran manusia dari rasa, kepercayaan, filsafat, hingga sains—serta fungsi sosial dari keluarga sampai algoritma; lengkap dengan contoh, sejarah animisme–monoteisme, diagram, dan transisi super mulus.">
+<meta name="description" content="Evolusi pikiran manusia dari rasa, kepercayaan, filsafat, hingga sains—serta fungsi sosial dari keluarga sampai algoritma; dalam desain e-book premium minimalis-modern.">
 <meta name="author" content="PlayPal.ID">
 <meta property="og:title" content="Katedral Makna — Evolusi Pikiran & Fungsi Sosial">
-<meta property="og:description" content="Dari rasa dan kepercayaan hingga filsafat dan sains—bagaimana cara berpikir kita membangun ikatan sosial dari keluarga sampai algoritma, dengan transisi halus antarbab.">
+<meta property="og:description" content="Dari rasa dan kepercayaan hingga filsafat dan sains—bagaimana cara berpikir kita membangun ikatan sosial dari keluarga sampai algoritma, dalam desain e-book premium.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="id_ID">
 <meta property="og:url" content="https://playpal.id/katedral-makna">
 <link rel="canonical" href="https://playpal.id/katedral-makna">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg: #fefefe;
-  --paper: #ffffff;
-  --ink: #1a1a1a;
-  --muted: #6b7280;
-  --subtle: #f3f4f6;
-  --border: rgba(0,0,0,0.08);
-  --accent: #3b82f6;
-  --accent-soft: rgba(59,130,246,0.08);
-  --accent-border: rgba(59,130,246,0.2);
-  --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
+/* ====================================================================
+  1. SETUP & DEFINISI VARIABEL DESAIN
+====================================================================
+- Tipografi: Inter (Sans-Serif Elegan)
+- Palet Warna: Neutral Premium (Off-White, Soft Gray) + Aksen (Sage Green)
+- Transisi: Halus untuk nuansa premium
+*/
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Light Mode Palette */
+  --bg: #F8F7F4;                /* Beige lembut / Off-white */
+  --paper: #FFFFFF;
+  --ink: #202020;                /* Abu-abu gelap, bukan hitam pekat */
+  --muted: #6A6A6A;
+  --hairline: #EAE9E4;
+  --accent: #4A6B5D;            /* Sage Green */
+  --accent-light: #F0F3F2;      /* Latar belakang untuk callout */
+  --accent-border: #D8DFDB;
+
+  --transition-speed: 300ms;
 }
 
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg: #0a0a0a;
-    --paper: #111111;
-    --ink: #f9fafb;
-    --muted: #9ca3af;
-    --subtle: #1f2937;
-    --border: rgba(255,255,255,0.1);
-    --accent: #60a5fa;
-    --accent-soft: rgba(96,165,250,0.1);
-    --accent-border: rgba(96,165,250,0.3);
-    --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.3);
-    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.3);
-    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5), 0 4px 6px -2px rgba(0,0,0,0.4);
-  }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --paper: #1C1C1C;
+    --ink: #EAEAEA;
+    --muted: #9E9E9E;
+    --hairline: #333333;
+    --accent: #86B8A2;          /* Sage Green versi terang */
+    --accent-light: #252D2A;
+    --accent-border: #3A4C45;
+  }
 }
 
-*,*::before,*::after{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html{
-  -webkit-text-size-adjust:100%;
-  scroll-behavior:smooth;
-  overflow-x:hidden;
-  scrollbar-gutter:stable both-edges;
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto}
-  *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
 }
 
-body{
-  background:var(--bg);
-  color:var(--ink);
-  font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-  font-size:17px;
-  line-height:1.7;
-  font-weight:400;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  overflow-x:hidden;
-  transition:background-color 0.3s ease, color 0.3s ease;
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 18px;    /* Ukuran dasar lebih nyaman dibaca */
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
 }
 
-.container{
-  max-width:800px;
-  margin:0 auto;
-  padding:clamp(2rem,6vw,4rem) clamp(1.5rem,5vw,3rem);
+/* ====================================================================
+  2. STRUKTUR & LAYOUT UTAMA
+====================================================================
+- Grid proporsional dengan negative space luas
+- Wrapper terpusat untuk fokus maksimal
+*/
+.wrapper {
+  width: 100%;
+  max-width: 820px;
+  padding: clamp(2rem, 8vw, 6rem) clamp(1rem, 5vw, 2.5rem);
 }
 
-/* Progress Bar */
-.progress{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  height:3px;
-  background:var(--subtle);
-  z-index:1000;
-  opacity:0;
-  animation:fadeIn 0.5s ease 0.5s forwards;
+header {
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
-.progress-bar{
-  height:100%;
-  background:linear-gradient(90deg, var(--accent), #10b981);
-  width:0%;
-  transition:width 0.1s ease;
+main article {
+  /* Tanpa background 'paper' terpisah, menyatu dengan body */
+  /* untuk tampilan lebih bersih dan modern */
 }
 
-@keyframes fadeIn{
-  to{opacity:1}
+section + section {
+  margin-top: 4rem;
 }
 
-/* Header */
-header{
-  text-align:center;
-  margin-bottom:clamp(3rem,8vw,5rem);
-  opacity:0;
-  transform:translateY(20px);
-  animation:slideUp 0.8s ease 0.2s forwards;
+/* ====================================================================
+  3. HIERARKI TIPOGRAFI
+====================================================================
+- Menggunakan font 'Inter' dengan bobot dan ukuran yang jelas
+- Fluid typography (clamp) untuk responsivitas
+*/
+.kicker {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
-@keyframes slideUp{
-  to{opacity:1;transform:translateY(0)}
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 1.5rem + 4vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+  margin-bottom: 1.5rem;
 }
 
-.kicker{
-  font-size:15px;
-  font-weight:500;
-  color:var(--muted);
-  letter-spacing:0.02em;
-  margin-bottom:1rem;
-  line-height:1.6;
-  max-width:600px;
-  margin-left:auto;
-  margin-right:auto;
+.byline {
+  color: var(--muted);
+  font-size: 1rem;
+}
+.byline strong {
+  font-weight: 500;
+  color: var(--ink);
 }
 
-h1{
-  font-size:clamp(2.5rem,5vw,4rem);
-  font-weight:700;
-  line-height:1.1;
-  letter-spacing:-0.02em;
-  margin-bottom:1rem;
-  background:linear-gradient(135deg, var(--ink), var(--muted));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 1.4rem + 1.5vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin: 4rem 0 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--hairline);
 }
 
-.byline{
-  color:var(--muted);
-  font-size:15px;
-  font-weight:500;
+section:first-of-type h2 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
-.byline strong{
-  font-weight:600;
-  color:var(--accent);
+h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 2rem 0 0.5rem;
+  color: var(--ink);
 }
 
-/* Main Article */
-main{
-  opacity:0;
-  transform:translateY(30px);
-  animation:slideUp 0.8s ease 0.4s forwards;
+p, ul {
+  max-width: 70ch; /* Batasi panjang baris untuk kenyamanan baca */
+  margin-bottom: 1.5rem;
+  text-wrap: pretty;
+  overflow-wrap: anywhere;
 }
 
-article{
-  background:var(--paper);
-  border-radius:var(--radius-xl);
-  padding:clamp(2.5rem,6vw,4rem);
-  box-shadow:var(--shadow-lg);
-  border:1px solid var(--border);
-  position:relative;
-  overflow:hidden;
+/* ====================================================================
+  4. KOMPONEN & ELEMEN STYLING
+====================================================================
+- Ikon SVG minimalis untuk list
+- Callout yang elegan dan tidak mencolok
+- Ilustrasi & diagram yang bersih
+*/
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-article::before{
-  content:'';
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:4px;
-  background:linear-gradient(90deg, var(--accent), #10b981, #f59e0b);
-  opacity:0.6;
+li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 0.75rem;
 }
 
-/* Typography */
-section{
-  margin-bottom:clamp(2.5rem,6vw,4rem);
+li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 16px;
+  height: 2px;
+  background-color: var(--accent);
+  opacity: 0.6;
+  /* Mengganti '›' dengan garis minimalis, simbol pertumbuhan */
 }
 
-section:last-child{
-  margin-bottom:0;
+.figure {
+  margin: 3rem 0;
+  text-align: center;
 }
 
-h2{
-  font-size:clamp(1.75rem,4vw,2.25rem);
-  font-weight:700;
-  line-height:1.2;
-  letter-spacing:-0.01em;
-  margin-bottom:1.5rem;
-  color:var(--ink);
-  position:relative;
-  padding-left:1rem;
+.diagram {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
-h2::before{
-  content:'';
-  position:absolute;
-  left:0;
-  top:0.2em;
-  width:4px;
-  height:1.2em;
-  background:linear-gradient(135deg, var(--accent), #10b981);
-  border-radius:2px;
+.callout {
+  background-color: var(--accent-light);
+  border-left: 3px solid var(--accent);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+.callout p { margin-bottom: 0; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--hairline);
+  margin: 3rem 0;
 }
 
-h3{
-  font-size:1.25rem;
-  font-weight:600;
-  line-height:1.3;
-  margin:2rem 0 1rem;
-  color:var(--ink);
+.small { color: var(--muted); font-size: 0.9rem; }
+.emph { font-style: italic; color: var(--muted); }
+::selection { background: var(--accent); color: var(--bg); }
+.srOnly { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+/* ====================================================================
+  5. ANIMASI & INTERAKSI
+====================================================================
+- Progress bar dengan gaya modern
+- Transisi lembut untuk menambah kesan premium
+*/
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  z-index: 1000;
 }
 
-p{
-  margin-bottom:1.5rem;
-  font-size:1.05rem;
-  line-height:1.7;
-  color:var(--ink);
+.progress-bar-indicator {
+  width: 0%;
+  height: 100%;
+  background-color: var(--accent);
+  transition: width 150ms ease-out;
 }
 
-/* Lists */
-ul{
-  margin:1rem 0 2rem;
-  padding:0;
-  list-style:none;
+/* Transisi fade-in untuk section saat scroll */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-li{
-  margin:0.75rem 0;
-  padding-left:2rem;
-  position:relative;
-  font-size:1.05rem;
-  line-height:1.6;
+
+/* ====================================================================
+  6. PRINT STYLES
+====================================================================
+- Optimasi untuk versi cetak yang profesional
+*/
+@media print {
+  :root {
+    --bg: #FFFFFF;
+    --paper: #FFFFFF;
+    --ink: #000000;
+    --muted: #555555;
+    --hairline: #DDDDDD;
+    --accent: #444444;
+  }
+
+  body { font-size: 12pt; line-height: 1.5; }
+  .wrapper { max-width: 100%; padding: 1in; }
+  .progress-bar, .kicker, .byline { display: none; }
+  h1 { font-size: 28pt; }
+  h2 { font-size: 20pt; margin-top: 2rem; padding-top: 1rem; }
+  h3 { font-size: 15pt; }
+  section { page-break-before: auto; }
+  .diagram { max-width: 90%; }
+  .callout { background-color: #f5f5f5; border-left: 2px solid #ccc; }
 }
 
-li::before{
-  content:'';
-  position:absolute;
-  left:0;
-  top:0.7em;
-  width:8px;
-  height:8px;
-  background:var(--accent);
-  border-radius:50%;
-  transform:translateY(-50%);
-}
-
-/* Callouts */
-.callout{
-  background:var(--accent-soft);
-  border:1px solid var(--accent-border);
-  border-radius:var(--radius-md);
-  padding:1.5rem;
-  margin:2rem 0;
-  position:relative;
-  overflow:hidden;
-}
-
-.callout::before{
-  content:'';
-  position:absolute;
-  left:0;
-  top:0;
-  bottom:0;
-  width:4px;
-  background:var(--accent);
-}
-
-.callout strong{
-  color:var(--accent);
-  font-weight:600;
-}
-
-/* Figures and SVGs */
-.figure{
-  display:flex;
-  justify-content:center;
-  margin:2.5rem 0;
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeInUp 0.6s ease forwards;
-}
-
-@keyframes fadeInUp{
-  to{opacity:1;transform:translateY(0)}
-}
-
-.icon{
-  width:80px;
-  height:80px;
-  opacity:0.9;
-}
-
-.diagram{
-  width:100%;
-  max-width:100%;
-  height:auto;
-  display:block;
-  filter:drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-}
-
-svg{
-  stroke-linecap:round;
-  stroke-linejoin:round;
-  max-width:100%;
-}
-
-/* SVG Styles */
-.tick{stroke:var(--border);stroke-width:2}
-.dot{fill:var(--accent)}
-.lab{font:600 14px 'Inter',system-ui,sans-serif;fill:var(--ink)}
-.sub{font:500 12px 'Inter',system-ui,sans-serif;fill:var(--muted)}
-.box{fill:var(--paper);stroke:var(--border);stroke-width:2}
-.label{font:600 14px 'Inter',system-ui,sans-serif;fill:var(--ink)}
-.desc{font:500 12px 'Inter',system-ui,sans-serif;fill:var(--muted)}
-.arrow{stroke:var(--accent);stroke-width:2;marker-end:url(#arrow)}
-.grid{stroke:var(--border);stroke-width:1;opacity:0.3}
-.step{fill:var(--subtle);stroke:var(--border);stroke-width:2;transition:all 0.3s ease}
-.step:hover{fill:var(--accent-soft);stroke:var(--accent-border)}
-
-/* Emphasis */
-.emph{
-  font-style:italic;
-  color:var(--accent);
-  font-weight:500;
-}
-
-.small{
-  color:var(--muted);
-  font-size:0.95rem;
-}
-
-/* Dividers */
-hr{
-  height:1px;
-  border:0;
-  background:var(--border);
-  margin:2rem 0;
-  opacity:0.5;
-}
-
-/* Selection */
-::selection{
-  background:var(--accent-soft);
-  color:var(--accent);
-}
-
-/* Screen Reader */
-.srOnly{
-  position:absolute;
-  width:1px;
-  height:1px;
-  padding:0;
-  margin:-1px;
-  overflow:hidden;
-  clip:rect(0,0,0,0);
-  white-space:nowrap;
-  border:0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px){
-  .container{
-    padding:clamp(1.5rem,4vw,2rem) clamp(1rem,4vw,1.5rem);
-  }
-  
-  article{
-    padding:clamp(1.5rem,4vw,2rem);
-    border-radius:var(--radius-md);
-  }
-  
-  h2{
-    font-size:clamp(1.5rem,5vw,1.75rem);
-  }
-  
-  .diagram{
-    font-size:12px;
-  }
-}
-
-/* Micro Animations */
-@media (prefers-reduced-motion: no-preference){
-  section{
-    opacity:0;
-    transform:translateY(20px);
-    animation:slideUp 0.6s ease forwards;
-  }
-  
-  section:nth-child(1){animation-delay:0.1s}
-  section:nth-child(2){animation-delay:0.2s}
-  section:nth-child(3){animation-delay:0.3s}
-  section:nth-child(4){animation-delay:0.4s}
-  section:nth-child(5){animation-delay:0.5s}
-  section:nth-child(6){animation-delay:0.6s}
-  section:nth-child(7){animation-delay:0.7s}
-  
-  .callout{
-    transition:all 0.3s ease;
-  }
-  
-  .callout:hover{
-    transform:translateY(-2px);
-    box-shadow:var(--shadow-lg);
-  }
-  
-  h2{
-    transition:color 0.3s ease;
-  }
-  
-  h2:hover{
-    color:var(--accent);
-  }
-}
-
-/* Print Styles */
-@media print{
-  .progress{display:none}
-  body{background:white;color:black}
-  article{box-shadow:none;border:1px solid #ccc}
-  .figure{break-inside:avoid}
-  section{break-inside:avoid-page}
-}
 </style>
 </head>
 <body>
-<div class="progress">
-  <div class="progress-bar"></div>
+
+<div class="progress-bar" aria-hidden="true">
+  <div class="progress-bar-indicator"></div>
 </div>
 
-<div class="container">
-  <header role="banner">
-    <div class="kicker">Jejak evolusi pikiran: dari rasa, kepercayaan, filsafat, hingga sains — dan bagaimana itu membangun ikatan
+<div class="wrapper">
+  <header role="banner">
+    <div class="kicker">Evolusi Pikiran & Fungsi Sosial</div>
+    <h1>Katedral Makna</h1>
+    <div class="byline">Oleh <strong>PlayPal.ID</strong></div>
+  </header>
+
+  <main role="main">
+    <article role="article">
+            <section id="pengantar">
+        <h2>Mengapa Kita Mencari Arti?</h2>
+        <p>Hanya manusia yang menatap langit malam dan bertanya, “mengapa aku di sini?”. Kita membuat musik, menulis doa, menyusun hukum. Namun pikiran tidak langsung lahir matang; ia tumbuh bertahap—didorong kebutuhan untuk segera selamat, lalu perlahan belajar memberi makna yang makin rapi.</p>
+        <p>Buku mini ini menelusuri tangga: <strong>rasa → kepercayaan → filsafat → sains</strong>. Setelah itu, kita tarik benang fungsinya bagi masyarakat: <strong>keluarga → suku → kerajaan/negara → Tuhan → uang → algoritma</strong>. Setiap tahap lahir dari keterbatasan tahap sebelumnya dan membuka skala kerja sama yang lebih besar—ibarat sungai kecil yang akhirnya bermuara ke samudra.</p>
+      </section>
+
+            <section id="rasa">
+        <h2>Rasa: Bahasa Pertama Otak</h2>
+        <p>Jauh sebelum ada logika, otak bekerja hemat energi. Ia memprioritaskan selamat, bukan akurat. Karena itu, <strong>emosi</strong>—takut, senang, jijik, lapar—menjadi kompas cepat untuk memutuskan. Lebih baik “salah takut” daripada “salah santai”.</p>
+        <h3>Contoh Pola Pikir Berbasis Rasa</h3>
+        <ul>
+          <li>Melihat kilat → takut → mencari tempat berlindung.</li>
+          <li>Buah manis → senang → menyimpan lokasi (memori emosional memperkuat ingatan).</li>
+          <li>Bau busuk → jijik → menghindar (pengaman dasar dari racun/patogen).</li>
+        </ul>
+        <p>Namun secepat apa pun ia bekerja, rasa hanya memberi sinyal—bukan penjelasan. Dari celah inilah muncul kebutuhan untuk menenun cerita agar dunia yang membingungkan terasa masuk akal.</p>
+        <p class="emph">Dari sinilah kepercayaan lahir.</p>
+      </section>
+
+      <section id="kepercayaan">
+        <h2>Kepercayaan: Cerita Yang Menyatukan</h2>
+        <p>Ketika rasa tak cukup menjelaskan fenomena—petir, gempa, panen—manusia menciptakan <strong>cerita</strong>. Cerita itu irasional menurut standar modern, tetapi fungsional: ia mengikat kelompok, memberi alasan bersama untuk bertindak, dan menenangkan kecemasan akan hal-hal di luar kontrol.</p>
+        
+        <hr>
+        <h3>Sejarah Singkat: Dari Animisme ke Monoteisme</h3>
+        <p><strong>Animisme</strong> memandang alam berjiwa. Saat kota-kota lahir, <strong>politeisme</strong> muncul. Pada skala politik dan moral yang lebih luas, gagasan <strong>monoteisme</strong> menawarkan satu pusat hukum dan makna yang universal. Setiap tahap adalah adaptasi terhadap skala sosial yang makin kompleks.</p>
+        <figure class="figure">
+                      <svg class="diagram" viewBox="0 0 760 180" aria-label="Garis waktu ide keagamaan: Animisme, Totem & Leluhur, Politeisme, Monoteisme.">
+            <style>
+              .line-path { stroke: var(--hairline); stroke-width: 2; }
+              .node-circle { fill: var(--bg); stroke: var(--accent); stroke-width: 2.5; }
+              .node-label { font-family: var(--font-sans); font-weight: 600; font-size: 15px; fill: var(--ink); text-anchor: middle; }
+              .node-sublabel { font-family: var(--font-sans); font-weight: 400; font-size: 13px; fill: var(--muted); text-anchor: middle; }
+            </style>
+            <path class="line-path" d="M 60 110 H 700" />
+              <g transform="translate(120, 110)">
+                <circle class="node-circle" r="8"/>
+                <text class="node-label" y="-45">Animisme</text><text class="node-sublabel" y="-25">alam berjiwa</text>
+              </g>
+              <g transform="translate(280, 110)">
+                <circle class="node-circle" r="8"/>
+                <text class="node-label" y="-45">Totem/Leluhur</text><text class="node-sublabel" y="-25">ikatan moral</text>
+              </g>
+              <g transform="translate(480, 110)">
+                <circle class="node-circle" r="8"/>
+                <text class="node-label" y="-45">Politeisme</text><text class="node-sublabel" y="-25">dewa fungsional</text>
+              </g>
+              <g transform="translate(640, 110)">
+                <circle class="node-circle" r="8"/>
+                <text class="node-label" y="-45">Monoteisme</text><text class="node-sublabel" y="-25">pusat moral</text>
+              </g>
+          </svg>
+        </figure>
+        <p>Kepercayaan menambal kekosongan penjelasan. Tetapi ketika sebagian orang mulai ragu pada cerita kolektif, lahir upaya baru: mencari alasan yang bisa dipertanggungjawabkan tanpa bergantung pada mitos.</p>
+        <p class="emph">Di situlah filsafat muncul.</p>
+      </section>
+
+      <section id="filsafat">
+        <h2>Filsafat: Logika Tanpa Uji</h2>
+        <p>Filsafat bertanya: “apakah cerita itu benar, atau hanya simbol?”. Ia mencoba menjelaskan dunia dengan <strong>rasio</strong>, bukan mitos. Namun pada tahap ini, kebenaran masih ditimbang lewat argumentasi, belum lewat percobaan sistematis.</p>
+        <p>Filsafat menertibkan cara bertanya. Namun logika yang indah di kepala belum tentu benar di alam. Agar alasan tidak melayang, manusia membutuhkan jangkar yang menambatkannya pada kenyataan.</p>
+        <p class="emph">Itulah mengapa sains lahir.</p>
+      </section>
+
+      <section id="sains">
+        <h2>Sains: Logika + Empiris</h2>
+        <p>Sains mensyaratkan pertemuan argumen dengan <strong>data</strong>. Klaim harus dapat diuji, diulang, dan dipalsukan. Metodenya sederhana namun dahsyat: ajukan hipotesis, turunkan prediksi, lakukan observasi/eksperimen, bandingkan hasil, revisi teori.</p>
+        <figure class="figure">
+            <svg class="diagram" viewBox="0 0 760 200" aria-label="Evolusi cara berpikir dari Rasa ke Sains, yang terbagi menjadi fungsi sosial dan fungsi pengetahuan.">
+              <style>
+                .flow-box { fill: var(--paper); stroke: var(--hairline); stroke-width: 1.5; rx: 8; }
+                .flow-arrow { fill: none; stroke: var(--accent); stroke-width: 2; marker-end: url(#arrowhead); }
+                .flow-label { font-family: var(--font-sans); font-weight: 500; font-size: 15px; fill: var(--ink); text-anchor: middle; }
+                .flow-sublabel { font-family: var(--font-sans); font-size: 12px; fill: var(--muted); text-anchor: middle; }
+              </style>
+              <defs>
+                <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--accent)" />
+                </marker>
+              </defs>
+              
+              <g>
+                <rect class="flow-box" x="20" y="20" width="160" height="60" />
+                <text class="flow-label" x="100" y="48">Rasa</text><text class="flow-sublabel" x="100" y="65">emosi & insting</text>
+              </g>
+              <path class="flow-arrow" d="M 185 50 h 20"/>
+              <g>
+                <rect class="flow-box" x="210" y="20" width="160" height="60" />
+                <text class="flow-label" x="290" y="48">Kepercayaan</text><text class="flow-sublabel" x="290" y="65">mitos & cerita</text>
+              </g>
+              <path class="flow-arrow" d="M 375 50 h 20"/>
+              <g>
+                <rect class="flow-box" x="400" y="20" width="160" height="60" />
+                <text class="flow-label" x="480" y="48">Filsafat</text><text class="flow-sublabel" x="480" y="65">logika & rasio</text>
+              </g>
+              <path class="flow-arrow" d="M 565 50 h 20"/>
+              <g>
+                <rect class="flow-box" x="590" y="20" width="160" height="60" />
+                <text class="flow-label" x="670" y="48">Sains</text><text class="flow-sublabel" x="670" y="65">logika & data</text>
+              </g>
+              
+              <path class="flow-arrow" d="M 290 85 v 30"/>
+              <g>
+                <rect class="flow-box" x="180" y="120" width="220" height="60" />
+                <text class="flow-label" x="290" y="148">Fungsi Sosial</text><text class="flow-sublabel" x="290" y="165">koordinasi & makna</text>
+              </g>
+              <path class="flow-arrow" d="M 480 85 v 30"/>
+              <g>
+                <rect class="flow-box" x="370" y="120" width="220" height="60" />
+                <text class="flow-label" x="480" y="148">Fungsi Pengetahuan</text><text class="flow-sublabel" x="480" y="165">prediksi & kontrol</text>
+              </g>
+            </svg>
+        </figure>
+        <p>Pengetahuan terasa mantap dengan sains. Namun hidup manusia bukan hanya tentang benar-salah; ia juga tentang bagaimana kita <em>hidup bersama</em>. Kita turun dari menara teori ke jalan raya masyarakat.</p>
+      </section>
+
+            <section id="fungsi-sosial">
+        <h2>Fungsi Sosial: Dari Keluarga Sampai Algoritma</h2>
+        <p>Pikiran manusia tidak hanya membaca alam; ia merancang <strong>abstraksi sosial</strong> yang memungkinkan kerja sama dalam skala makin besar. Tangga ini bergerak dari yang paling konkret ke paling abstrak: <strong>keluarga → suku → negara → Tuhan → uang → algoritma</strong>.</p>
+
+        <div class="callout">
+          <p><strong>Inti Fungsi Sosial:</strong> Semakin abstrak medianya (dari wajah → simbol → angka → kode), semakin luas jangkauan koordinasinya—tetapi juga semakin besar risiko bias sistemik.</p>
+        </div>
+        
+        <figure class="figure">
+            <svg class="diagram" viewBox="0 0 760 400" aria-label="Tangga abstraksi sosial dari Keluarga hingga Algoritma.">
+              <style>
+                .step-line { stroke: var(--hairline); stroke-width: 2; }
+                .step-circle { fill: var(--accent); }
+                .step-label { font-family: var(--font-sans); font-weight: 600; font-size: 16px; fill: var(--ink); }
+                .step-sublabel { font-family: var(--font-sans); font-size: 13px; fill: var(--muted); }
+              </style>
+              
+              <path class="step-line" d="M 380 40 V 360" />
+              
+              <g>
+                <circle class="step-circle" cx="380" cy="350" r="7"/>
+                <text class="step-label" x="400" y="355">Keluarga</text>
+                <text class="step-sublabel" x="400" y="375">ikatan emosional</text>
+              </g>
+              <g>
+                <circle class="step-circle" cx="380" cy="290" r="7"/>
+                <text class="step-label" x="400" y="295">Suku</text>
+                <text class="step-sublabel" x="400" y="315">tradisi & mitos</text>
+              </g>
+              <g>
+                <circle class="step-circle" cx="380" cy="230" r="7"/>
+                <text class="step-label" x="400" y="235">Negara</text>
+                <text class="step-sublabel" x="400" y="255">hukum & simbol</text>
+              </g>
+              <g>
+                <circle class="step-circle" cx="380" cy="170" r="7"/>
+                <text class="step-label" x="400" y="175">Tuhan</text>
+                <text class="step-sublabel" x="400" y="195">otoritas moral</text>
+              </g>
+              <g>
+                <circle class="step-circle" cx="380" cy="110" r="7"/>
+                <text class="step-label" x="400" y="115">Uang</text>
+                <text class="step-sublabel" x="400" y="135">abstraksi ekonomi</text>
+              </g>
+              <g>
+                <circle class="step-circle" cx="380" cy="50" r="7"/>
+                <text class="step-label" x="400" y="55">Algoritma</text>
+                <text class="step-sublabel" x="400" y="75">logika digital</text>
+              </g>
+            </svg>
+        </figure>
+        <p>Pada akhirnya, semua lapisan ini saling menopang: rasa menjaga kita, kepercayaan menyatukan kita, filsafat merapikan tanya, dan sains menguji jawaban; sementara keluarga hingga algoritma menyediakan panggung tempat semua itu bermain.</p>
+        <p class="emph">Katedral makna pun berdiri: dibangun dari batu pengalaman, ditopang lengkung cerita, dan diterangi jendela sains.</p>
+      </section>
+
+            <section id="penutup">
+        <h2>Katedral Makna</h2>
+        <p>Dari tubuh yang ingin selamat (rasa), ke cerita yang menyatukan (kepercayaan), ke argumen yang menertibkan (filsafat), hingga prosedur yang menguji (sains), manusia membangun sebuah <strong>katedral makna</strong>. Bangunan itu menaungi ikatan yang makin abstrak: dari keluarga sampai algoritma. Ia berdiri di pikiran, namun dampaknya nyata: lebih banyak kerja sama, lebih tajam prediksi, dan—harapannya—lebih bijak keputusan. Dan seperti semua katedral, ia tak pernah benar-benar selesai; selalu ada batu terakhir yang menunggu diletakkan esok hari.</p>
+      </section>
+
+    </article>
+  </main>
+</div>
+
+<script>
+// Skrip untuk Progress Bar
+const progressBar = document.querySelector('.progress-bar-indicator');
+const article = document.querySelector('article');
+
+const updateProgressBar = () => {
+  if (!article || !progressBar) return;
+  const articleRect = article.getBoundingClientRect();
+  const scrollableHeight = articleRect.height - window.innerHeight;
+  let progress = (-articleRect.top / scrollableHeight) * 100;
+  progress = Math.min(100, Math.max(0, progress));
+  progressBar.style.width = progress + '%';
+};
+
+// Skrip untuk Animasi Fade-in Section
+const sections = document.querySelectorAll('section');
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+};
+
+const sectionObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+sections.forEach(section => {
+  sectionObserver.observe(section);
+});
+
+// Event Listeners
+window.addEventListener('scroll', updateProgressBar, { passive: true });
+window.addEventListener('resize', updateProgressBar, { passive: true });
+
+// Initial call
+updateProgressBar();
+
+</script>
+</body>
+</html>
