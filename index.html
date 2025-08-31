@@ -6,7 +6,6 @@
 <meta name="color-scheme" content="light dark" />
 <title>Di Antara Jutaan Spesies — PlayPal.ID</title>
 
-<!-- Ringkas SEO -->
 <meta name="description" content="Versi bahasa awam namun tetap ilmiah: dari otak bertahan hidup menuju pencipta makna—dunia nyata, dunia rasa, dan dunia cerita bersama; agama sebagai hasil perjalanan panjang pikiran manusia.">
 <meta name="author" content="PlayPal.ID">
 <meta property="og:title" content="Di Antara Jutaan Spesies — Dari Otak Survival ke Pencipta Makna">
@@ -15,92 +14,177 @@
 <meta property="og:locale" content="id_ID">
 
 <style>
-/* ===== FLAT PREMIUM: simple & clean ===== */
-:root{
-  --bg:#f7f9fc;
-  --paper:#ffffff;
-  --ink:#0e1218;
-  --muted:#647089;
-  --hair:rgba(15,20,30,.08);
-  --accent:#5C80BC;
+/* ===== APPLE MINIMALIST MODERN STYLE ===== */
+:root {
+  /* Palet Warna Terinspirasi Apple (Light Mode) */
+  --bg: #f5f5f7; /* Abu-abu latar belakang yang sangat terang */
+  --paper: #ffffff;
+  --ink: #1d1d1f; /* Hitam yang tidak pekat, lebih nyaman di mata */
+  --muted: #6e6e73; /* Abu-abu sekunder */
+  --hair: rgba(0, 0, 0, 0.15); /* Garis pemisah yang sangat tipis */
+  --accent: #007aff; /* Biru khas Apple */
+  --shadow: rgba(0, 0, 0, 0.04);
 }
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0b0f14;
-    --paper:#0f141b;
-    --ink:#e8ecf5;
-    --muted:#a6b0c3;
-    --hair:rgba(255,255,255,.10);
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Palet Warna Terinspirasi Apple (Dark Mode) */
+    --bg: #000000;
+    --paper: #161617;
+    --ink: #f5f5f7;
+    --muted: #86868b;
+    --hair: rgba(255, 255, 255, 0.15);
+    --accent: #0a84ff;
+    --shadow: rgba(0, 0, 0, 0.2);
   }
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;text-size-adjust:100%}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-
-body{
-  margin:0; background:var(--bg); color:var(--ink);
-  font:400 1rem/1.75 -apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Inter,Segoe UI,Roboto,system-ui,Arial,sans-serif;
-  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+/* ===== RESET & DASAR ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
-/* Layout */
-.wrapper{max-width:74ch; margin-inline:auto; padding:clamp(16px,3vw,28px)}
-header{padding-block:10px 12px}
-.kicker{font-size:.92rem; color:var(--muted); letter-spacing:.02em}
-h1{
-  margin:.25rem 0 .35rem; line-height:1.16; letter-spacing:-.015em;
-  font-size:clamp(1.7rem,1.2rem + 2.2vw,2.5rem); text-wrap:balance;
-}
-.byline{color:var(--muted); font-size:.95rem}
-
-/* Article card (flat, no shadow) */
-article{
-  background:var(--paper);
-  border:1px solid var(--hair);
-  border-radius:14px;
-  padding:clamp(18px,2.6vw,28px);
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Headings */
-section + section{margin-top:1.3rem}
-h2{
-  display:flex; align-items:center; gap:.6rem;
-  margin:1.6rem 0 .55rem;
-  font-size:clamp(1.2rem,1.05rem + .8vw,1.55rem);
-  line-height:1.28; text-wrap:balance;
-}
-h2::before{
-  content:""; width:8px; height:22px; border-radius:6px; background:var(--accent);
+/* ===== LAYOUT UTAMA ===== */
+.wrapper {
+  max-width: 680px; /* Lebar baca yang ideal */
+  margin-inline: auto;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
 }
 
-/* Paragraphs */
-p{margin:.85rem 0; font-size:clamp(1.02rem,1rem + .25vw,1.14rem); text-wrap:pretty}
-
-/* Tiny hairline divider */
-.hr{height:1px; background:var(--hair); margin:1.1rem 0}
-
-/* Minimal icons/diagrams */
-.figure{display:flex; justify-content:center; margin:.4rem 0 .2rem}
-.icon{width:76px; height:76px}
-.diagram{width:100%; max-width:560px; height:auto}
-svg{stroke-linecap:round; stroke-linejoin:round}
-
-/* Subtle progress line */
-.progress{
-  height:3px; position:sticky; top:0; left:0; z-index:20;
-  background:linear-gradient(to right,var(--accent),var(--accent)) no-repeat;
-  background-size:0% 100%;
+header {
+  padding-block: 1rem 2rem;
+  text-align: center;
 }
 
-/* Selection */
-::selection{background:color-mix(in srgb, var(--accent) 20%, transparent)}
-
-/* Print */
-@media print{
-  .progress{display:none}
-  article{border-color:transparent; padding:0}
+.kicker {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
+
+h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: clamp(2.2rem, 1.5rem + 3vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.022em;
+  text-wrap: balance;
+  margin-bottom: 0.75rem;
+}
+
+.byline {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.byline strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* ===== KARTU ARTIKEL ===== */
+article {
+  background: var(--paper);
+  border-radius: 18px; /* Sudut lebih tumpul khas iOS/macOS */
+  padding: clamp(2rem, 5vw, 3.5rem);
+  box-shadow: 0 1px 2px var(--shadow), 0 8px 24px var(--shadow);
+  border: 1px solid var(--hair);
+}
+@media (prefers-color-scheme: dark){
+  article { border: 1px solid var(--hair); }
+}
+
+
+/* ===== TIPOGRAFI ARTIKEL ===== */
+section + section {
+  margin-top: 2.5rem;
+}
+h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 2.5rem 0 0.5rem;
+  font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.7rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  border-top: 1px solid var(--hair);
+  padding-top: 2.5rem;
+}
+section:first-of-type h2{
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem; /* Sedikit lebih besar untuk kenyamanan membaca */
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Menghilangkan .hr, diganti dengan border-top di H2 */
+.hr { display: none; }
+
+/* ===== GAMBAR & DIAGRAM ===== */
+.figure {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 1.2rem;
+}
+.icon { width: 64px; height: 64px; opacity: 0.8; }
+.diagram { width: 100%; max-width: 480px; height: auto; opacity: 0.85; }
+svg { stroke-linecap: round; stroke-linejoin: round; }
+
+
+/* ===== ELEMEN LAIN ===== */
+.progress {
+  height: 4px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: linear-gradient(to right, var(--accent), var(--accent)) no-repeat;
+  background-size: 0% 100%;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+@media print {
+  body { background: #fff; color: #000; font-size: 12pt; }
+  .progress, header, footer { display: none; }
+  .wrapper { max-width: 100%; padding: 0; }
+  article { border: 0; box-shadow: none; padding: 0; }
+  h2 { border-top: 1px solid #ccc; }
+}
+
 </style>
 </head>
 <body>
@@ -114,20 +198,15 @@ svg{stroke-linecap:round; stroke-linejoin:round}
   </header>
 
   <article role="article">
-    <!-- Pembuka -->
     <section id="pembuka" aria-labelledby="pembuka-title">
       <h2 id="pembuka-title">Pembuka</h2>
       <p>Kita ini unik. Kalau agama kita dihina, kita bisa tersulut marah. Tapi kalau harga beras naik, kita sering diam saja. Kita rela mati demi Tuhan yang tak terlihat, tapi juga rela hidup demi uang yang sehari-hari kita anggap kotor.</p>
       <p>Mengapa? Karena sejak awal otak kita bukan mesin pencari kebenaran, melainkan mesin bertahan hidup. Lama-lama, mesin ini berkembang menjadi mesin yang menciptakan arti dan cerita. Dari sana lahir tiga dunia yang kita jalani: <em>dunia nyata</em> yang bisa disentuh, <em>dunia rasa</em> di dalam diri, dan <em>dunia cerita bersama</em> yang hanya ada karena kita percaya bersama. Agama berdiri di puncak dunia cerita itu: tumbuh dari cara otak kita menata hidup.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
-
-    <!-- 1. Otak Survival -->
     <section id="survival" aria-labelledby="s1">
       <h2 id="s1">1. Otak Bertahan Hidup (Dunia Nyata)</h2>
       <div class="figure" aria-hidden="true">
-        <!-- perisai + kilat -->
         <svg class="icon" viewBox="0 0 96 96">
           <path d="M48 14l26 10v18c0 18-12 30-26 38C34 72 22 60 22 42V24l26-10z" fill="none" stroke="currentColor" stroke-width="2"/>
           <path d="M46 28l-6 12h8l-6 12" fill="none" stroke="var(--accent)" stroke-width="2"/>
@@ -137,13 +216,9 @@ svg{stroke-linecap:round; stroke-linejoin:round}
       <p>Begitu juga kita. Di jalan raya, saat motor tiba-tiba menyalip, rem diinjak dulu, mikir belakangan. Otak kita didesain untuk <strong>selamat dulu</strong>, akurat nanti. Sistem cepat ini kadang keliru, tapi menyelamatkan. Kita lebih takut kecelakaan yang heboh ketimbang penyakit sunyi seperti darah tinggi. Analogi mudah: <strong>helm motor</strong>. Helm tidak membuat kita lebih jago, tapi melindungi saat jatuh.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
-
-    <!-- 2. Emosi -->
     <section id="emosi" aria-labelledby="s2">
       <h2 id="s2">2. Emosi: Kompas Rasa</h2>
       <div class="figure" aria-hidden="true">
-        <!-- hati-kompas -->
         <svg class="icon" viewBox="0 0 96 96">
           <path d="M48 74s-24-16-24-34a12 12 0 0 1 24-7 12 12 0 0 1 24 7c0 18-24 34-24 34z" fill="none" stroke="currentColor" stroke-width="2"/>
           <circle cx="48" cy="52" r="8" fill="none" stroke="var(--accent)" stroke-width="2"/>
@@ -155,13 +230,9 @@ svg{stroke-linecap:round; stroke-linejoin:round}
       <p>Riset otak menunjukkan, tanpa emosi orang sulit mengambil keputusan. Emosi bukan musuh logika—ia <em>bahan bakarnya</em>. Dalam budaya kita, rasa <em>sungkan</em>, <em>malu</em>, dan <em>gotong royong</em> menuntun pilihan sehari-hari tanpa rumus panjang.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
-
-    <!-- 3. Bahasa & Cerita Bersama -->
     <section id="bahasa" aria-labelledby="s3">
       <h2 id="s3">3. Bahasa: Dunia Cerita Bersama</h2>
       <div class="figure" aria-hidden="true">
-        <!-- tiga lingkaran beririsan -->
         <svg class="diagram" viewBox="0 0 640 240">
           <circle cx="240" cy="120" r="84" fill="none" stroke="currentColor" stroke-width="2"/>
           <circle cx="320" cy="120" r="84" fill="none" stroke="var(--accent)" stroke-width="2"/>
@@ -174,13 +245,9 @@ svg{stroke-linecap:round; stroke-linejoin:round}
       <p><strong>Proklamasi 17 Agustus</strong> membuktikannya: kalimat singkat mengubah nasib jutaan orang. Kata-kata bisa lebih kuat dari senjata ketika diakui bersama.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
-
-    <!-- 4. Dari Suku ke Tuhan -->
     <section id="suku-tuhan" aria-labelledby="s4">
       <h2 id="s4">4. Dari Suku ke Tuhan</h2>
       <div class="figure" aria-hidden="true">
-        <!-- tiga orang → pilar -->
         <svg class="icon" viewBox="0 0 96 96">
           <circle cx="24" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
           <circle cx="48" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -192,13 +259,9 @@ svg{stroke-linecap:round; stroke-linejoin:round}
       <p>Cerita besar memotong biaya curiga. Kita tak perlu kenal semua orang satu per satu, cukup yakin ada aturan yang berlaku untuk semua, dijaga oleh sesuatu yang lebih tinggi dari kepala suku.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
-
-    <!-- 5. Agama -->
     <section id="agama" aria-labelledby="s5">
       <h2 id="s5">5. Agama: Perjalanan Panjang Pikiran</h2>
       <div class="figure" aria-hidden="true">
-        <!-- konsentris -->
         <svg class="icon" viewBox="0 0 96 96">
           <circle cx="48" cy="48" r="26" fill="none" stroke="currentColor" stroke-width="2"/>
           <circle cx="48" cy="48" r="16" fill="none" stroke="var(--accent)" stroke-width="2"/>
@@ -210,13 +273,9 @@ svg{stroke-linecap:round; stroke-linejoin:round}
       <p>Agama kuat karena bekerja di tiga lapis sekaligus: memberi tafsir pada alam, memberi makna pada rasa, dan memberi aturan pada hidup bersama. Itu sebabnya hingga sekarang ia masih mampu menggerakkan jutaan orang.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
-
-    <!-- 6. Paradoks -->
     <section id="paradoks" aria-labelledby="s6">
       <h2 id="s6">6. Paradoks: Tuhan & Uang</h2>
       <div class="figure" aria-hidden="true">
-        <!-- neraca minimal -->
         <svg class="diagram" viewBox="0 0 640 220">
           <line x1="60" y1="170" x2="580" y2="170" stroke="currentColor" stroke-width="2"/>
           <line x1="320" y1="40" x2="320" y2="170" stroke="currentColor" stroke-width="2"/>
@@ -229,13 +288,9 @@ svg{stroke-linecap:round; stroke-linejoin:round}
       <p>Karena uang menyentuh <em>fungsi</em> sehari-hari, sementara Tuhan melekat pada <em>identitas</em>. Menyentuh agama terasa seperti menyentuh harga diri. Bisa jadi yang sering kita bela adalah <strong>cerita kita tentang Tuhan</strong>. Dan yang kita diamkan pada uang adalah kenyataan bahwa ia hanyalah <strong>alat</strong>—dipakai semua orang tanpa perlu dicintai.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
-
-    <!-- 7. Tangga Cerita -->
     <section id="tangga" aria-labelledby="s7">
       <h2 id="s7">7. Tangga Cerita Kita</h2>
       <div class="figure" aria-hidden="true">
-        <!-- tangga -->
         <svg class="diagram" viewBox="0 0 640 220">
           <line x1="80" y1="190" x2="560" y2="190" stroke="currentColor" stroke-width="2"/>
           <path d="M120 190v-22h60v-22h60v-22h60v-22h60v-22h60v-22h60" fill="none" stroke="var(--accent)" stroke-width="2"/>
@@ -250,13 +305,9 @@ svg{stroke-linecap:round; stroke-linejoin:round}
       <p>Perjalanan manusia mirip tangga: <strong>Keluarga → Suku → Kerajaan → Negara → Tuhan → Uang → Algoritma</strong>. Semakin naik, semakin abstrak, namun jangkauannya makin luas. Dari wajah-wajah akrab, ke bendera, ke kitab, ke angka saldo, hingga ke arus informasi di layar kita.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
-
-    <!-- Penutup -->
     <section id="penutup" aria-labelledby="s8">
       <h2 id="s8">Penutup: Katedral Makna</h2>
       <div class="figure" aria-hidden="true">
-        <!-- katedral garis sederhana -->
         <svg class="icon" viewBox="0 0 96 96">
           <path d="M20 72h56M30 72V44l18-14 18 14v28" fill="none" stroke="currentColor" stroke-width="2"/>
           <circle cx="48" cy="50" r="6" fill="var(--accent)"/>
@@ -271,19 +322,29 @@ svg{stroke-linecap:round; stroke-linejoin:round}
 </div>
 
 <script>
-/* progress baca halus (flat) */
+/* progress baca halus */
 (function(){
   const bar = document.querySelector('.progress');
   const art = document.querySelector('article');
+  if (!bar || !art) return;
   const update=()=>{
-    const start = art.offsetTop;
-    const h = art.offsetHeight - innerHeight;
-    const y = scrollY;
-    const p = Math.min(100, Math.max(0, ((y - start) / Math.max(1,h)) * 100));
-    bar.style.backgroundSize = p + '% 100%';
+    const articleTop = art.offsetTop;
+    const articleHeight = art.offsetHeight;
+    const viewportHeight = window.innerHeight;
+    const scrollY = window.scrollY;
+    
+    // Perhitungan dimulai saat bagian atas artikel masuk viewport
+    // dan berakhir saat bagian bawah artikel meninggalkan viewport
+    const totalScrollableHeight = articleHeight;
+    const scrolledDistance = scrollY - articleTop + viewportHeight / 2;
+    
+    let progress = (scrolledDistance / totalScrollableHeight) * 100;
+    progress = Math.min(100, Math.max(0, progress));
+
+    bar.style.backgroundSize = progress + '% 100%';
   };
-  addEventListener('scroll',update,{passive:true});
-  addEventListener('resize',update);
+  addEventListener('scroll', update, { passive: true });
+  addEventListener('resize', update);
   update();
 })();
 </script>
