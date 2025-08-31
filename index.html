@@ -2,36 +2,35 @@
 <html lang="id">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="light dark" />
 <title>Di Antara Jutaan Spesies — PlayPal.ID</title>
 
-<!-- Meta ringkas -->
-<meta name="description" content="Esai tentang evolusi pikiran manusia: dari mesin survival ke pencipta makna—objektif, subjektif, intersubjektif—hingga agama sebagai produk evolusi.">
+<!-- Ringkas SEO -->
+<meta name="description" content="Versi bahasa awam namun tetap ilmiah: dari otak bertahan hidup menuju pencipta makna—dunia nyata, dunia rasa, dan dunia cerita bersama; agama sebagai hasil perjalanan panjang pikiran manusia.">
 <meta name="author" content="PlayPal.ID">
-<meta property="og:title" content="Di Antara Jutaan Spesies: Perjalanan dari Mesin Survival ke Pencipta Makna">
-<meta property="og:description" content="Narasi mengalir dan gamblang tentang otak manusia, emosi, bahasa, agama, dan fiksi sosial.">
+<meta property="og:title" content="Di Antara Jutaan Spesies — Dari Otak Survival ke Pencipta Makna">
+<meta property="og:description" content="Narasi sederhana, runtut, ilmiah untuk pembaca awam.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="id_ID">
 
 <style>
-/* ====== FLAT PREMIUM THEME ====== */
+/* ===== FLAT PREMIUM: simple & clean ===== */
 :root{
-  --bg:#fafbfe;      /* base surface */
-  --ink:#0d1017;     /* main text */
-  --muted:#5e6677;   /* secondary text */
-  --accent:#5C80BC;  /* brand accent */
-  --paper:#ffffff;   /* article surface */
-  --hair:rgba(15,20,30,.08); /* hairline */
+  --bg:#f7f9fc;
+  --paper:#ffffff;
+  --ink:#0e1218;
+  --muted:#647089;
+  --hair:rgba(15,20,30,.08);
+  --accent:#5C80BC;
 }
-
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#0b0f14;
-    --paper:#0e141b;
-    --ink:#e7ecf5;
-    --muted:#a8b1c4;
-    --hair:rgba(255,255,255,.08);
+    --paper:#0f141b;
+    --ink:#e8ecf5;
+    --muted:#a6b0c3;
+    --hair:rgba(255,255,255,.10);
   }
 }
 
@@ -41,39 +40,21 @@ html{scroll-behavior:smooth;text-size-adjust:100%}
 
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font:400 1rem/1.7 -apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Inter,Segoe UI,Roboto,system-ui,Arial,sans-serif;
+  font:400 1rem/1.75 -apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Inter,Segoe UI,Roboto,system-ui,Arial,sans-serif;
   -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 }
 
 /* Layout */
 .wrapper{max-width:74ch; margin-inline:auto; padding:clamp(16px,3vw,28px)}
-.header{padding-block:8px 14px; position:relative}
+header{padding-block:10px 12px}
 .kicker{font-size:.92rem; color:var(--muted); letter-spacing:.02em}
 h1{
-  margin:.2rem 0 .4rem; line-height:1.15; letter-spacing:-.015em;
-  font-size:clamp(1.6rem,1.1rem + 2.2vw,2.4rem); text-wrap:balance;
+  margin:.25rem 0 .35rem; line-height:1.16; letter-spacing:-.015em;
+  font-size:clamp(1.7rem,1.2rem + 2.2vw,2.5rem); text-wrap:balance;
 }
 .byline{color:var(--muted); font-size:.95rem}
 
-/* Progress bar — hairline, flat */
-.progress{
-  height:3px; width:100%; position:sticky; top:0; left:0; z-index:20;
-  background:linear-gradient(to right,var(--accent),var(--accent)) no-repeat;
-  background-size:0% 100%;
-}
-
-/* TOC "chips" flat */
-.toc{
-  display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 18px;
-}
-.toc a{
-  text-decoration:none; color:var(--ink); font-size:.95rem;
-  padding:8px 12px; border-radius:999px;
-  background:var(--paper); border:1px solid var(--hair);
-}
-.toc a:hover,.toc a:focus{outline:none; border-color:var(--accent)}
-
-/* Article surface — FLAT: no shadow, no thick borders */
+/* Article card (flat, no shadow) */
 article{
   background:var(--paper);
   border:1px solid var(--hair);
@@ -81,42 +62,43 @@ article{
   padding:clamp(18px,2.6vw,28px);
 }
 
-/* Headings — accent bar kiri */
-section + section{margin-top:1.25rem}
+/* Headings */
+section + section{margin-top:1.3rem}
 h2{
   display:flex; align-items:center; gap:.6rem;
-  margin:1.6rem 0 .6rem;
-  font-size:clamp(1.22rem,1.05rem + .8vw,1.6rem);
+  margin:1.6rem 0 .55rem;
+  font-size:clamp(1.2rem,1.05rem + .8vw,1.55rem);
   line-height:1.28; text-wrap:balance;
 }
 h2::before{
-  content:""; width:8px; height:24px; border-radius:6px;
-  background:var(--accent);
+  content:""; width:8px; height:22px; border-radius:6px; background:var(--accent);
 }
 
-/* Paragraph */
-p{margin:.9rem 0; font-size:clamp(1.02rem,1rem + .25vw,1.14rem); text-wrap:pretty}
+/* Paragraphs */
+p{margin:.85rem 0; font-size:clamp(1.02rem,1rem + .25vw,1.14rem); text-wrap:pretty}
 
-/* Hairline divider */
-.divider{height:1px; background:var(--hair); margin:1.2rem 0}
+/* Tiny hairline divider */
+.hr{height:1px; background:var(--hair); margin:1.1rem 0}
 
-/* Flat icons (SVG) */
-.figure{display:flex; justify-content:center; margin:.6rem 0 .2rem}
-.icon{width:78px; height:78px}
+/* Minimal icons/diagrams */
+.figure{display:flex; justify-content:center; margin:.4rem 0 .2rem}
+.icon{width:76px; height:76px}
 .diagram{width:100%; max-width:560px; height:auto}
 svg{stroke-linecap:round; stroke-linejoin:round}
 
-/* Links */
-a{color:inherit}
-a.ghost{border-bottom:1px dotted var(--hair); text-decoration:none}
-a.ghost:hover{border-bottom-color:var(--accent)}
+/* Subtle progress line */
+.progress{
+  height:3px; position:sticky; top:0; left:0; z-index:20;
+  background:linear-gradient(to right,var(--accent),var(--accent)) no-repeat;
+  background-size:0% 100%;
+}
 
 /* Selection */
-::selection{background:color-mix(in srgb,var(--accent) 20%, transparent)}
+::selection{background:color-mix(in srgb, var(--accent) 20%, transparent)}
 
 /* Print */
 @media print{
-  .progress,.toc{display:none}
+  .progress{display:none}
   article{border-color:transparent; padding:0}
 }
 </style>
@@ -125,73 +107,61 @@ a.ghost:hover{border-bottom-color:var(--accent)}
 <div class="progress" aria-hidden="true"></div>
 
 <div class="wrapper">
-  <header class="header" role="banner">
-    <div class="kicker">Esai</div>
-    <h1>Di Antara Jutaan Spesies: Perjalanan dari Mesin Survival ke Pencipta Makna</h1>
+  <header role="banner">
+    <div class="kicker">Esai Bahasa Awam • Ilmiah</div>
+    <h1>Di Antara Jutaan Spesies: Dari Otak Bertahan Hidup ke Mesin Pencipta Makna</h1>
     <div class="byline">Penulis: <strong>PlayPal.ID</strong></div>
   </header>
 
-  <!-- TOC chips (flat) -->
-  <nav class="toc" aria-label="Daftar isi">
-    <a href="#pembuka">Pembuka</a>
-    <a href="#mesin-survival">Mesin Survival</a>
-    <a href="#emosi">Emosi</a>
-    <a href="#bahasa">Bahasa</a>
-    <a href="#dari-suku-ke-tuhan">Dari Suku ke Tuhan</a>
-    <a href="#agama">Agama</a>
-    <a href="#paradoks">Paradoks</a>
-    <a href="#tangga">Tangga Intersubjektif</a>
-    <a href="#penutup">Penutup</a>
-  </nav>
-
   <article role="article">
+    <!-- Pembuka -->
     <section id="pembuka" aria-labelledby="pembuka-title">
       <h2 id="pembuka-title">Pembuka</h2>
-      <p>Manusia itu unik. Kita bisa marah besar ketika ada yang menyinggung agama, tapi adem saja saat harga beras naik. Kita rela mati demi Tuhan yang tak pernah kita lihat, tapi juga rela hidup demi uang yang tak pernah kita cintai. Tuhan sering dibela dengan emosi, sementara uang dibiarkan dihina tanpa balasan—padahal uanglah yang tiap hari membeli nasi, membayar kuota, menyelamatkan nyawa di rumah sakit.</p>
-      <p>Mengapa bisa begitu? Karena otak kita, sejak awal, bukan mesin pencari kebenaran murni. Ia adalah mesin bertahan hidup yang perlahan berevolusi menjadi mesin pencipta makna. Dari situ lahir tiga dunia yang kita huni sekaligus: dunia objektif (yang ada di luar kepala), dunia subjektif (rasa di dalam kepala), dan dunia intersubjektif (cerita bersama yang kita sepakati). Agama dan Tuhan berdiri di puncak perjalanan itu—bukan jatuh dari langit begitu saja, melainkan tumbuh dari cara otak kita bekerja.</p>
+      <p>Kita ini unik. Kalau agama kita dihina, kita bisa tersulut marah. Tapi kalau harga beras naik, kita sering diam saja. Kita rela mati demi Tuhan yang tak terlihat, tapi juga rela hidup demi uang yang sehari-hari kita anggap kotor.</p>
+      <p>Mengapa? Karena sejak awal otak kita bukan mesin pencari kebenaran, melainkan mesin bertahan hidup. Lama-lama, mesin ini berkembang menjadi mesin yang menciptakan arti dan cerita. Dari sana lahir tiga dunia yang kita jalani: <em>dunia nyata</em> yang bisa disentuh, <em>dunia rasa</em> di dalam diri, dan <em>dunia cerita bersama</em> yang hanya ada karena kita percaya bersama. Agama berdiri di puncak dunia cerita itu: tumbuh dari cara otak kita menata hidup.</p>
     </section>
 
-    <div class="divider" role="presentation"></div>
+    <div class="hr" role="presentation"></div>
 
-    <section id="mesin-survival" aria-labelledby="s1">
-      <h2 id="s1">1) Mesin Survival: Dunia Objektif</h2>
+    <!-- 1. Otak Survival -->
+    <section id="survival" aria-labelledby="s1">
+      <h2 id="s1">1. Otak Bertahan Hidup (Dunia Nyata)</h2>
       <div class="figure" aria-hidden="true">
-        <!-- perisai + petir -->
+        <!-- perisai + kilat -->
         <svg class="icon" viewBox="0 0 96 96">
           <path d="M48 14l26 10v18c0 18-12 30-26 38C34 72 22 60 22 42V24l26-10z" fill="none" stroke="currentColor" stroke-width="2"/>
           <path d="M46 28l-6 12h8l-6 12" fill="none" stroke="var(--accent)" stroke-width="2"/>
         </svg>
       </div>
-      <p>Sebelum ada doa, puisi, atau filsafat, otak sudah sibuk menjalankan misi brutal: membuat tubuh ini selamat cukup lama untuk punya keturunan. Panggungnya adalah dunia objektif—dunia nyata yang tetap ada meskipun kita tak percaya. Gempa di Yogyakarta tetap mengguncang walau ada yang berkata, “saya tidak percaya gempa.” Gravitasi tetap menarik tubuh jatuh, walau kamu yakin bisa melayang. Singa tetap berbahaya, entah kamu spiritual atau tidak.</p>
-      <p>Untuk bertarung di panggung keras ini, otak mengembangkan jalur cepat hemat energi. Bayangkan kamu berjalan di pematang sawah: bayangan melata di ujung mata langsung dibaca “ular!” sehingga tubuh mundur setengah langkah. Sering kali itu hanya ranting, tapi lebih baik salah mundur daripada diterkam. Jalur cepat ini bekerja juga ketika kamu mencium sate di pinggir jalan—ludah keluar dulu sebelum logika bertanya soal kolesterol. Di jalan raya Jakarta, kamu refleks mengerem ketika motor dari lajur kiri tiba-tiba memotong; kamu tak sempat berdiskusi dengan diri sendiri, “apakah ini benar-benar berbahaya?” Refleks menyelamatkanmu lebih cepat dari kata-kata.</p>
-      <p>Jalur cepat ini memang tidak rapi, kadang salah sangka, tapi efektif. Otak memilih keliru aman daripada telat benar. Banyak bias lahir dari sini: kita cenderung mengingat kecelakaan besar di berita dan melebih-lebihkan risikonya (karena gambarannya kuat), namun meremehkan bahaya nyata yang sunyi seperti hipertensi. Di pasar, kita cepat percaya “diskon besar hari ini!” karena mata menangkap angka merah lebih cepat daripada kalkulator di kepala. Semua ini terjadi karena perangkat dasar otak berpihak pada keselamatan dan penghematan energi, bukan pada kebenaran yang elegan.</p>
-      <p>Perumpamaannya sederhana: helm motor. Ia tidak membuatmu mengerti jalan lebih baik, tapi menyelamatkan ketika hal buruk terjadi. Begitu pula otak bertahan: mungkin tidak selalu cantik, namun ia menjaga kita tetap hidup di dunia objektif yang keras.</p>
+      <p>Bayangkan orang desa berjalan di sawah. Ia melihat bayangan di tanah. Tanpa pikir panjang, ia mundur. Kadang itu hanya ranting, tapi kalau ternyata ular, mundur itu menyelamatkan nyawa.</p>
+      <p>Begitu juga kita. Di jalan raya, saat motor tiba-tiba menyalip, rem diinjak dulu, mikir belakangan. Otak kita didesain untuk <strong>selamat dulu</strong>, akurat nanti. Sistem cepat ini kadang keliru, tapi menyelamatkan. Kita lebih takut kecelakaan yang heboh ketimbang penyakit sunyi seperti darah tinggi. Analogi mudah: <strong>helm motor</strong>. Helm tidak membuat kita lebih jago, tapi melindungi saat jatuh.</p>
     </section>
 
-    <div class="divider" role="presentation"></div>
+    <div class="hr" role="presentation"></div>
 
+    <!-- 2. Emosi -->
     <section id="emosi" aria-labelledby="s2">
-      <h2 id="s2">2) Emosi: Kompas Subjektif</h2>
+      <h2 id="s2">2. Emosi: Kompas Rasa</h2>
       <div class="figure" aria-hidden="true">
-        <!-- kompas hati -->
+        <!-- hati-kompas -->
         <svg class="icon" viewBox="0 0 96 96">
           <path d="M48 74s-24-16-24-34a12 12 0 0 1 24-7 12 12 0 0 1 24 7c0 18-24 34-24 34z" fill="none" stroke="currentColor" stroke-width="2"/>
           <circle cx="48" cy="52" r="8" fill="none" stroke="var(--accent)" stroke-width="2"/>
           <path d="M48 44l4 4-4 4-4-4z" fill="var(--accent)"/>
         </svg>
       </div>
-      <p>Refleks menyelamatkan, tetapi hidup bukan hanya menghindari gigitan. Kita perlu tahu ke mana melangkah. Di sinilah emosi bekerja sebagai kompas subjektif. Dunia subjektif adalah dunia di dalam kepala—rasa, ingatan, tafsir pribadi. Benda yang sama bisa terasa berbeda: durian adalah surga bagi sebagian orang, “bau tempat sampah” bagi yang lain. Hujan deras membawa syukur bagi petani di Kebumen, tapi bisa berarti dagangan sepi bagi pedagang kaki lima di Jakarta.</p>
-      <p>Emosi memberi sinyal cepat: takut mendorong kita menghindar sebelum terluka; jijik membuat kita menolak makanan basi; senang menandai sumber energi yang layak diingat; kesepian memaksa kita merapat ke keluarga atau tetangga, karena sendiri itu rawan. Rasa bukan penghalang logika; justru bahan bakarnya. Banyak penelitian menunjukkan: ketika bagian otak yang memproses emosi rusak, orang sulit mengambil keputusan, bahkan untuk hal remeh seperti memilih menu makan siang. Tanpa rasa, logika kehilangan arah—seperti peta tanpa tanda “Anda di sini”.</p>
-      <p>Budaya Indonesia menjahit emosi ke dalam hidup sehari-hari: rasa sungkan menahan kita dari merugikan orang lain; malu menjaga batas; bangga kampung halaman memanggil kita pulang saat lebaran; gotong royong bukan perhitungan biaya–manfaat dingin, melainkan kehangatan yang membuat badan capek terasa ringan. Emosi membentuk peta nilai—apa yang kita cari, apa yang kita hindari, siapa yang kita anggap “kita”.</p>
-      <p>Analogi singkat: kalau dunia objektif adalah jalan raya, maka emosi adalah kompas di dashboard. Jalan tetap jalan, tapi tanpa kompas kita mudah tersesat; dengan kompas yang sensitif, kita bisa memilih belok yang tepat di simpang-simpang hidup.</p>
+      <p>Selamat saja tidak cukup. Kita butuh arah. Di sinilah <strong>emosi</strong> berfungsi.</p>
+      <p><strong>Takut</strong> membuat kita waspada. <strong>Jijik</strong> menahan kita dari makanan berbahaya. <strong>Senang</strong> menyuruh kita mengingat hal yang baik untuk diulang. <strong>Sepi</strong> mendorong kita mencari teman, karena sendirian itu rawan.</p>
+      <p>Riset otak menunjukkan, tanpa emosi orang sulit mengambil keputusan. Emosi bukan musuh logika—ia <em>bahan bakarnya</em>. Dalam budaya kita, rasa <em>sungkan</em>, <em>malu</em>, dan <em>gotong royong</em> menuntun pilihan sehari-hari tanpa rumus panjang.</p>
     </section>
 
-    <div class="divider" role="presentation"></div>
+    <div class="hr" role="presentation"></div>
 
+    <!-- 3. Bahasa & Cerita Bersama -->
     <section id="bahasa" aria-labelledby="s3">
-      <h2 id="s3">3) Bahasa: Dunia Intersubjektif</h2>
+      <h2 id="s3">3. Bahasa: Dunia Cerita Bersama</h2>
       <div class="figure" aria-hidden="true">
-        <!-- tiga realitas beririsan -->
+        <!-- tiga lingkaran beririsan -->
         <svg class="diagram" viewBox="0 0 640 240">
           <circle cx="240" cy="120" r="84" fill="none" stroke="currentColor" stroke-width="2"/>
           <circle cx="320" cy="120" r="84" fill="none" stroke="var(--accent)" stroke-width="2"/>
@@ -199,18 +169,18 @@ a.ghost:hover{border-bottom-color:var(--accent)}
           <circle cx="320" cy="120" r="12" fill="var(--accent)"/>
         </svg>
       </div>
-      <p>Refleks menjaga, emosi mengarah. Tapi manusia melompat jauh ketika menemukan bahasa. Bahasa bukan hanya nyanyian mulut; ia adalah mesin yang menciptakan dunia ketiga: dunia intersubjektif—realitas yang ada karena banyak kepala percaya bersama.</p>
-      <p>Contoh paling dekat: rupiah. Selembar kertas bergambar pahlawan adalah objek (objektif). Rasa lega saat gajian adalah pengalaman pribadi (subjektif). Tetapi nilai “ini seratus ribu” hanya ada karena kita semua sepakat; inilah intersubjektif. Dengan kesepakatan itu, kertas bisa berubah menjadi nasi Padang, bensin, atau kuota internet. Kesepakatan juga membuat Merah Putih yang hanyalah kain menjadi simbol yang menggetarkan; membuat NKRI yang hanyalah susunan huruf menjadi tanah air yang kita bela; membuat akta nikah yang hanyalah kertas menjadi janji yang mengikat dua keluarga.</p>
-      <p>Bahasa memberi kita kemampuan melompati waktu—menceritakan masa lalu, meramal masa depan—dan melompati jarak—mengikat orang-orang yang tak saling kenal dalam cerita yang sama. Dari sini lahir institusi: sekolah, partai, perusahaan, pengadilan. Semuanya beroperasi bukan karena batu dan kayu, melainkan karena kalimat-kalimat yang disepakati: “sah,” “melanggar,” “dibatalkan,” “disubsidi,” “darurat,” “merdeka.” Kalimat-kalimat itu menggerakkan triliunan rupiah, jutaan manusia, tarikan napas di ICU, hingga rasa lega seorang ibu menerima kabar beasiswa anaknya.</p>
-      <p>Analogi Indonesia: proklamasi 17 Agustus. Ucapannya singkat. Tak ada ledakan. Tapi kata-kata itu mengubah status jutaan jiwa. Begitu kuatnya fiksi bersama, sehingga suara bisa mengalahkan senjata—setidaknya untuk memulai sejarah baru.</p>
+      <p>Lompatan terbesar manusia adalah <strong>bahasa</strong>. Dengan bahasa, kita menciptakan dunia yang hanya ada kalau kita semua percaya.</p>
+      <p>Contoh paling dekat: <strong>uang</strong>. Selembar seratus ribu hanyalah kertas. Tapi karena kita sepakat nilainya, ia bisa berubah jadi nasi Padang, bensin, atau kuota. Begitu juga <strong>Merah Putih</strong>, <strong>NKRI</strong>, atau <strong>akta nikah</strong>—kuat bukan karena kain atau kertasnya, melainkan karena kita percaya bersama.</p>
+      <p><strong>Proklamasi 17 Agustus</strong> membuktikannya: kalimat singkat mengubah nasib jutaan orang. Kata-kata bisa lebih kuat dari senjata ketika diakui bersama.</p>
     </section>
 
-    <div class="divider" role="presentation"></div>
+    <div class="hr" role="presentation"></div>
 
-    <section id="dari-suku-ke-tuhan" aria-labelledby="s4">
-      <h2 id="s4">4) Dari Suku ke Tuhan</h2>
+    <!-- 4. Dari Suku ke Tuhan -->
+    <section id="suku-tuhan" aria-labelledby="s4">
+      <h2 id="s4">4. Dari Suku ke Tuhan</h2>
       <div class="figure" aria-hidden="true">
-        <!-- tiga lingkaran → pilar -->
+        <!-- tiga orang → pilar -->
         <svg class="icon" viewBox="0 0 96 96">
           <circle cx="24" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
           <circle cx="48" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -218,15 +188,15 @@ a.ghost:hover{border-bottom-color:var(--accent)}
           <path d="M16 26h64M32 70v16M64 70v16" stroke="var(--accent)" stroke-width="2"/>
         </svg>
       </div>
-      <p>Ada batas bawaan otak: kita nyaman berelasi akrab dengan sekitar 150 orang—dikenal sebagai Angka Dunbar. Di kampung kecil, gosip cukup untuk menjaga ketertiban: semua orang tahu siapa yang jujur, siapa yang culas. Tetapi ketika jumlah kepala tumbuh menjadi ribuan, gosip tidak cukup. Kita butuh sesuatu yang lebih besar daripada obrolan warung.</p>
-      <p>Maka otak menciptakan cerita besar. Mula-mula tentang roh gunung, sungai, laut selatan; kemudian mitos leluhur yang mengawasi anak cucu; lalu simbol dan upacara kerajaan yang memberi wibawa; akhirnya perintah Tuhan yang mengatasnamakan sumber tertinggi. Semakin besar kelompok, semakin tinggi biaya ketidakpastian. Cerita besar adalah alat untuk memangkas biaya itu: ia menyediakan aturan umum (“jangan membunuh”), identitas (“kita ini satu umat”), dan hukuman tak terlihat (“akan ada balasan”).</p>
-      <p>Praktiknya mudah dilihat di Indonesia. Adat mengikat orang satu kampung lebih kuat daripada surat pernyataan; sumpah jabatan mengikat pejabat lebih kuat daripada pidato teknis; ritual mengikat massa tanpa harus saling kenal. Ini bukan sekadar “percaya buta”, melainkan cara otak merakit kepercayaan massal dengan bahan bakar emosi dan bahasa. Cerita besar memperluas lingkaran “kita” dari RT menjadi bangsa, bahkan umat manusia—setidaknya dalam potensi terbaiknya.</p>
+      <p>Di kampung kecil, gosip cukup jadi “polisi.” Semua orang tahu siapa yang jujur dan siapa yang licik. Tapi ketika orang makin banyak, gosip tidak cukup. Kita butuh <strong>cerita besar</strong> yang mengikat banyak kepala: roh gunung, roh laut, leluhur yang mengawasi, simbol kerajaan, hingga <strong>perintah Tuhan</strong>.</p>
+      <p>Cerita besar memotong biaya curiga. Kita tak perlu kenal semua orang satu per satu, cukup yakin ada aturan yang berlaku untuk semua, dijaga oleh sesuatu yang lebih tinggi dari kepala suku.</p>
     </section>
 
-    <div class="divider" role="presentation"></div>
+    <div class="hr" role="presentation"></div>
 
+    <!-- 5. Agama -->
     <section id="agama" aria-labelledby="s5">
-      <h2 id="s5">5) Agama: Produk Evolusi Pikiran</h2>
+      <h2 id="s5">5. Agama: Perjalanan Panjang Pikiran</h2>
       <div class="figure" aria-hidden="true">
         <!-- konsentris -->
         <svg class="icon" viewBox="0 0 96 96">
@@ -235,20 +205,16 @@ a.ghost:hover{border-bottom-color:var(--accent)}
           <circle cx="48" cy="48" r="6" fill="var(--accent)"/>
         </svg>
       </div>
-      <p>Agama bukan benda beku yang jatuh dari langit. Ia lahir, tumbuh, berubah—seiring evolusi otak dan masyarakat.</p>
-      <p>Tahap awal: animisme. Petir terdengar seperti amarah langit; gunung seperti makhluk agung; laut seperti penguasa yang minta dihormati. Bagi otak yang hidup dalam ketidakpastian alam, memberi “jiwa” pada fenomena adalah cara memadatkan rasa takut menjadi sesuatu yang bisa dinegosiasikan lewat ritual.</p>
-      <p>Komunitas membesar; lahir mitos leluhur. Di Nusantara, roh orang tua dianggap tetap mengawasi cucu-cicit. Di banyak tempat, raja menjadi titisan ilahi—hubungan darah dijadikan jembatan antara manusia dan yang sakral. Cerita-cerita ini memelihara kepatuhan tanpa perlu polisi di setiap sudut.</p>
-      <p>Hidup kian kompleks; muncul politeisme—banyak dewa dengan spesialisasi. Ada dewa panen, perang, cinta, kematian. Kosmos menjadi seperti kementerian: tiap urusan ada pejabatnya. Ini cara otak membagi-bagi masalah ke dalam laci-laci yang mudah diingat.</p>
-      <p>Namun otak juga menyukai kesederhanaan. Lalu lahir monoteisme—satu Tuhan transenden, satu sumber hukum, satu tujuan besar. Satu pusat memudahkan standarisasi aturan moral di wilayah luas; satu nama memudahkan identitas; satu kitab memudahkan distribusi ajaran ke pelosok.</p>
-      <p>Di era modern, agama bertemu sains. Teori evolusi, kosmologi, dan ilmu saraf menantang narasi lama. Agama tidak lenyap; ia beradaptasi. Ada yang memilih kembali ke teks dengan ketat; ada yang mengembangkan tafsir baru; ada yang menekankan nilai-nilai universal seperti keadilan, kasih sayang, dan amanah. Di Indonesia, kamu bisa melihat spektrum itu: dari pengajian kampung, gereja kota, pura di Bali, hingga diskusi-diskusi kampus yang merangkai iman dengan ilmu.</p>
-      <p>Hari ini, agama masih menjadi fiksi kolektif paling kuat. Ia bisa menggerakkan jutaan orang dalam hitungan hari. Namun ia juga bersaing dengan fiksi modern: uang, negara, nasionalisme, kapitalisme, bahkan algoritma media sosial yang menentukan apa yang kita lihat tiap pagi. Banyak orang sekarang lebih disiplin pada “aturan bank” atau “aturan aplikasi” daripada pada doa pagi—bukan karena iman hilang, melainkan karena jaringan intersubjektif baru makin rapat membungkus hidup.</p>
-      <p>Disarikan, evolusi agama mengikuti alur: Animisme → Mitos Leluhur → Politeisme → Monoteisme → Adaptasi Modern. Ia adalah monumen perjalanan otak yang tidak puas hanya selamat, tetapi ingin mengerti, tertib, dan bermakna.</p>
+      <p><strong>Agama</strong> lahir dari proses panjang. Ia bukan benda mati yang jatuh begitu saja, tetapi cara manusia menata hidup, menenangkan cemas, dan menyatukan banyak orang.</p>
+      <p><strong>Awal</strong>: alam dianggap berjiwa (animisme), ritual menenangkan ketakutan. <strong>Berikutnya</strong>: mitos leluhur—nenek moyang dipercaya menjaga cucu-cicit. <strong>Lalu</strong>: politeisme—banyak dewa untuk urusan berbeda, seperti kementerian kosmos. <strong>Kemudian</strong>: monoteisme—satu Tuhan, satu hukum, satu tujuan, mudah menyatukan wilayah luas. <strong>Di masa kini</strong>: agama bertemu sains; ada yang kembali ke teks, ada yang menafsir ulang, banyak yang menekankan nilai universal seperti kasih sayang, keadilan, dan amanah.</p>
+      <p>Agama kuat karena bekerja di tiga lapis sekaligus: memberi tafsir pada alam, memberi makna pada rasa, dan memberi aturan pada hidup bersama. Itu sebabnya hingga sekarang ia masih mampu menggerakkan jutaan orang.</p>
     </section>
 
-    <div class="divider" role="presentation"></div>
+    <div class="hr" role="presentation"></div>
 
+    <!-- 6. Paradoks -->
     <section id="paradoks" aria-labelledby="s6">
-      <h2 id="s6">6) Paradoks Tuhan vs Uang</h2>
+      <h2 id="s6">6. Paradoks: Tuhan & Uang</h2>
       <div class="figure" aria-hidden="true">
         <!-- neraca minimal -->
         <svg class="diagram" viewBox="0 0 640 220">
@@ -259,16 +225,15 @@ a.ghost:hover{border-bottom-color:var(--accent)}
           <circle cx="430" cy="106" r="28" fill="none" stroke="currentColor" stroke-width="2"/>
         </svg>
       </div>
-      <p>Di sini muncul paradoks yang membuat banyak orang tak nyaman. Uang, fiksi besar berbahan kertas dan kode digital, tidak pernah marah saat dihina. Kamu boleh mencibir “rupiah lemah” atau “uang bau korupsi”—ia diam. Esok hari ia tetap bisa membeli nasi Padang, membayar sekolah, menyelamatkan nyawa lewat biaya operasi. Manfaatnya terasa dan terukur.</p>
-      <p>Tuhan, sebaliknya, sering memicu amarah ketika diremehkan. Massa bisa turun ke jalan demi membela yang sakral. Pertanyaan tajam pun lahir: Jika Tuhan Mahakuasa, mengapa Ia perlu dibela dengan emosi kita? Di sisi lain, jika uang hanya fiksi, kenapa ia begitu efektif menggerakkan dunia tanpa banyak drama?</p>
-      <p>Jawabannya kembali ke otak. Agama adalah mahakarya emosi + bahasa—ia menyentuh identitas terdalam, “siapa aku” dan “siapa kelompokku”. Menyentuh agama terasa seperti menyentuh harga diri. Sementara uang adalah mesin fungsi—ia bekerja tenang karena berdiri di atas angka, kontrak, dan kebiasaan tukar-menukar; manfaatnya dirasa tanpa perlu tepuk tangan. Satu memukul jati diri, satu memijat kebutuhan.</p>
-      <p>Provokatifnya begini: mungkin yang sering kita bela bukan Tuhan sebagai kebenaran, melainkan cerita kita tentang Tuhan sebagai identitas. Dan mungkin yang sering kita diamkan bukan uang sebagai dewa, melainkan uang sebagai obeng—alat universal yang dipakai semua orang tanpa perlu cinta.</p>
+      <p><strong>Uang</strong> diam saat dihina, namun besok tetap berguna: membeli makan, membayar rumah sakit. <strong>Tuhan</strong>—atau tepatnya cerita tentang Tuhan—sering memicu amarah saat diremehkan. Mengapa?</p>
+      <p>Karena uang menyentuh <em>fungsi</em> sehari-hari, sementara Tuhan melekat pada <em>identitas</em>. Menyentuh agama terasa seperti menyentuh harga diri. Bisa jadi yang sering kita bela adalah <strong>cerita kita tentang Tuhan</strong>. Dan yang kita diamkan pada uang adalah kenyataan bahwa ia hanyalah <strong>alat</strong>—dipakai semua orang tanpa perlu dicintai.</p>
     </section>
 
-    <div class="divider" role="presentation"></div>
+    <div class="hr" role="presentation"></div>
 
+    <!-- 7. Tangga Cerita -->
     <section id="tangga" aria-labelledby="s7">
-      <h2 id="s7">7) Tangga Intersubjektif</h2>
+      <h2 id="s7">7. Tangga Cerita Kita</h2>
       <div class="figure" aria-hidden="true">
         <!-- tangga -->
         <svg class="diagram" viewBox="0 0 640 220">
@@ -282,38 +247,31 @@ a.ghost:hover{border-bottom-color:var(--accent)}
           <circle cx="420" cy="80"  r="4" fill="var(--accent)"/>
         </svg>
       </div>
-      <p>Sejarah manusia terlihat seperti menaiki tangga narasi: Keluarga → Suku → Kerajaan → Negara → Tuhan → Uang (→ Algoritma).</p>
-      <p>• Keluarga: solidaritas kecil berbasis darah; “sedulur”.<br>
-         • Suku: lingkaran diperluas lewat cerita leluhur dan simbol adat.<br>
-         • Kerajaan: kekuasaan distabilkan oleh ritual dan simbol sakral.<br>
-         • Negara: kontrak imajiner modern—NKRI ada karena kesepakatan dan hukum.<br>
-         • Tuhan: narasi transenden yang mampu menyatukan jutaan “orang asing” di bawah aturan moral bersama.<br>
-         • Uang: bahasa global melintasi agama, negara, ideologi; fiksi bersama yang paling praktis.<br>
-         • Algoritma (zaman kini): pembentuk arus perhatian; “imam” baru yang diam-diam mengatur apa yang kita lihat, percaya, dan beli.</p>
-      <p>Setiap kenaikan tangga berarti cerita bersama yang lebih besar dan kepercayaan yang lebih abstrak. Dari wajah-wajah yang kita kenal, ke bendera, ke kitab suci, ke angka saldo—semuanya adalah produk otak yang makin piawai mengorganisir dunia melalui kesepakatan.</p>
+      <p>Perjalanan manusia mirip tangga: <strong>Keluarga → Suku → Kerajaan → Negara → Tuhan → Uang → Algoritma</strong>. Semakin naik, semakin abstrak, namun jangkauannya makin luas. Dari wajah-wajah akrab, ke bendera, ke kitab, ke angka saldo, hingga ke arus informasi di layar kita.</p>
     </section>
 
-    <div class="divider" role="presentation"></div>
+    <div class="hr" role="presentation"></div>
 
+    <!-- Penutup -->
     <section id="penutup" aria-labelledby="s8">
-      <h2 id="s8">8) Penutup: Katedral Makna</h2>
+      <h2 id="s8">Penutup: Katedral Makna</h2>
       <div class="figure" aria-hidden="true">
-        <!-- katedral abstrak -->
+        <!-- katedral garis sederhana -->
         <svg class="icon" viewBox="0 0 96 96">
           <path d="M20 72h56M30 72V44l18-14 18 14v28" fill="none" stroke="currentColor" stroke-width="2"/>
           <circle cx="48" cy="50" r="6" fill="var(--accent)"/>
         </svg>
       </div>
-      <p>Kita lahir dari tanah, dari lumpur evolusi, dari ketakutan pada gelap dan lapar. Otak kita mula-mula adalah alarm; lalu menjadi kompas; kemudian menjadi mesin bahasa yang menenun cerita. Dari sana lahir adat, hukum, bangsa, agama, uang—katedral-katedral makna yang berdiri di dalam kepala kita, namun sanggup mengubah nasib di dunia nyata.</p>
-      <p>Karena itu, ketika kita berbicara tentang agama dan Tuhan, kita sebenarnya sedang berbicara tentang sejarah otak manusia: bagaimana ia mendisiplinkan insting, menata emosi, menjahit kesepakatan, dan memahat harapan. Agama bukan musuh sains dan bukan sekadar hadiah misterius; ia adalah puncak evolusi pikiran pada zamannya—dan sampai hari ini, ia masih berevolusi, berdampingan atau bersaing dengan fiksi kolektif lain.</p>
-      <p>Pertanyaan akhirnya sederhana namun tajam: cerita mana yang membuat kita lebih manusia? Bukan cuma yang paling keras suaranya, melainkan yang paling baik hasilnya—lebih adil, lebih welas asih, lebih jernih menatap dunia objektif, lebih matang mengolah dunia subjektif, dan lebih bijak merawat dunia intersubjektif yang kita bangun bersama.</p>
-      <p>Itulah keanehan sekaligus keagungan Homo sapiens: hewan yang tak puas hanya hidup, tetapi ingin hidup bermakna—dan cukup cerdas (serta berbahaya) untuk menciptakan makna itu sendiri.</p>
+      <p>Kita lahir dari rasa takut dan lapar, lalu menata hidup dengan refleks, rasa, dan cerita. Dari situlah lahir adat, hukum, bangsa, agama, uang—<strong>katedral makna</strong> yang berdiri di kepala namun nyata dampaknya di dunia.</p>
+      <p>Agama, jika dilihat dengan jernih, adalah bagian dari sejarah panjang otak manusia. Ia bukan musuh sains, bukan hadiah misterius, melainkan hasil pencarian manusia untuk hidup lebih teratur dan bermakna.</p>
+      <p>Pada akhirnya, pertanyaannya sederhana: <em>cerita apa yang kita pilih untuk kita pegang?</em> Apakah cerita itu membuat kita lebih adil, lebih welas asih, dan lebih bijak?</p>
+      <p>Di situlah keanehan sekaligus keagungan manusia: makhluk yang tidak puas hanya hidup, tetapi ingin hidup dengan arti—dan cukup cerdas untuk menciptakan arti itu sendiri.</p>
     </section>
   </article>
 </div>
 
 <script>
-/* progress bar (flat) */
+/* progress baca halus (flat) */
 (function(){
   const bar = document.querySelector('.progress');
   const art = document.querySelector('article');
