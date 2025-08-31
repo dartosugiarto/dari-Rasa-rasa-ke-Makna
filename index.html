@@ -87,21 +87,68 @@ figure{
   justify-content:center;
   align-items:center;
 }
-svg{
-  width:90px;
-  height:90px;
-}
-hr{
-  height:1px;border:0;background:var(--line);
-  margin:24px 0;
-}
+svg{width:90px;height:90px}
+hr{height:1px;border:0;background:var(--line);margin:24px 0}
 strong{font-weight:700}
 em{font-style:italic}
 ::selection{background:color-mix(in srgb, var(--accent) 20%, transparent)}
+/* COVER */
+.cover{
+  margin-bottom:24px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background:color-mix(in srgb, var(--paper) 92%, var(--bg) 8%);
+}
+.cover svg{width:100%;height:auto;display:block;aspect-ratio:3/4}
 </style>
 </head>
 <body>
 <main>
+
+  <!-- Cover Buku SVG Minimalis -->
+  <div class="cover">
+    <svg viewBox="0 0 960 1280" role="img" aria-label="Sampul abstrak minimalis: pikiran, emosi, bahasa, dan sistem">
+      <defs>
+        <radialGradient id="glow" cx="50%" cy="38%" r="60%">
+          <stop offset="0" stop-color="var(--accent)" stop-opacity=".18"/>
+          <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="lineAcc" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="var(--accent)"/>
+          <stop offset="1" stop-color="currentColor"/>
+        </linearGradient>
+      </defs>
+
+      <rect x="0" y="0" width="960" height="1280" fill="url(#glow)"/>
+
+      <!-- Lingkar konsentris (sistem terpadu) -->
+      <circle cx="480" cy="740" r="320" fill="none" stroke="color-mix(in srgb, var(--accent) 30%, currentColor 70%)" stroke-width="2"/>
+      <circle cx="480" cy="740" r="210" fill="none" stroke="color-mix(in srgb, var(--accent) 40%, currentColor 60%)" stroke-width="2"/>
+      <circle cx="480" cy="740" r="110" fill="none" stroke="var(--accent)" stroke-width="2"/>
+
+      <!-- Balon bicara (bahasa & cerita) -->
+      <rect x="188" y="250" width="350" height="210" rx="36" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M258 460l-48 64 84-44" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+
+      <!-- Hati-kompas (emosi sebagai kompas) -->
+      <path d="M640 370c0 80-160 160-160 160S320 450 320 370a80 80 0 0 1 160-40 80 80 0 0 1 160 40z" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="480" cy="410" r="28" fill="none" stroke="var(--accent)" stroke-width="2"/>
+      <path d="M480 394l12 12-12 12-12-12z" fill="var(--accent)"/>
+
+      <!-- Bintang kecil (menatap langit) -->
+      <circle cx="760" cy="180" r="4" fill="url(#lineAcc)"/>
+      <circle cx="710" cy="220" r="3" fill="url(#lineAcc)"/>
+      <circle cx="820" cy="260" r="3.5" fill="url(#lineAcc)"/>
+
+      <!-- Titik inti (pencarian makna) -->
+      <circle cx="480" cy="740" r="10" fill="var(--accent)"/>
+
+      <!-- Garis lembut pengarah -->
+      <path d="M200 980c120-60 240-90 360-90s240 30 360 90" fill="none" stroke="color-mix(in srgb, var(--accent) 30%, currentColor 70%)" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+
   <header>
     <div class="kicker">Esai</div>
     <h1>Di Antara Jutaan Spesies</h1>
