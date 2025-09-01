@@ -14,22 +14,27 @@
 <meta property="og:locale" content="id_ID">
 
 <style>
-/* ===== ACADEMIC MINIMALIST ===== */
+/* ===== CLASSIC MODERN PREMIUM FLAT STYLE ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 :root{
-  --bg:#ffffff;
-  --paper:#ffffff;
-  --ink:#1a1a1a;
-  --muted:#6b6b6b;
-  --hair: #ebebeb;
-  --accent: #007bff; /* Hanya untuk seleksi teks, tidak untuk UI */
+  --bg: #F9F9F7; /* Latar belakang off-white yang hangat */
+  --paper: #FFFFFF;
+  --ink: #222222; /* Hitam yang lebih lembut */
+  --muted: #7A7A7A;
+  --hair: #EAEAEA;
+  --accent: #2A52BE; /* Biru Cobalt sebagai aksen premium */
+  --shadow: rgba(0, 0, 0, 0.05);
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#0a0a0a;
-    --paper:#0a0a0a;
-    --ink:#e0e0e0;
-    --muted:#999999;
-    --hair: #2b2b2b;
+    --bg: #121212;
+    --paper: #1C1C1C;
+    --ink: #E0E0E0;
+    --muted: #888888;
+    --hair: #333333;
+    --accent: #5A87FF;
+    --shadow: rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -38,152 +43,155 @@
 html{
   scroll-behavior:smooth;
   text-size-adjust:100%;
-  font-size: 106.25%; /* 1rem = 17px, ukuran ideal untuk font serif */
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-/* 1. TIPOGRAFI AKADEMIK: Serif untuk keterbacaan tinggi di teks panjang */
+/* 1. TIPOGRAFI MODERN: Menggunakan satu keluarga font sans-serif yang kuat (Inter) */
 body{
   margin:0;
   background:var(--bg);
   color:var(--ink);
-  font-family: Charter, 'Iowan Old Style', 'Source Serif Pro', Georgia, serif;
-  font-size: 1rem; /* Efektif menjadi 17px */
-  line-height: 1.75;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.1rem; /* Sekitar 17.6px, nyaman dibaca */
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
-  counter-reset: section-counter; /* Inisialisasi penghitung section */
 }
 
-/* 2. LAYOUT FOKUS: Menghilangkan distraksi, memusatkan pada konten */
+/* 2. LAYOUT RATA KIRI: Bersih dan terstruktur */
 .wrapper{
-  max-width: 65ch;
+  max-width: 68ch; /* Sedikit lebih lebar untuk sans-serif */
   margin-inline: auto;
-  padding: 4rem 1.5rem;
+  padding: clamp(3rem, 8vw, 6rem) 1.5rem;
 }
 
-/* 3. HIRARKI JUDUL: Bersih, fungsional, dan tidak berlebihan */
+/* 3. HIRARKI ELEGAN: Spasi dan ketebalan sebagai pembeda utama */
 header{
-  padding-bottom: 2.5rem;
-  text-align: left; /* Standar layout artikel/jurnal */
-  border-bottom: 1px solid var(--hair);
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
+  text-align: left; /* Semua teks mulai dari kiri */
 }
 .kicker{
   font-size: .8rem;
-  color: var(--muted);
-  font-family: system-ui, sans-serif; /* Sans-serif untuk metadata */
+  font-weight: 600;
+  color: var(--accent); /* Aksen warna digunakan secara strategis */
   letter-spacing: .05em;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: .75rem;
 }
 h1{
-  margin: 0 0 1rem;
-  font-family: system-ui, -apple-system, sans-serif; /* Sans-serif modern untuk judul */
+  margin: 0 0 .75rem;
   font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: -0.025em;
-  font-size: clamp(1.8rem, 1.5rem + 1.5vw, 2.5rem); /* Ukuran lebih terkontrol */
+  line-height: 1.2;
+  letter-spacing: -0.03em; /* Kerning yang rapat untuk kesan premium */
+  font-size: clamp(2.2rem, 1.5rem + 3vw, 3.2rem);
+  text-wrap: balance;
 }
 .byline{
   color: var(--muted);
-  font-family: system-ui, sans-serif;
-  font-size: .9rem;
+  font-size: .95rem;
 }
-
-/* Artikel tanpa dekorasi visual (border, shadow) */
-article{
-  background: var(--paper);
-}
-
-/* 4. HIRARKI SUBJUDUL: Menggunakan penomoran otomatis, tanpa hiasan */
-section + section{
-  margin-top: 2rem;
-}
-h2{
-  margin: 3rem 0 1.5rem;
-  font-family: system-ui, -apple-system, sans-serif; /* Konsisten dengan H1 */
-  font-size: 1.4rem;
-  font-weight: 650;
-  line-height: 1.3;
-  padding-bottom: .5rem;
-  border-bottom: 1px solid var(--hair);
-}
-/* Tambahkan nomor section secara otomatis sebelum H2 */
-h2::before {
-  counter-increment: section-counter;
-  content: counter(section-counter) ". ";
-  font-weight: 650;
-  color: var(--muted);
-}
-/* Menghilangkan nomor untuk Pembuka & Penutup */
-#pembuka h2::before, #penutup h2::before {
-  content: "";
-}
-
-
-/* 5. PARAGRAF & SPASI: Ruang napas yang teratur */
-p{
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  text-align: justify; /* Rata kiri-kanan untuk tampilan formal seperti jurnal */
-  hyphens: auto; /* Membantu perataan teks */
-}
-p:last-child {
-  margin-bottom: 0;
-}
-
-/* Garis pemisah yang sangat subtil */
-.hr{
-  height: 1px;
-  background: var(--hair);
-  margin: 3rem 0;
-  border: none;
-}
-
-/* 6. ELEMEN VISUAL MINIMALIS: Tanpa warna, menyatu dengan teks */
-.figure{display:flex; justify-content:center; margin: 1.5rem 0 2rem;}
-.icon, .diagram{
-  width:100%;
-  max-width: 480px;
-  height:auto;
-  opacity: .85;
-}
-/* Paksa semua SVG menjadi monokromatik */
-svg, svg * {
-  stroke: currentColor !important;
-  fill: currentColor !important;
-}
-svg path[fill="none"] {
-  fill: none !important;
-}
-
-
-/* Hanya warna saat seleksi teks */
-::selection{
-  background:color-mix(in srgb, var(--accent) 20%, transparent);
+.byline strong {
+  font-weight: 600;
   color: var(--ink);
 }
 
+/* 4. KARTU ARTIKEL FLAT & PREMIUM: Menggunakan bayangan halus, bukan border */
+article{
+  background:var(--paper);
+  border-radius: 12px;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  box-shadow: 0 4px 24px var(--shadow); /* Bayangan halus untuk efek 'mengambang' */
+}
+
+section + section{
+  margin-top: 3rem;
+}
+
+/* Subjudul yang bersih, dipisahkan oleh garis tipis di atas */
+h2{
+  margin: 3.5rem 0 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  border-top: 1px solid var(--hair);
+  padding-top: 3rem;
+}
+section:first-of-type h2 {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+}
+
+/* Paragraf rata kiri untuk kenyamanan membaca di layar */
+p{
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+p:last-child { margin-bottom: 0; }
+
+/* 5. DETAIL KLASIK: Mengganti garis HR dengan pemisah tipografis */
+.hr{
+  height: auto;
+  background: transparent;
+  margin: 3.5rem 0;
+  border: none;
+  text-align: center;
+}
+.hr::before {
+  content: '•••';
+  font-size: 1rem;
+  letter-spacing: 0.6em; /* Jarak antar titik */
+  color: var(--muted);
+}
+
+/* Ikon & Diagram Monokromatik */
+.figure{display:flex; justify-content:center; margin: 2rem 0;}
+.icon, .diagram{
+  width:100%;
+  max-width: 520px;
+  height:auto;
+  opacity: .9;
+}
+svg, svg * {
+  stroke: currentColor !important;
+  fill: none !important; /* Default fill dinonaktifkan */
+}
+svg path[fill]:not([fill="none"]), svg circle[fill]:not([fill="none"]){
+  fill: currentColor !important; /* Hanya fill elemen yang memang harus diisi */
+}
+
+/* Warna seleksi yang sesuai tema */
+::selection{
+  background:color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
 @media print{
-  .progress{display:none}
-  body {font-size: 11pt; color: #000;}
+  body {font-size: 12pt; color: #000;}
   article{border:none; padding:0; box-shadow: none;}
   .wrapper {max-width: 100%; padding: 0;}
-  header {border: none; margin: 0; padding-bottom: 1rem;}
 }
-</style>
 
+</style>
 </head>
 <body>
 
 <div class="wrapper">
   <header role="banner">
     <div class="kicker">Esai Bahasa Awam • Ilmiah</div>
-    <h1>Di Antara Jutaan Spesies: Dari Otak Bertahan Hidup ke Mesin Pencipta Makna</h1>
+    <h1>Di Antara Jutaan Spesies: Dari Otak Bertahan hidup ke Mesin Pencipta Makna</h1>
     <div class="byline">Penulis: <strong>PlayPal.ID</strong></div>
   </header>
 
   <article role="article">
+    <section id="pembuka" aria-labelledby="pembuka-title">
+      <h2 id="pembuka-title">Pembuka</h2>
+      <p>Kita ini unik. Kalau agama kita dihina, kita bisa tersulut marah. Tapi kalau harga beras naik, kita sering diam saja. Kita rela mati demi Tuhan yang tak terlihat, tapi juga rela hidup demi uang yang sehari-hari kita anggap kotor.</p>
+      <p>Mengapa? Karena sejak awal otak kita bukan mesin pencari kebenaran, melainkan mesin bertahan hidup. Lama-lama, mesin ini berkembang menjadi mesin yang menciptakan arti dan cerita. Dari sana lahir tiga dunia yang kita jalani: <em>dunia nyata</em> yang bisa disentuh, <em>dunia rasa</em> di dalam diri, dan <em>dunia cerita bersama</em> yang hanya ada karena kita percaya bersama. Agama berdiri di puncak dunia cerita itu: tumbuh dari cara otak kita menata hidup.</p>
+    </section>
+
+    <div class="hr" role="presentation"></div>
+    
     </article>
 </div>
 
