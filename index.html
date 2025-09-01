@@ -14,143 +14,78 @@
 <meta property="og:locale" content="id_ID">
 
 <style>
-/* ===== MINIMALIST PREMIUM ===== */
 :root{
-  --bg: #FFFFFF;
-  --paper: #FFFFFF;
-  --ink: #1A1A1A;
-  --muted: #757575;
-  --hair: #EAEAEA;
-  --accent: #336699;
+  --bg:#ffffff; --paper:#ffffff; --ink:#1a1a1a; --muted:#757575; --hair:#eaeaea;
+  --accent:#3654ff;
+
+  --a1:#2d7ff9;  /* survival: royal blue   */
+  --a2:#00bfa6;  /* emosi: teal            */
+  --a3:#ffb020;  /* bahasa: amber          */
+  --a4:#e14d72;  /* suku-tuhan: rose       */
+  --a5:#7c5cfc;  /* agama: violet          */
+  --a6:#12b886;  /* paradoks: emerald      */
+  --a7:#9c27b0;  /* tangga: purple         */
+  --a8:#3e8ef7;  /* penutup: azure         */
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg: #0F0F0F;
-    --paper: #0F0F0F;
-    --ink: #E0E0E0;
-    --muted: #999999;
-    --hair: #2A2A2A;
+    --bg:#0f0f0f; --paper:#0f0f0f; --ink:#e0e0e0; --muted:#999999; --hair:#2a2a2a;
   }
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 
-html { 
-  scroll-behavior: smooth; 
-  -webkit-text-size-adjust: 100%;
-}
-
-@media (prefers-reduced-motion: reduce) { 
-  html { scroll-behavior: auto; }
-}
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.8;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, Arial, sans-serif;
+  font-size:16px; line-height:1.8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 }
 
-/* Layout & Spacing */
-.wrapper {
-  max-width: 680px; /* Lebar optimal untuk membaca */
-  margin-inline: auto;
-  padding: 4rem 1.5rem;
-}
+.wrapper{max-width:680px;margin-inline:auto;padding:4rem 1.5rem}
+header{margin-bottom:3rem;text-align:left}
+h1{font-size:1.8rem;font-weight:600;line-height:1.25;letter-spacing:-0.02em;margin:0 0 .5rem 0;text-wrap:balance}
+.byline{font-size:.9rem;color:var(--muted)}
+.byline strong{font-weight:500;color:var(--ink)}
 
-header {
-  margin-bottom: 3rem;
-  text-align: left;
-}
+article{background:var(--paper)}
+section+section{margin-top:2.5rem}
+h2{font-size:1.2rem;font-weight:600;line-height:1.4;margin:2rem 0 1rem 0;padding-bottom:.5rem;border-bottom:1px solid var(--hair);text-align:left}
+p{margin:0 0 1.25rem 0;font-size:1.05rem;text-wrap:pretty;text-align:left}
+p:last-of-type{margin-bottom:0}
 
-h1 {
-  font-size: 1.8rem; /* Ukuran judul lebih terkontrol */
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  margin: 0 0 0.5rem 0;
-  text-wrap: balance;
+/* Ikon Flat Premium */
+.figure{display:flex;justify-content:left;margin:1.25rem 0 1.5rem 0}
+.iconBadge{
+  width:56px;height:56px;border-radius:14px;display:grid;place-items:center;
+  background:color-mix(in srgb, var(--iconAccent) 14%, transparent);
+  border:1px solid color-mix(in srgb, var(--iconAccent) 28%, transparent);
 }
+.iconBadge svg{width:28px;height:28px;stroke:var(--iconAccent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
-.byline {
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-.byline strong {
-  font-weight: 500;
-  color: var(--ink);
-}
-
-
-/* Article Body */
-article {
-  background: var(--paper);
-}
-
-section + section {
-  margin-top: 2.5rem;
-}
-
-h2 {
-  font-size: 1.2rem; /* Ukuran subjudul yang jelas namun tidak dominan */
-  font-weight: 600;
-  line-height: 1.4;
-  margin: 2rem 0 1rem 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--hair); /* Garis bawah halus sebagai pemisah */
-  text-align: left;
-}
-
-p {
-  margin: 0 0 1.25rem 0;
-  font-size: 1.05rem; /* Ukuran teks isi yang nyaman */
-  text-wrap: pretty;
-  text-align: left;
-}
-p:last-of-type {
-  margin-bottom: 0;
-}
-
-/* Visual Elements */
-.figure {
-  display: flex;
-  justify-content: left; /* Ikon rata kiri */
-  margin: 1.5rem 0 1.5rem 0;
-}
-
-.icon {
-  width: 100%;
-  max-width: 48px; /* Ukuran ikon minimalis */
-  height: auto;
-  stroke-width: 1.5px;
-  opacity: 0.9;
-}
-
-svg {
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
+/* Aksen per-bagian */
+.figure.accentSatpam{--iconAccent:var(--a1)}
+.figure.accentEmosi{--iconAccent:var(--a2)}
+.figure.accentBahasa{--iconAccent:var(--a3)}
+.figure.accentSuku{--iconAccent:var(--a4)}
+.figure.accentAgama{--iconAccent:var(--a5)}
+.figure.accentParadoks{--iconAccent:var(--a6)}
+.figure.accentTangga{--iconAccent:var(--a7)}
+.figure.accentPenutup{--iconAccent:var(--a8)}
 
 /* Selection */
-::selection {
-  background: color-mix(in srgb, var(--accent) 20%, transparent);
-}
+::selection{background:color-mix(in srgb, var(--accent) 20%, transparent)}
 
 /* Print */
-@media print {
-  body { font-size: 12pt; }
-  .wrapper { padding: 0; }
-  article { border: none; }
+@media print{
+  body{font-size:12pt}
+  .wrapper{padding:0}
+  article{border:none}
 }
 </style>
-
 </head>
 <body>
-
 <div class="wrapper">
   <header role="banner">
     <h1>Di Antara Jutaan Spesies: Dari Otak Bertahan Hidup ke Mesin Pencipta Makna</h1>
@@ -160,6 +95,14 @@ svg {
   <article role="article">
     <section id="pembuka" aria-labelledby="pembuka-title">
       <h2 id="pembuka-title">Pembuka</h2>
+      <div class="figure accentPenutup" aria-hidden="true">
+        <div class="iconBadge">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3l7 4v5c0 5-4 8-7 9-3-1-7-4-7-9V7l7-4z"/>
+            <path d="M9.5 12h5M12 9v6"/>
+          </svg>
+        </div>
+      </div>
       <p>Kita adalah makhluk yang aneh. Kita bisa tersulut amarah jika simbol tak terlihat yang kita sucikan dihina, namun seringkali diam saat harga kebutuhan pokok merangkak naik. Kita rela berkorban demi ide-ide abstrak seperti 'keadilan' atau 'bangsa', namun kesulitan menabung untuk masa tua yang nyata.</p>
       <p>Keanehan ini bukan sebuah cacat, melainkan petunjuk. Petunjuk bahwa otak kita pada dasarnya tidak dirancang untuk mencari kebenaran mutlak, melainkan untuk bertahan hidup. Seiring waktu, mesin bertahan hidup ini berevolusi menjadi sesuatu yang jauh lebih kompleks: sebuah mesin pencipta makna. Perjalanan inilah yang melahirkan tiga dunia yang kita huni secara bersamaan: <strong>dunia nyata</strong> yang bisa kita sentuh, <strong>dunia rasa</strong> di dalam batin, dan <strong>dunia cerita bersama</strong> yang hanya ada karena kita semua menyepakatinya.</p>
       <p>Mari kita telusuri perjalanan ini, langkah demi langkah, dari refleks dasar hingga gagasan paling agung yang membentuk peradaban, termasuk agama.</p>
@@ -167,8 +110,13 @@ svg {
 
     <section id="survival" aria-labelledby="s1">
       <h2 id="s1">1. Otak Bertahan Hidup: Si Satpam yang Reaktif</h2>
-      <div class="figure" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <div class="figure accentSatpam" aria-hidden="true">
+        <div class="iconBadge">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V6l-8-3-8 3v6c0 6 8 10 8 10z"/>
+            <path d="M9.5 12l1.8 1.8L15 10"/>
+          </svg>
+        </div>
       </div>
       <p>Bayangkan otak kita memiliki dua pekerja utama: seorang <strong>Satpam</strong> dan seorang <strong>Detektif</strong>. Satpam ini bertugas di pos jaga depan. Kerjanya super cepat, sedikit panik, dan motonya adalah "lebih baik salah sangka daripada celaka". Saat ia melihat bayangan meliuk di tanah, ia tidak akan berhenti untuk menganalisis. Ia langsung berteriak, "ULAR!" dan menyuruh tubuh melompat mundur. Seringkali itu hanya ranting, tapi jika suatu saat itu benar ular, keputusannya yang gegabah itu menyelamatkan nyawa.</p>
       <p>Satpam ini adalah <strong>sistem berpikir cepat</strong> kita, sistem yang bekerja berdasarkan insting dan pengalaman masa lalu. Ia sangat efisien dan hemat energi. Saat Anda mengerem mendadak di jalan atau terkejut mendengar suara pintu terbanting, itu adalah kerja si Satpam.</p>
@@ -177,8 +125,13 @@ svg {
 
     <section id="emosi" aria-labelledby="s2">
       <h2 id="s2">2. Emosi: Dashboard Kesadaran</h2>
-       <div class="figure" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <div class="figure accentEmosi" aria-hidden="true">
+        <div class="iconBadge">
+          <svg viewBox="0 0 24 24">
+            <path d="M20.8 8.6a5.5 5.5 0 0 0-9.1-3.9L12 5.7l.3-.3a5.5 5.5 0 1 0 7.8 7.8l.3-.3a5.5 5.5 0 0 0 .4-1.9 5.5 5.5 0 0 0 0-2.5z"/>
+            <path d="M8 14s1.5-2 4-2 4 2 4 2"/>
+          </svg>
+        </div>
       </div>
       <p>Jika Satpam tadi adalah sistem peringatan, maka emosi adalah layar monitor di pos jaganya. Emosi bukanlah gangguan bagi pikiran logis; ia adalah <strong>sistem navigasi</strong> yang memberi tahu kita apa yang penting. Bayangkan emosi seperti dashboard di mobil Anda.</p>
       <p><strong>Rasa jijik</strong> adalah lampu peringatan "jangan disentuh, mungkin beracun". <strong>Rasa takut</strong> adalah alarm bahaya. <strong>Rasa lapar</strong> adalah indikator bensin yang berkedip. <strong>Rasa senang</strong> saat makan buah manis adalah sistem yang mengatakan, "Ini sumber energi bagus, ingat lokasinya!". Dan <strong>rasa sepi</strong> adalah peringatan 'sinyal lemah' yang mendorong kita untuk kembali terhubung dengan kelompok, karena bagi nenek moyang kita, sendirian berarti mati.</p>
@@ -187,8 +140,14 @@ svg {
 
     <section id="bahasa" aria-labelledby="s3">
       <h2 id="s3">3. Bahasa: Sihir Dunia Cerita Bersama</h2>
-      <div class="figure" aria-hidden="true">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+      <div class="figure accentBahasa" aria-hidden="true">
+        <div class="iconBadge">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M21 10h-2a7 7 0 0 0-7-7v2M3 14h2a7 7 0 0 0 7 7v-2"/>
+            <path d="M19.5 16.5l-2 2m0-2 2 2"/>
+          </svg>
+        </div>
       </div>
       <p>Lompatan terbesar dalam evolusi pikiran kita adalah kemampuan berbahasa. Bahasa tidak hanya memungkinkan kita untuk bergosip tentang siapa yang mencuri makanan; ia memungkinkan kita untuk berbicara tentang hal-hal yang tidak ada sama sekali. Inilah sumber "sihir" manusia: kemampuan menciptakan dan memercayai <strong>fiksi bersama</strong>.</p>
       <p>Contoh terbaiknya adalah <strong>uang</strong>. Selembar kertas seratus ribu secara fisik tidak berharga. Anda tidak bisa memakannya. Tapi karena jutaan orang, dari pedagang di pasar hingga direktur bank, sama-sama percaya pada cerita bahwa kertas itu bernilai, maka ia benar-benar menjadi bernilai. Kekuatannya bukan pada kertasnya, melainkan pada <strong>kesepakatan tak terlihat</strong> di dalam jutaan pikiran.</p>
@@ -197,8 +156,15 @@ svg {
 
     <section id="suku-tuhan" aria-labelledby="s4">
       <h2 id="s4">4. Dari Gosip Suku ke Otoritas Tuhan</h2>
-       <div class="figure" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      <div class="figure accentSuku" aria-hidden="true">
+        <div class="iconBadge">
+          <svg viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/>
+            <circle cx="10" cy="8" r="4"/>
+            <path d="M20 21v-2a4 4 0 0 0-3-3.8"/>
+            <path d="M16 3.2a4 4 0 0 1 0 7.6"/>
+          </svg>
+        </div>
       </div>
       <p>Dalam kelompok kecil, sekitar 50-150 orang, ketertiban sosial bisa dijaga lewat mekanisme reputasi dan gosip. Semua orang saling kenal. Jika ada yang berbuat curang, beritanya akan cepat menyebar dan ia akan dikucilkan. Gosip adalah "polisi" alami dalam komunitas kecil.</p>
       <p>Namun, masalah muncul ketika manusia mulai hidup dalam ribuan orang di kota-kota pertama. Sistem gosip runtuh; Anda tidak mungkin mengenal semua orang. Bagaimana Anda bisa percaya pada pedagang dari desa seberang? Bagaimana ribuan orang bisa bekerja sama membangun piramida jika mereka tidak saling percaya? Di sinilah lahir kebutuhan akan sebuah cerita yang lebih besar, sebuah <strong>otoritas yang mengawasi semua orang</strong>.</p>
@@ -207,8 +173,13 @@ svg {
 
     <section id="agama" aria-labelledby="s5">
       <h2 id="s5">5. Agama: Evolusi "Sistem Operasi" Sosial</h2>
-      <div class="figure" aria-hidden="true">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0L12 2.69z"></path></svg>
+      <div class="figure accentAgama" aria-hidden="true">
+        <div class="iconBadge">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0L12 2.7z"/>
+            <path d="M12 9v6M9.5 12h5"/>
+          </svg>
+        </div>
       </div>
       <p>Jika cerita bersama adalah "perangkat lunak" pikiran, maka agama adalah salah satu "sistem operasi" paling sukses yang pernah ada. Ia tidak muncul tiba-tiba, melainkan berevolusi untuk menjawab tantangan sosial yang semakin kompleks.</p>
       <p>Tahapannya bisa kita lihat sebagai berikut: <strong>Animisme</strong>, kepercayaan bahwa semua benda (batu, pohon, sungai) memiliki roh, adalah sistem operasi yang cocok untuk suku pemburu-pengumpul. Ia membantu menjelaskan alam yang acak dan memberikan aturan interaksi dengan lingkungan. Lalu muncul <strong>Politeisme</strong>, dengan banyak dewa yang memiliki "spesialisasi" (dewa perang, dewi kesuburan). Ini mencerminkan struktur masyarakat kota yang juga mulai terspesialisasi. Sistem ini bekerja baik untuk kerajaan-kerajaan lokal.</p>
@@ -217,8 +188,14 @@ svg {
 
     <section id="paradoks" aria-labelledby="s6">
       <h2 id="s6">6. Paradoks Identitas: Mengapa Kita Membela Tuhan, Bukan Uang?</h2>
-      <div class="figure" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+      <div class="figure accentParadoks" aria-hidden="true">
+        <div class="iconBadge">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 12h14"/>
+            <path d="M12 5l7 7-7 7"/>
+            <path d="M7 17c1.5-3 3.5-5 5-5s3.5 2 5 5"/>
+          </svg>
+        </div>
       </div>
       <p>Di sinilah kita kembali ke pertanyaan awal. Mengapa kita marah jika agama dihina, tapi biasa saja saat uang diremehkan? Jawabannya terletak pada perbedaan antara <strong>alat</strong> dan <strong>identitas</strong>.</p>
       <p>Uang, meskipun merupakan cerita bersama, kita perlakukan murni sebagai alat. Fungsinya impersonal. Menghina selembar uang seratus ribu itu seperti mengkritik sebuah palu; palu itu tidak peduli, dan kita pun tidak. Selama ia masih bisa digunakan untuk membeli barang, nilainya tetap utuh.</p>
@@ -227,8 +204,13 @@ svg {
 
     <section id="tangga" aria-labelledby="s7">
       <h2 id="s7">7. Tangga Abstraksi Kita</h2>
-      <div class="figure" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 1.67L4.62 6.33 12 11l7.38-4.67L12 1.67zM4 9v6l8 5 8-5V9l-8 5-8-5z"></path></svg>
+      <div class="figure accentTangga" aria-hidden="true">
+        <div class="iconBadge">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 17h4v3H4zM10 13h4v7h-4zM16 9h4v11h-4z"/>
+            <path d="M4 7l8-5 8 5"/>
+          </svg>
+        </div>
       </div>
       <p>Maka, perjalanan peradaban manusia bisa dilihat sebagai pendakian sebuah tangga abstraksi. Di anak tangga terbawah ada <strong>Keluarga</strong>, diikat oleh ikatan biologis dan emosi langsung. Di atasnya ada <strong>Suku</strong>, diikat oleh mitos dan leluhur bersama. Lalu <strong>Kerajaan/Negara</strong>, diikat oleh hukum dan simbol. Di atasnya lagi ada <strong>Tuhan</strong>, diikat oleh keyakinan universal. Kemudian <strong>Uang</strong>, diikat oleh kepercayaan pada nilai abstrak. Dan hari ini, kita menapaki anak tangga baru: <strong>Algoritma</strong>, yang mengikat kita melalui logika data dan informasi yang tak terlihat.</p>
       <p>Semakin tinggi kita menaiki tangga, semakin abstrak perekatnya, namun semakin luas jangkauan kerja samanya.</p>
@@ -236,8 +218,13 @@ svg {
 
     <section id="penutup" aria-labelledby="s8">
       <h2 id="s8">Penutup: Katedral di Dalam Pikiran</h2>
-       <div class="figure" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+      <div class="figure accentPenutup" aria-hidden="true">
+        <div class="iconBadge">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 21V9l9-6 9 6v12"/>
+            <path d="M8.5 21V12h7v9"/>
+          </svg>
+        </div>
       </div>
       <p>Kita lahir dari refleks si Satpam yang reaktif, menavigasi dunia dengan dashboard emosi, dan membangun peradaban dengan sihir bahasa. Dari bahan-bahan dasar itulah kita membangun adat, hukum, bangsa, dan agama—sebuah <strong>katedral makna</strong> yang megah. Katedral ini tidak terbuat dari batu, melainkan dari cerita. Ia berdiri kokoh di dalam pikiran kolektif kita, namun dampaknya sangat nyata di dunia.</p>
       <p>Melihat agama dari sudut pandang ini tidak bertujuan untuk meremehkannya, melainkan untuk mengapresiasinya sebagai salah satu pencapaian kognitif paling luar biasa dalam sejarah spesies kita. Ia adalah bukti kejeniusan manusia dalam mengatasi keterbatasannya untuk bekerja sama dan hidup lebih bermakna.</p>
@@ -245,6 +232,5 @@ svg {
     </section>
   </article>
 </div>
-
 </body>
 </html>
