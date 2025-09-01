@@ -14,169 +14,167 @@
 <meta property="og:locale" content="id_ID">
 
 <style>
-/* ===== FLAT PREMIUM REFINED: Typography-focused ===== */
+/* ===== ACADEMIC MINIMALIST ===== */
 :root{
-  --bg:#f8f9fa;
+  --bg:#ffffff;
   --paper:#ffffff;
-  --ink:#1c1e21; /* Sedikit lebih lembut dari hitam pekat */
-  --muted:#5a6474;
-  --hair:rgba(15,20,30,.08);
-  --accent:#4A7ECF; /* Biru yang lebih solid dan profesional */
+  --ink:#1a1a1a;
+  --muted:#6b6b6b;
+  --hair: #ebebeb;
+  --accent: #007bff; /* Hanya untuk seleksi teks, tidak untuk UI */
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#0c0f13;
-    --paper:#12161b;
-    --ink:#e1e6ed;
-    --muted:#a0abbc;
-    --hair:rgba(255,255,255,.12);
-    --accent: #5e97f5; /* Aksen lebih cerah untuk kontras di mode gelap */
+    --bg:#0a0a0a;
+    --paper:#0a0a0a;
+    --ink:#e0e0e0;
+    --muted:#999999;
+    --hair: #2b2b2b;
   }
 }
 
 *, *::before, *::after {box-sizing:border-box}
 
-/* 1. SKALABILITAS: Mengatur font-size dasar di HTML agar unit 'rem' menjadi lebih intuitif */
 html{
   scroll-behavior:smooth;
   text-size-adjust:100%;
-  font-size: 112.5%; /* 1rem = 18px, basis yang nyaman untuk dibaca */
+  font-size: 106.25%; /* 1rem = 17px, ukuran ideal untuk font serif */
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-/* 2. READABILITY & LEGIBILITY: Font stack solid, line-height lega */
+/* 1. TIPOGRAFI AKADEMIK: Serif untuk keterbacaan tinggi di teks panjang */
 body{
   margin:0;
   background:var(--bg);
   color:var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem; /* Efektif menjadi 18px */
-  line-height: 1.8; /* Memberi ruang napas antar baris */
+  font-family: Charter, 'Iowan Old Style', 'Source Serif Pro', Georgia, serif;
+  font-size: 1rem; /* Efektif menjadi 17px */
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  counter-reset: section-counter; /* Inisialisasi penghitung section */
 }
 
-/* 3. WHITE SPACE & ALIGNMENT: Layout utama yang terpusat dan bernapas */
+/* 2. LAYOUT FOKUS: Menghilangkan distraksi, memusatkan pada konten */
 .wrapper{
-  max-width: 65ch; /* Batasi lebar baris untuk kenyamanan membaca */
+  max-width: 65ch;
   margin-inline: auto;
-  padding: clamp(2rem, 5vw, 4rem) 1.5rem;
+  padding: 4rem 1.5rem;
 }
 
-/* 4. HIRARKI VISUAL: Judul utama yang dominan dan informatif */
+/* 3. HIRARKI JUDUL: Bersih, fungsional, dan tidak berlebihan */
 header{
-  padding-block: 1rem 2rem;
-  text-align: center; /* Pusatkan header untuk kesan formal */
+  padding-bottom: 2.5rem;
+  text-align: left; /* Standar layout artikel/jurnal */
+  border-bottom: 1px solid var(--hair);
+  margin-bottom: 2.5rem;
 }
 .kicker{
-  font-size: .88rem; /* 16px */
+  font-size: .8rem;
   color: var(--muted);
-  letter-spacing: .04em;
-  text-transform: uppercase; /* Pembeda yang jelas untuk kicker */
+  font-family: system-ui, sans-serif; /* Sans-serif untuk metadata */
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 h1{
-  margin: .5rem 0;
-  font-weight: 800; /* Lebih tebal untuk otoritas */
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  font-size: clamp(2rem, 1.5rem + 2.5vw, 3rem); /* Skala yang lebih dramatis */
-  text-wrap: balance;
+  margin: 0 0 1rem;
+  font-family: system-ui, -apple-system, sans-serif; /* Sans-serif modern untuk judul */
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  font-size: clamp(1.8rem, 1.5rem + 1.5vw, 2.5rem); /* Ukuran lebih terkontrol */
 }
 .byline{
   color: var(--muted);
+  font-family: system-ui, sans-serif;
   font-size: .9rem;
 }
 
-/* 5. KONSISTENSI: Desain kartu artikel yang bersih */
+/* Artikel tanpa dekorasi visual (border, shadow) */
 article{
-  background:var(--paper);
-  border:1px solid var(--hair);
-  border-radius:16px;
-  padding: clamp(1.8rem, 4vw, 3rem);
+  background: var(--paper);
 }
 
-/* 6. HIRARKI & WHITE SPACE: Subjudul yang terstruktur */
+/* 4. HIRARKI SUBJUDUL: Menggunakan penomoran otomatis, tanpa hiasan */
 section + section{
-  margin-top: 2.5rem; /* Jarak antar bagian lebih jelas */
+  margin-top: 2rem;
 }
 h2{
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-  margin: 3rem 0 1.2rem; /* Ruang lebih luas sebelum subjudul */
-  font-size: clamp(1.3rem, 1.2rem + .8vw, 1.6rem);
-  font-weight: 700;
+  margin: 3rem 0 1.5rem;
+  font-family: system-ui, -apple-system, sans-serif; /* Konsisten dengan H1 */
+  font-size: 1.4rem;
+  font-weight: 650;
   line-height: 1.3;
-  text-wrap: balance;
-  border-top: 1px solid var(--hair); /* Garis atas sebagai pemisah visual */
-  padding-top: 2.5rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--hair);
 }
-section:first-of-type h2 {
-  margin-top: 0;
-  border-top: none; /* Hilangkan garis untuk subjudul pertama */
-  padding-top: 0;
+/* Tambahkan nomor section secara otomatis sebelum H2 */
+h2::before {
+  counter-increment: section-counter;
+  content: counter(section-counter) ". ";
+  font-weight: 650;
+  color: var(--muted);
 }
-h2::before{
-  content:"";
-  width: 10px;
-  height: 24px;
-  border-radius: 4px;
-  background: var(--accent);
-  flex-shrink: 0;
+/* Menghilangkan nomor untuk Pembuka & Penutup */
+#pembuka h2::before, #penutup h2::before {
+  content: "";
 }
 
-/* 7. READABILITY: Paragraf yang nyaman dibaca */
+
+/* 5. PARAGRAF & SPASI: Ruang napas yang teratur */
 p{
   margin-top: 0;
-  margin-bottom: 1.5rem; /* Spasi yang cukup setelah paragraf */
-  text-wrap: pretty;
+  margin-bottom: 1.5rem;
+  text-align: justify; /* Rata kiri-kanan untuk tampilan formal seperti jurnal */
+  hyphens: auto; /* Membantu perataan teks */
 }
 p:last-child {
-  margin-bottom: 0; /* Hapus margin di paragraf terakhir setiap section */
+  margin-bottom: 0;
 }
 
-/* Garis pemisah yang subtil */
+/* Garis pemisah yang sangat subtil */
 .hr{
-  height:1px;
-  background:var(--hair);
-  margin: 2rem 0;
+  height: 1px;
+  background: var(--hair);
+  margin: 3rem 0;
   border: none;
 }
 
-/* Styling minimal untuk elemen pendukung */
-.figure{display:flex; justify-content:center; margin:1rem 0 1.5rem;}
-.icon{width:72px; height:72px; opacity: 0.9;}
-.diagram{width:100%; max-width:560px; height:auto; opacity: 0.9;}
-svg{stroke-linecap:round; stroke-linejoin:round}
-
-/* Progress bar yang tidak mengganggu */
-.progress{
-  height:4px;
-  position:sticky;
-  top:0;
-  left:0;
-  z-index:20;
-  background:linear-gradient(to right,var(--accent),var(--accent)) no-repeat;
-  background-size:0% 100%;
+/* 6. ELEMEN VISUAL MINIMALIS: Tanpa warna, menyatu dengan teks */
+.figure{display:flex; justify-content:center; margin: 1.5rem 0 2rem;}
+.icon, .diagram{
+  width:100%;
+  max-width: 480px;
+  height:auto;
+  opacity: .85;
+}
+/* Paksa semua SVG menjadi monokromatik */
+svg, svg * {
+  stroke: currentColor !important;
+  fill: currentColor !important;
+}
+svg path[fill="none"] {
+  fill: none !important;
 }
 
-/* 8. KONTRAS: Warna seleksi teks yang sesuai tema */
+
+/* Hanya warna saat seleksi teks */
 ::selection{
-  background:color-mix(in srgb, var(--accent) 25%, transparent);
+  background:color-mix(in srgb, var(--accent) 20%, transparent);
+  color: var(--ink);
 }
 
-/* 9. RESPONSIVITAS CETAK: Optimasi untuk versi cetak */
 @media print{
   .progress{display:none}
-  body {font-size: 12pt; color: #000;}
-  article{border-color:transparent; padding:0; box-shadow: none;}
+  body {font-size: 11pt; color: #000;}
+  article{border:none; padding:0; box-shadow: none;}
   .wrapper {max-width: 100%; padding: 0;}
+  header {border: none; margin: 0; padding-bottom: 1rem;}
 }
 </style>
-</head>
 
+</head>
 <body>
-<div class="progress" aria-hidden="true"></div>
 
 <div class="wrapper">
   <header role="banner">
@@ -186,163 +184,8 @@ svg{stroke-linecap:round; stroke-linejoin:round}
   </header>
 
   <article role="article">
-    <section id="pembuka" aria-labelledby="pembuka-title">
-      <h2 id="pembuka-title">Pembuka</h2>
-      <p>Kita ini unik. Kalau agama kita dihina, kita bisa tersulut marah. Tapi kalau harga beras naik, kita sering diam saja. Kita rela mati demi Tuhan yang tak terlihat, tapi juga rela hidup demi uang yang sehari-hari kita anggap kotor.</p>
-      <p>Mengapa? Karena sejak awal otak kita bukan mesin pencari kebenaran, melainkan mesin bertahan hidup. Lama-lama, mesin ini berkembang menjadi mesin yang menciptakan arti dan cerita. Dari sana lahir tiga dunia yang kita jalani: <em>dunia nyata</em> yang bisa disentuh, <em>dunia rasa</em> di dalam diri, dan <em>dunia cerita bersama</em> yang hanya ada karena kita percaya bersama. Agama berdiri di puncak dunia cerita itu: tumbuh dari cara otak kita menata hidup.</p>
-    </section>
-
-<div class="hr" role="presentation"></div>
-
-<section id="survival" aria-labelledby="s1">
-  <h2 id="s1">1. Otak Bertahan Hidup (Dunia Nyata)</h2>
-  <div class="figure" aria-hidden="true">
-    <svg class="icon" viewBox="0 0 96 96">
-      <path d="M48 14l26 10v18c0 18-12 30-26 38C34 72 22 60 22 42V24l26-10z" fill="none" stroke="currentColor" stroke-width="2"/>
-      <path d="M46 28l-6 12h8l-6 12" fill="none" stroke="var(--accent)" stroke-width="2"/>
-    </svg>
-  </div>
-  <p>Bayangkan orang desa berjalan di sawah. Ia melihat bayangan di tanah. Tanpa pikir panjang, ia mundur. Kadang itu hanya ranting, tapi kalau ternyata ular, mundur itu menyelamatkan nyawa.</p>
-  <p>Begitu juga kita. Di jalan raya, saat motor tiba-tiba menyalip, rem diinjak dulu, mikir belakangan. Otak kita didesain untuk <strong>selamat dulu</strong>, akurat nanti. Sistem cepat ini kadang keliru, tapi menyelamatkan. Kita lebih takut kecelakaan yang heboh ketimbang penyakit sunyi seperti darah tinggi. Analogi mudah: <strong>helm motor</strong>. Helm tidak membuat kita lebih jago, tapi melindungi saat jatuh.</p>
-</section>
-
-<div class="hr" role="presentation"></div>
-
-<section id="emosi" aria-labelledby="s2">
-  <h2 id="s2">2. Emosi: Kompas Rasa</h2>
-  <div class="figure" aria-hidden="true">
-    <svg class="icon" viewBox="0 0 96 96">
-      <path d="M48 74s-24-16-24-34a12 12 0 0 1 24-7 12 12 0 0 1 24 7c0 18-24 34-24 34z" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle cx="48" cy="52" r="8" fill="none" stroke="var(--accent)" stroke-width="2"/>
-      <path d="M48 44l4 4-4 4-4-4z" fill="var(--accent)"/>
-    </svg>
-  </div>
-  <p>Selamat saja tidak cukup. Kita butuh arah. Di sinilah <strong>emosi</strong> berfungsi.</p>
-  <p><strong>Takut</strong> membuat kita waspada. <strong>Jijik</strong> menahan kita dari makanan berbahaya. <strong>Senang</strong> menyuruh kita mengingat hal yang baik untuk diulang. <strong>Sepi</strong> mendorong kita mencari teman, karena sendirian itu rawan.</p>
-  <p>Riset otak menunjukkan, tanpa emosi orang sulit mengambil keputusan. Emosi bukan musuh logika—ia <em>bahan bakarnya</em>. Dalam budaya kita, rasa <em>sungkan</em>, <em>malu</em>, dan <em>gotong royong</em> menuntun pilihan sehari-hari tanpa rumus panjang.</p>
-</section>
-
-<div class="hr" role="presentation"></div>
-
-<section id="bahasa" aria-labelledby="s3">
-  <h2 id="s3">3. Bahasa: Dunia Cerita Bersama</h2>
-  <div class="figure" aria-hidden="true">
-    <svg class="diagram" viewBox="0 0 640 240">
-      <circle cx="240" cy="120" r="84" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle cx="320" cy="120" r="84" fill="none" stroke="var(--accent)" stroke-width="2"/>
-      <circle cx="400" cy="120" r="84" fill="none" stroke="currentColor" stroke-width="2" opacity=".75"/>
-      <circle cx="320" cy="120" r="12" fill="var(--accent)"/>
-    </svg>
-  </div>
-  <p>Lompatan terbesar manusia adalah <strong>bahasa</strong>. Dengan bahasa, kita menciptakan dunia yang hanya ada kalau kita semua percaya.</p>
-  <p>Contoh paling dekat: <strong>uang</strong>. Selembar seratus ribu hanyalah kertas. Tapi karena kita sepakat nilainya, ia bisa berubah jadi nasi Padang, bensin, atau kuota. Begitu juga <strong>Merah Putih</strong>, <strong>NKRI</strong>, atau <strong>akta nikah</strong>—kuat bukan karena kain atau kertasnya, melainkan karena kita percaya bersama.</p>
-  <p><strong>Proklamasi 17 Agustus</strong> membuktikannya: kalimat singkat mengubah nasib jutaan orang. Kata-kata bisa lebih kuat dari senjata ketika diakui bersama.</p>
-</section>
-
-<div class="hr" role="presentation"></div>
-
-<section id="suku-tuhan" aria-labelledby="s4">
-  <h2 id="s4">4. Dari Suku ke Tuhan</h2>
-  <div class="figure" aria-hidden="true">
-    <svg class="icon" viewBox="0 0 96 96">
-      <circle cx="24" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle cx="48" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle cx="72" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-      <path d="M16 26h64M32 70v16M64 70v16" stroke="var(--accent)" stroke-width="2"/>
-    </svg>
-  </div>
-  <p>Di kampung kecil, gosip cukup jadi “polisi.” Semua orang tahu siapa yang jujur dan siapa yang licik. Tapi ketika orang makin banyak, gosip tidak cukup. Kita butuh <strong>cerita besar</strong> yang mengikat banyak kepala: roh gunung, roh laut, leluhur yang mengawasi, simbol kerajaan, hingga <strong>perintah Tuhan</strong>.</p>
-  <p>Cerita besar memotong biaya curiga. Kita tak perlu kenal semua orang satu per satu, cukup yakin ada aturan yang berlaku untuk semua, dijaga oleh sesuatu yang lebih tinggi dari kepala suku.</p>
-</section>
-
-<div class="hr" role="presentation"></div>
-
-<section id="agama" aria-labelledby="s5">
-  <h2 id="s5">5. Agama: Perjalanan Panjang Pikiran</h2>
-  <div class="figure" aria-hidden="true">
-    <svg class="icon" viewBox="0 0 96 96">
-      <circle cx="48" cy="48" r="26" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle cx="48" cy="48" r="16" fill="none" stroke="var(--accent)" stroke-width="2"/>
-      <circle cx="48" cy="48" r="6" fill="var(--accent)"/>
-    </svg>
-  </div>
-  <p><strong>Agama</strong> lahir dari proses panjang. Ia bukan benda mati yang jatuh begitu saja, tetapi cara manusia menata hidup, menenangkan cemas, dan menyatukan banyak orang.</p>
-  <p><strong>Awal</strong>: alam dianggap berjiwa (animisme), ritual menenangkan ketakutan. <strong>Berikutnya</strong>: mitos leluhur—nenek moyang dipercaya menjaga cucu-cicit. <strong>Lalu</strong>: politeisme—banyak dewa untuk urusan berbeda, seperti kementerian kosmos. <strong>Kemudian</strong>: monoteisme—satu Tuhan, satu hukum, satu tujuan, mudah menyatukan wilayah luas. <strong>Di masa kini</strong>: agama bertemu sains; ada yang kembali ke teks, ada yang menafsir ulang, banyak yang menekankan nilai universal seperti kasih sayang, keadilan, dan amanah.</p>
-  <p>Agama kuat karena bekerja di tiga lapis sekaligus: memberi tafsir pada alam, memberi makna pada rasa, dan memberi aturan pada hidup bersama. Itu sebabnya hingga sekarang ia masih mampu menggerakkan jutaan orang.</p>
-</section>
-
-<div class="hr" role="presentation"></div>
-
-<section id="paradoks" aria-labelledby="s6">
-  <h2 id="s6">6. Paradoks: Tuhan & Uang</h2>
-  <div class="figure" aria-hidden="true">
-    <svg class="diagram" viewBox="0 0 640 220">
-      <line x1="60" y1="170" x2="580" y2="170" stroke="currentColor" stroke-width="2"/>
-      <line x1="320" y1="40" x2="320" y2="170" stroke="currentColor" stroke-width="2"/>
-      <line x1="140" y1="120" x2="500" y2="120" stroke="var(--accent)" stroke-width="2" transform="rotate(-7 320 120)"/>
-      <circle cx="210" cy="138" r="28" fill="none" stroke="var(--accent)" stroke-width="2"/>
-      <circle cx="430" cy="106" r="28" fill="none" stroke="currentColor" stroke-width="2"/>
-    </svg>
-  </div>
-  <p><strong>Uang</strong> diam saat dihina, namun besok tetap berguna: membeli makan, membayar rumah sakit. <strong>Tuhan</strong>—atau tepatnya cerita tentang Tuhan—sering memicu amarah saat diremehkan. Mengapa?</p>
-  <p>Karena uang menyentuh <em>fungsi</em> sehari-hari, sementara Tuhan melekat pada <em>identitas</em>. Menyentuh agama terasa seperti menyentuh harga diri. Bisa jadi yang sering kita bela adalah <strong>cerita kita tentang Tuhan</strong>. Dan yang kita diamkan pada uang adalah kenyataan bahwa ia hanyalah <strong>alat</strong>—dipakai semua orang tanpa perlu dicintai.</p>
-</section>
-
-<div class="hr" role="presentation"></div>
-
-<section id="tangga" aria-labelledby="s7">
-  <h2 id="s7">7. Tangga Cerita Kita</h2>
-  <div class="figure" aria-hidden="true">
-    <svg class="diagram" viewBox="0 0 640 220">
-      <line x1="80" y1="190" x2="560" y2="190" stroke="currentColor" stroke-width="2"/>
-      <path d="M120 190v-22h60v-22h60v-22h60v-22h60v-22h60v-22h60" fill="none" stroke="var(--accent)" stroke-width="2"/>
-      <circle cx="120" cy="190" r="4" fill="var(--accent)"/>
-      <circle cx="180" cy="168" r="4" fill="var(--accent)"/>
-      <circle cx="240" cy="146" r="4" fill="var(--accent)"/>
-      <circle cx="300" cy="124" r="4" fill="var(--accent)"/>
-      <circle cx="360" cy="102" r="4" fill="var(--accent)"/>
-      <circle cx="420" cy="80"  r="4" fill="var(--accent)"/>
-    </svg>
-  </div>
-  <p>Perjalanan manusia mirip tangga: <strong>Keluarga → Suku → Kerajaan → Negara → Tuhan → Uang → Algoritma</strong>. Semakin naik, semakin abstrak, namun jangkauannya makin luas. Dari wajah-wajah akrab, ke bendera, ke kitab, ke angka saldo, hingga ke arus informasi di layar kita.</p>
-</section>
-
-<div class="hr" role="presentation"></div>
-
-<section id="penutup" aria-labelledby="s8">
-  <h2 id="s8">Penutup: Katedral Makna</h2>
-  <div class="figure" aria-hidden="true">
-    <svg class="icon" viewBox="0 0 96 96">
-      <path d="M20 72h56M30 72V44l18-14 18 14v28" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle cx="48" cy="50" r="6" fill="var(--accent)"/>
-    </svg>
-  </div>
-  <p>Kita lahir dari rasa takut dan lapar, lalu menata hidup dengan refleks, rasa, dan cerita. Dari situlah lahir adat, hukum, bangsa, agama, uang—<strong>katedral makna</strong> yang berdiri di kepala namun nyata dampaknya di dunia.</p>
-  <p>Agama, jika dilihat dengan jernih, adalah bagian dari sejarah panjang otak manusia. Ia bukan musuh sains, bukan hadiah misterius, melainkan hasil pencarian manusia untuk hidup lebih teratur dan bermakna.</p>
-  <p>Pada akhirnya, pertanyaannya sederhana: <em>cerita apa yang kita pilih untuk kita pegang?</em> Apakah cerita itu membuat kita lebih adil, lebih welas asih, dan lebih bijak?</p>
-  <p>Di situlah keanehan sekaligus keagungan manusia: makhluk yang tidak puas hanya hidup, tetapi ingin hidup dengan arti—dan cukup cerdas untuk menciptakan arti itu sendiri.</p>
-</section>
-
-  </article>
+    </article>
 </div>
-
-<script>
-/* progress baca halus (flat) */
-(function(){
-  const bar = document.querySelector('.progress');
-  const art = document.querySelector('article');
-  const update=()=>{
-    const start = art.offsetTop;
-    const h = art.offsetHeight - innerHeight;
-    const y = scrollY;
-    const p = Math.min(100, Math.max(0, ((y - start) / Math.max(1,h)) * 100));
-    bar.style.backgroundSize = p + '% 100%';
-  };
-  addEventListener('scroll',update,{passive:true});
-  addEventListener('resize',update);
-  update();
-})();
-</script>
 
 </body>
 </html>
