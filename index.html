@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf--8" />
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="light dark" />
-<title>Di Antara Jutaan Spesies — PlayPal.ID</title>
+<title>Di Antara Jutaan Spesies — Dari Otak Survival ke Pencipta Makna</title>
 
 <meta name="description" content="Versi bahasa awam namun tetap ilmiah: dari otak bertahan hidup menuju pencipta makna—dunia nyata, dunia rasa, dan dunia cerita bersama; agama sebagai hasil perjalanan panjang pikiran manusia.">
 <meta name="author" content="PlayPal.ID">
@@ -14,139 +14,147 @@
 <meta property="og:locale" content="id_ID">
 
 <style>
-/* ===== ESSENTIAL MINIMALISM (FOKUS BACA) ===== */
+/* ===== MINIMALIST PREMIUM ===== */
 :root{
   --bg: #FFFFFF;
-  --ink: #202020;
-  --muted: #666666;
-  --hair: #EFEFEF;
+  --paper: #FFFFFF;
+  --ink: #1A1A1A;
+  --muted: #757575;
+  --hair: #EAEAEA;
+  --accent: #336699;
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg: #111111;
-    --ink: #E2E2E2;
+    --bg: #0F0F0F;
+    --paper: #0F0F0F;
+    --ink: #E0E0E0;
     --muted: #999999;
     --hair: #2A2A2A;
   }
 }
 
-*, *::before, *::after {box-sizing:border-box}
+*, *::before, *::after { box-sizing: border-box; }
 
-html{
-  scroll-behavior:smooth;
-  text-size-adjust:100%;
+html { 
+  scroll-behavior: smooth; 
+  -webkit-text-size-adjust: 100%;
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-/* 1. TIPOGRAFI NYAMAN: Satu font, ukuran pas, spasi lega */
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--ink);
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  font-size: 1.0625rem; /* 17px, ukuran ideal untuk kenyamanan membaca */
-  line-height: 1.85; /* Spasi antar baris yang sangat lega */
+@media (prefers-reduced-motion: reduce) { 
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* 2. LAYOUT SEDERHANA: Lebar kolom ideal untuk pergerakan mata */
-.wrapper{
-  max-width: 65ch;
+/* Layout & Spacing */
+.wrapper {
+  max-width: 680px; /* Lebar optimal untuk membaca */
   margin-inline: auto;
   padding: 4rem 1.5rem;
 }
 
-/* 3. HIRARKI SUBTIL: Pembeda ukuran yang sangat kecil dan fungsional */
-header{
-  margin-bottom: 2rem;
+header {
+  margin-bottom: 3rem;
+  text-align: left;
 }
-.kicker, .byline {
-  font-size: 0.9rem; /* Lebih kecil dari teks utama */
-  color: var(--muted);
-  line-height: 1.6;
-}
-.kicker {
-  margin-bottom: 0.5rem;
-}
-h1{
-  margin: 0.5rem 0;
+
+h1 {
+  font-size: 1.8rem; /* Ukuran judul lebih terkontrol */
   font-weight: 600;
-  line-height: 1.3;
-  font-size: 1.6rem; /* Judul utama tidak besar, hanya tegas */
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem 0;
   text-wrap: balance;
+}
+
+.byline {
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 .byline strong {
   font-weight: 500;
   color: var(--ink);
 }
 
-/* 4. TANPA KARTU: Teks mengalir langsung di halaman */
-article{
-  /* Tidak ada style khusus, menyatu dengan body */
+
+/* Article Body */
+article {
+  background: var(--paper);
 }
 
-/* Subjudul yang hanya sedikit lebih besar dari teks */
-h2{
-  margin: 3.5rem 0 1.5rem;
-  font-size: 1.25rem;
+section + section {
+  margin-top: 2.5rem;
+}
+
+h2 {
+  font-size: 1.2rem; /* Ukuran subjudul yang jelas namun tidak dominan */
   font-weight: 600;
   line-height: 1.4;
-}
-section:first-of-type h2 {
-  margin-top: 2rem;
-}
-
-/* Paragraf rata kiri, fokus pada alur baca alami */
-p{
-  margin: 0 0 1.5rem;
-}
-p:last-child { margin-bottom: 0; }
-
-/* 5. PEMISAH FUNGSIONAL: Garis tipis sebagai pengganti semua dekorasi */
-hr{
-  border: none;
-  height: 1px;
-  background-color: var(--hair);
-  margin: 3rem 0;
+  margin: 2rem 0 0.75rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--hair); /* Garis bawah halus sebagai pemisah */
+  text-align: left;
 }
 
-/* 6. FOKUS TEKS MURNI: Semua gambar dan diagram disembunyikan. */
-/* Hapus atau beri komentar pada baris di bawah ini untuk menampilkan kembali ikon/diagram */
+p {
+  margin: 0 0 1rem 0;
+  font-size: 1.05rem; /* Ukuran teks isi yang nyaman */
+  text-wrap: pretty;
+  text-align: left;
+}
+
+/* Visual Elements */
+.hr { display: none; } /* Hapus divider lama, digantikan border-bottom di h2 */
+
 .figure {
-  display: none;
+  display: flex;
+  justify-content: left; /* Ikon rata kiri */
+  margin: 1.5rem 0 1.5rem 0;
 }
 
-/* Hilangkan style spesifik untuk SVG karena sudah disembunyikan */
-svg { display: none; }
-
-
-/* Warna seleksi yang tidak mengganggu */
-::selection{
-  background: rgba(0,0,0,0.08);
-}
-@media (prefers-color-scheme: dark){
-  ::selection{
-    background: rgba(255,255,255,0.1);
-  }
+.icon, .diagram {
+  width: 100%;
+  max-width: 48px; /* Ukuran ikon minimalis */
+  height: auto;
+  stroke-width: 1.5px;
+  opacity: 0.9;
 }
 
-@media print{
-  body {font-size: 11pt; color: #000;}
-  .wrapper {max-width: 100%; padding: 0;}
+svg {
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
+/* Selection */
+::selection {
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+/* Print */
+@media print {
+  body { font-size: 12pt; }
+  .wrapper { padding: 0; }
+  article { border: none; }
+}
 </style>
+
 </head>
 <body>
 
 <div class="wrapper">
   <header role="banner">
-    <div class="kicker">Esai Bahasa Awam • Ilmiah</div>
     <h1>Di Antara Jutaan Spesies: Dari Otak Bertahan Hidup ke Mesin Pencipta Makna</h1>
     <div class="byline">Penulis: <strong>PlayPal.ID</strong></div>
   </header>
-
-  <hr />
 
   <article role="article">
     <section id="pembuka" aria-labelledby="pembuka-title">
@@ -155,74 +163,81 @@ svg { display: none; }
       <p>Mengapa? Karena sejak awal otak kita bukan mesin pencari kebenaran, melainkan mesin bertahan hidup. Lama-lama, mesin ini berkembang menjadi mesin yang menciptakan arti dan cerita. Dari sana lahir tiga dunia yang kita jalani: <em>dunia nyata</em> yang bisa disentuh, <em>dunia rasa</em> di dalam diri, dan <em>dunia cerita bersama</em> yang hanya ada karena kita percaya bersama. Agama berdiri di puncak dunia cerita itu: tumbuh dari cara otak kita menata hidup.</p>
     </section>
 
-    <hr />
-
     <section id="survival" aria-labelledby="s1">
       <h2 id="s1">1. Otak Bertahan Hidup (Dunia Nyata)</h2>
+      <div class="figure" aria-hidden="true">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      </div>
       <p>Bayangkan orang desa berjalan di sawah. Ia melihat bayangan di tanah. Tanpa pikir panjang, ia mundur. Kadang itu hanya ranting, tapi kalau ternyata ular, mundur itu menyelamatkan nyawa.</p>
       <p>Begitu juga kita. Di jalan raya, saat motor tiba-tiba menyalip, rem diinjak dulu, mikir belakangan. Otak kita didesain untuk <strong>selamat dulu</strong>, akurat nanti. Sistem cepat ini kadang keliru, tapi menyelamatkan. Kita lebih takut kecelakaan yang heboh ketimbang penyakit sunyi seperti darah tinggi. Analogi mudah: <strong>helm motor</strong>. Helm tidak membuat kita lebih jago, tapi melindungi saat jatuh.</p>
     </section>
 
-    <hr />
-
     <section id="emosi" aria-labelledby="s2">
       <h2 id="s2">2. Emosi: Kompas Rasa</h2>
+       <div class="figure" aria-hidden="true">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      </div>
       <p>Selamat saja tidak cukup. Kita butuh arah. Di sinilah <strong>emosi</strong> berfungsi.</p>
       <p><strong>Takut</strong> membuat kita waspada. <strong>Jijik</strong> menahan kita dari makanan berbahaya. <strong>Senang</strong> menyuruh kita mengingat hal yang baik untuk diulang. <strong>Sepi</strong> mendorong kita mencari teman, karena sendirian itu rawan.</p>
       <p>Riset otak menunjukkan, tanpa emosi orang sulit mengambil keputusan. Emosi bukan musuh logika—ia <em>bahan bakarnya</em>. Dalam budaya kita, rasa <em>sungkan</em>, <em>malu</em>, dan <em>gotong royong</em> menuntun pilihan sehari-hari tanpa rumus panjang.</p>
     </section>
 
-    <hr />
-
     <section id="bahasa" aria-labelledby="s3">
       <h2 id="s3">3. Bahasa: Dunia Cerita Bersama</h2>
+      <div class="figure" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+      </div>
       <p>Lompatan terbesar manusia adalah <strong>bahasa</strong>. Dengan bahasa, kita menciptakan dunia yang hanya ada kalau kita semua percaya.</p>
       <p>Contoh paling dekat: <strong>uang</strong>. Selembar seratus ribu hanyalah kertas. Tapi karena kita sepakat nilainya, ia bisa berubah jadi nasi Padang, bensin, atau kuota. Begitu juga <strong>Merah Putih</strong>, <strong>NKRI</strong>, atau <strong>akta nikah</strong>—kuat bukan karena kain atau kertasnya, melainkan karena kita percaya bersama.</p>
       <p><strong>Proklamasi 17 Agustus</strong> membuktikannya: kalimat singkat mengubah nasib jutaan orang. Kata-kata bisa lebih kuat dari senjata ketika diakui bersama.</p>
     </section>
 
-    <hr />
-
     <section id="suku-tuhan" aria-labelledby="s4">
       <h2 id="s4">4. Dari Suku ke Tuhan</h2>
+       <div class="figure" aria-hidden="true">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      </div>
       <p>Di kampung kecil, gosip cukup jadi “polisi.” Semua orang tahu siapa yang jujur dan siapa yang licik. Tapi ketika orang makin banyak, gosip tidak cukup. Kita butuh <strong>cerita besar</strong> yang mengikat banyak kepala: roh gunung, roh laut, leluhur yang mengawasi, simbol kerajaan, hingga <strong>perintah Tuhan</strong>.</p>
       <p>Cerita besar memotong biaya curiga. Kita tak perlu kenal semua orang satu per satu, cukup yakin ada aturan yang berlaku untuk semua, dijaga oleh sesuatu yang lebih tinggi dari kepala suku.</p>
     </section>
 
-    <hr />
-
     <section id="agama" aria-labelledby="s5">
       <h2 id="s5">5. Agama: Perjalanan Panjang Pikiran</h2>
+      <div class="figure" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0L12 2.69z"></path></svg>
+      </div>
       <p><strong>Agama</strong> lahir dari proses panjang. Ia bukan benda mati yang jatuh begitu saja, tetapi cara manusia menata hidup, menenangkan cemas, dan menyatukan banyak orang.</p>
       <p><strong>Awal</strong>: alam dianggap berjiwa (animisme), ritual menenangkan ketakutan. <strong>Berikutnya</strong>: mitos leluhur—nenek moyang dipercaya menjaga cucu-cicit. <strong>Lalu</strong>: politeisme—banyak dewa untuk urusan berbeda, seperti kementerian kosmos. <strong>Kemudian</strong>: monoteisme—satu Tuhan, satu hukum, satu tujuan, mudah menyatukan wilayah luas. <strong>Di masa kini</strong>: agama bertemu sains; ada yang kembali ke teks, ada yang menafsir ulang, banyak yang menekankan nilai universal seperti kasih sayang, keadilan, dan amanah.</p>
       <p>Agama kuat karena bekerja di tiga lapis sekaligus: memberi tafsir pada alam, memberi makna pada rasa, dan memberi aturan pada hidup bersama. Itu sebabnya hingga sekarang ia masih mampu menggerakkan jutaan orang.</p>
     </section>
 
-    <hr />
-
     <section id="paradoks" aria-labelledby="s6">
       <h2 id="s6">6. Paradoks: Tuhan & Uang</h2>
+      <div class="figure" aria-hidden="true">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+      </div>
       <p><strong>Uang</strong> diam saat dihina, namun besok tetap berguna: membeli makan, membayar rumah sakit. <strong>Tuhan</strong>—atau tepatnya cerita tentang Tuhan—sering memicu amarah saat diremehkan. Mengapa?</p>
       <p>Karena uang menyentuh <em>fungsi</em> sehari-hari, sementara Tuhan melekat pada <em>identitas</em>. Menyentuh agama terasa seperti menyentuh harga diri. Bisa jadi yang sering kita bela adalah <strong>cerita kita tentang Tuhan</strong>. Dan yang kita diamkan pada uang adalah kenyataan bahwa ia hanyalah <strong>alat</strong>—dipakai semua orang tanpa perlu dicintai.</p>
     </section>
 
-    <hr />
-
     <section id="tangga" aria-labelledby="s7">
       <h2 id="s7">7. Tangga Cerita Kita</h2>
+      <div class="figure" aria-hidden="true">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 1.67L4.62 6.33 12 11l7.38-4.67L12 1.67zM4 9v6l8 5 8-5V9l-8 5-8-5z"></path></svg>
+      </div>
       <p>Perjalanan manusia mirip tangga: <strong>Keluarga → Suku → Kerajaan → Negara → Tuhan → Uang → Algoritma</strong>. Semakin naik, semakin abstrak, namun jangkauannya makin luas. Dari wajah-wajah akrab, ke bendera, ke kitab, ke angka saldo, hingga ke arus informasi di layar kita.</p>
     </section>
 
-    <hr />
-
     <section id="penutup" aria-labelledby="s8">
       <h2 id="s8">Penutup: Katedral Makna</h2>
+       <div class="figure" aria-hidden="true">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+      </div>
       <p>Kita lahir dari rasa takut dan lapar, lalu menata hidup dengan refleks, rasa, dan cerita. Dari situlah lahir adat, hukum, bangsa, agama, uang—<strong>katedral makna</strong> yang berdiri di kepala namun nyata dampaknya di dunia.</p>
       <p>Agama, jika dilihat dengan jernih, adalah bagian dari sejarah panjang otak manusia. Ia bukan musuh sains, bukan hadiah misterius, melainkan hasil pencarian manusia untuk hidup lebih teratur dan bermakna.</p>
       <p>Pada akhirnya, pertanyaannya sederhana: <em>cerita apa yang kita pilih untuk kita pegang?</em> Apakah cerita itu membuat kita lebih adil, lebih welas asih, dan lebih bijak?</p>
       <p>Di situlah keanehan sekaligus keagungan manusia: makhluk yang tidak puas hanya hidup, tetapi ingin hidup dengan arti—dan cukup cerdas untuk menciptakan arti itu sendiri.</p>
     </section>
-
   </article>
 </div>
 
