@@ -5,29 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="light dark" />
 <title>Di Antara Jutaan Spesies — Dari Otak Survival ke Pencipta Makna</title>
+
 <meta name="description" content="Penjelasan mendalam untuk awam: bagaimana otak manusia berevolusi dari mesin bertahan hidup menjadi pencipta makna, melahirkan agama, uang, dan struktur sosial kompleks.">
 <meta name="author" content="PlayPal.ID">
 <meta property="og:title" content="Di Antara Jutaan Spesies — Dari Otak Survival ke Pencipta Makna">
 <meta property="og:description" content="Narasi mendalam, runtut, dan ilmiah untuk pembaca awam.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="id_ID">
+
 <style>
 :root{
-  --bg:#ffffff; --paper:#ffffff; --ink:#1a1a1a; --muted:#757575; --hair:#eaeaea;
+  --bg:#f6f6f6;
+  --paper:#ffffff;
+  --ink:#1a1a1a;
+  --muted:#757575;
+  --hair:#eaeaea;
   --accent:#3654ff;
   --a1:#2d7ff9; --a2:#00bfa6; --a3:#ffb020; --a4:#e14d72;
   --a5:#7c5cfc; --a6:#12b886; --a7:#9c27b0; --a8:#3e8ef7;
 }
 @media (prefers-color-scheme: dark){
-  :root{ --bg:#0f0f0f; --paper:#0f0f0f; --ink:#e0e0e0; --muted:#999999; --hair:#2a2a2a; }
+  :root{
+    --bg:#0f0f0f;
+    --paper:#1a1a1a;
+    --ink:#e0e0e0;
+    --muted:#999999;
+    --hair:#2a2a2a;
+  }
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 body{
-  margin:0; background:var(--bg); color:var(--ink);
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
   font-family:'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, Arial, sans-serif;
-  font-size:16px; line-height:1.8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  font-size:16px;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 .wrapper{max-width:680px;margin-inline:auto;padding:4rem 1.5rem}
 header{margin-bottom:3rem;text-align:left}
@@ -40,41 +57,36 @@ h2{font-size:1.2rem;font-weight:600;line-height:1.4;margin:2rem 0 1rem 0;padding
 p{margin:0 0 1.25rem 0;font-size:1.05rem;text-wrap:pretty;text-align:left}
 p:last-of-type{margin-bottom:0}
 
-/* Landscape full-bleed bar */
-.landscape{
-  width:100vw;
-  margin-left:calc(50% - 50vw);
-  margin-right:calc(50% - 50vw);
-  display:flex; align-items:center; gap:16px;
-  padding:28px clamp(16px,4vw,48px);
-  border-top:1px solid rgba(0,0,0,.06);
-  border-bottom:1px solid rgba(0,0,0,.06);
+/* Blok icon */
+.block{
+  background:var(--paper);
+  border-radius:16px;
+  padding:28px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:2rem 0;
+  box-shadow:0 1px 3px rgba(0,0,0,0.06);
 }
-@media (prefers-color-scheme: dark){
-  .landscape{border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.block svg{
+  width:48px;
+  height:48px;
+  stroke-width:2;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
 }
-.landscapeIcon{
-  width:72px;height:72px;stroke:#ffffff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:.95;
-}
-.landscapeLabel{
-  color:#ffffff; opacity:.95; font-weight:600; letter-spacing:.2px;
-}
-
-/* Accent mapping */
-.landSatpam{background:var(--a1)}
-.landEmosi{background:var(--a2)}
-.landBahasa{background:var(--a3)}
-.landSuku{background:var(--a4)}
-.landAgama{background:var(--a5)}
-.landParadoks{background:var(--a6)}
-.landTangga{background:var(--a7)}
-.landPenutup{background:var(--a8)}
+.iconSatpam{stroke:var(--a1)}
+.iconEmosi{stroke:var(--a2)}
+.iconBahasa{stroke:var(--a3)}
+.iconSuku{stroke:var(--a4)}
+.iconAgama{stroke:var(--a5)}
+.iconParadoks{stroke:var(--a6)}
+.iconTangga{stroke:var(--a7)}
+.iconPenutup{stroke:var(--a8)}
 
 /* Selection */
 ::selection{background:color-mix(in srgb, var(--accent) 20%, transparent)}
-
-/* Print */
-@media print{ body{font-size:12pt} .wrapper{padding:0} article{border:none} }
 </style>
 </head>
 <body>
@@ -85,102 +97,58 @@ p:last-of-type{margin-bottom:0}
   </header>
 
   <article role="article">
-    <section id="pembuka" aria-labelledby="pembuka-title">
-      <div class="landscape landPenutup" role="img" aria-label="Pembuka">
-        <svg class="landscapeIcon" viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 5-4 8-7 9-3-1-7-4-7-9V7l7-4z"/><path d="M9.5 12h5M12 9v6"/></svg>
-        <div class="landscapeLabel">Pembuka</div>
-      </div>
-      <h2 id="pembuka-title">Pembuka</h2>
-      <p>Kita adalah makhluk yang aneh. Kita bisa tersulut amarah jika simbol tak terlihat yang kita sucikan dihina, namun seringkali diam saat harga kebutuhan pokok merangkak naik. Kita rela berkorban demi ide-ide abstrak seperti 'keadilan' atau 'bangsa', namun kesulitan menabung untuk masa tua yang nyata.</p>
-      <p>Keanehan ini bukan sebuah cacat, melainkan petunjuk. Petunjuk bahwa otak kita pada dasarnya tidak dirancang untuk mencari kebenaran mutlak, melainkan untuk bertahan hidup. Seiring waktu, mesin bertahan hidup ini berevolusi menjadi sesuatu yang jauh lebih kompleks: sebuah mesin pencipta makna. Perjalanan inilah yang melahirkan tiga dunia yang kita huni secara bersamaan: <strong>dunia nyata</strong> yang bisa kita sentuh, <strong>dunia rasa</strong> di dalam batin, dan <strong>dunia cerita bersama</strong> yang hanya ada karena kita semua menyepakatinya.</p>
-      <p>Mari kita telusuri perjalanan ini, langkah demi langkah, dari refleks dasar hingga gagasan paling agung yang membentuk peradaban, termasuk agama.</p>
+    <section id="pembuka">
+      <div class="block"><svg class="iconPenutup" viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 5-4 8-7 9-3-1-7-4-7-9V7l7-4z"/><path d="M9.5 12h5M12 9v6"/></svg></div>
+      <h2>Pembuka</h2>
+      <p>Kita adalah makhluk yang aneh...</p>
     </section>
 
-    <section id="survival" aria-labelledby="s1">
-      <div class="landscape landSatpam" role="img" aria-label="Otak Bertahan Hidup">
-        <svg class="landscapeIcon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V6l-8-3-8 3v6c0 6 8 10 8 10z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
-        <div class="landscapeLabel">1. Otak Bertahan Hidup</div>
-      </div>
-      <h2 id="s1">1. Otak Bertahan Hidup: Si Satpam yang Reaktif</h2>
-      <p>Bayangkan otak kita memiliki dua pekerja utama: seorang <strong>Satpam</strong> dan seorang <strong>Detektif</strong>...</p>
-      <p>Satpam ini adalah <strong>sistem berpikir cepat</strong> kita...</p>
-      <p>Sementara itu, si Detektif adalah <strong>sistem berpikir lambat</strong> kita...</p>
+    <section id="survival">
+      <div class="block"><svg class="iconSatpam" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V6l-8-3-8 3v6c0 6 8 10 8 10z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></div>
+      <h2>1. Otak Bertahan Hidup</h2>
+      <p>Bayangkan otak kita memiliki dua pekerja utama...</p>
     </section>
 
-    <section id="emosi" aria-labelledby="s2">
-      <div class="landscape landEmosi" role="img" aria-label="Emosi">
-        <svg class="landscapeIcon" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 0 0-9.1-3.9L12 5.7l.3-.3a5.5 5.5 0 1 0 7.8 7.8l.3-.3a5.5 5.5 0 0 0 .4-1.9 5.5 5.5 0 0 0 0-2.5z"/><path d="M8 14s1.5-2 4-2 4 2 4 2"/></svg>
-        <div class="landscapeLabel">2. Emosi</div>
-      </div>
-      <h2 id="s2">2. Emosi: Dashboard Kesadaran</h2>
-      <p>Jika Satpam tadi adalah sistem peringatan, maka emosi adalah layar monitor di pos jaganya...</p>
-      <p><strong>Rasa jijik</strong> adalah lampu peringatan...</p>
-      <p>Tanpa dashboard ini, si Detektif (logika) akan bingung...</p>
+    <section id="emosi">
+      <div class="block"><svg class="iconEmosi" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 0 0-9.1-3.9L12 5.7l.3-.3a5.5 5.5 0 1 0 7.8 7.8l.3-.3a5.5 5.5 0 0 0 .4-1.9 5.5 5.5 0 0 0 0-2.5z"/><path d="M8 14s1.5-2 4-2 4 2 4 2"/></svg></div>
+      <h2>2. Emosi</h2>
+      <p>Jika Satpam tadi adalah sistem peringatan...</p>
     </section>
 
-    <section id="bahasa" aria-labelledby="s3">
-      <div class="landscape landBahasa" role="img" aria-label="Bahasa">
-        <svg class="landscapeIcon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M21 10h-2a7 7 0 0 0-7-7v2M3 14h2a7 7 0 0 0 7 7v-2"/><path d="M19.5 16.5l-2 2m0-2 2 2"/></svg>
-        <div class="landscapeLabel">3. Bahasa</div>
-      </div>
-      <h2 id="s3">3. Bahasa: Sihir Dunia Cerita Bersama</h2>
+    <section id="bahasa">
+      <div class="block"><svg class="iconBahasa" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M21 10h-2a7 7 0 0 0-7-7v2M3 14h2a7 7 0 0 0 7 7v-2"/><path d="M19.5 16.5l-2 2m0-2 2 2"/></svg></div>
+      <h2>3. Bahasa</h2>
       <p>Lompatan terbesar dalam evolusi pikiran kita adalah kemampuan berbahasa...</p>
-      <p>Contoh terbaiknya adalah <strong>uang</strong>...</p>
-      <p>Hal yang sama berlaku untuk negara, perseroan terbatas...</p>
     </section>
 
-    <section id="suku-tuhan" aria-labelledby="s4">
-      <div class="landscape landSuku" role="img" aria-label="Dari Gosip Suku ke Otoritas Tuhan">
-        <svg class="landscapeIcon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="8" r="4"/><path d="M20 21v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2a4 4 0 0 1 0 7.6"/></svg>
-        <div class="landscapeLabel">4. Suku → Otoritas</div>
-      </div>
-      <h2 id="s4">4. Dari Gosip Suku ke Otoritas Tuhan</h2>
+    <section id="suku-tuhan">
+      <div class="block"><svg class="iconSuku" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="8" r="4"/><path d="M20 21v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2a4 4 0 0 1 0 7.6"/></svg></div>
+      <h2>4. Dari Gosip Suku ke Otoritas Tuhan</h2>
       <p>Dalam kelompok kecil, sekitar 50-150 orang...</p>
-      <p>Namun, masalah muncul ketika manusia mulai hidup dalam ribuan orang...</p>
-      <p>Cerita tentang roh leluhur yang mengawasi...</p>
     </section>
 
-    <section id="agama" aria-labelledby="s5">
-      <div class="landscape landAgama" role="img" aria-label="Agama">
-        <svg class="landscapeIcon" viewBox="0 0 24 24"><path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0L12 2.7z"/><path d="M12 9v6M9.5 12h5"/></svg>
-        <div class="landscapeLabel">5. Agama</div>
-      </div>
-      <h2 id="s5">5. Agama: Evolusi "Sistem Operasi" Sosial</h2>
-      <p>Jika cerita bersama adalah "perangkat lunak" pikiran, maka agama adalah salah satu "sistem operasi" paling sukses...</p>
-      <p>Tahapannya bisa kita lihat sebagai berikut...</p>
-      <p>Kemudian, lompatan besar terjadi dengan lahirnya <strong>Monoteisme</strong>...</p>
+    <section id="agama">
+      <div class="block"><svg class="iconAgama" viewBox="0 0 24 24"><path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0L12 2.7z"/><path d="M12 9v6M9.5 12h5"/></svg></div>
+      <h2>5. Agama</h2>
+      <p>Jika cerita bersama adalah "perangkat lunak" pikiran...</p>
     </section>
 
-    <section id="paradoks" aria-labelledby="s6">
-      <div class="landscape landParadoks" role="img" aria-label="Paradoks Identitas">
-        <svg class="landscapeIcon" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/><path d="M7 17c1.5-3 3.5-5 5-5s3.5 2 5 5"/></svg>
-        <div class="landscapeLabel">6. Paradoks Identitas</div>
-      </div>
-      <h2 id="s6">6. Paradoks Identitas: Mengapa Kita Membela Tuhan, Bukan Uang?</h2>
+    <section id="paradoks">
+      <div class="block"><svg class="iconParadoks" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/><path d="M7 17c1.5-3 3.5-5 5-5s3.5 2 5 5"/></svg></div>
+      <h2>6. Paradoks Identitas</h2>
       <p>Di sinilah kita kembali ke pertanyaan awal...</p>
-      <p>Uang, meskipun merupakan cerita bersama, kita perlakukan murni sebagai alat...</p>
-      <p>Agama, di sisi lain, telah menyatu dengan lapisan terdalam identitas...</p>
     </section>
 
-    <section id="tangga" aria-labelledby="s7">
-      <div class="landscape landTangga" role="img" aria-label="Tangga Abstraksi">
-        <svg class="landscapeIcon" viewBox="0 0 24 24"><path d="M4 17h4v3H4zM10 13h4v7h-4zM16 9h4v11h-4z"/><path d="M4 7l8-5 8 5"/></svg>
-        <div class="landscapeLabel">7. Tangga Abstraksi</div>
-      </div>
-      <h2 id="s7">7. Tangga Abstraksi Kita</h2>
-      <p>Maka, perjalanan peradaban manusia bisa dilihat sebagai pendakian sebuah tangga abstraksi...</p>
-      <p>Semakin tinggi kita menaiki tangga, semakin abstrak perekatnya...</p>
+    <section id="tangga">
+      <div class="block"><svg class="iconTangga" viewBox="0 0 24 24"><path d="M4 17h4v3H4zM10 13h4v7h-4zM16 9h4v11h-4z"/><path d="M4 7l8-5 8 5"/></svg></div>
+      <h2>7. Tangga Abstraksi Kita</h2>
+      <p>Maka, perjalanan peradaban manusia bisa dilihat sebagai pendakian...</p>
     </section>
 
-    <section id="penutup" aria-labelledby="s8">
-      <div class="landscape landPenutup" role="img" aria-label="Penutup">
-        <svg class="landscapeIcon" viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12"/><path d="M8.5 21V12h7v9"/></svg>
-        <div class="landscapeLabel">Penutup</div>
-      </div>
-      <h2 id="s8">Penutup: Katedral di Dalam Pikiran</h2>
-      <p>Kita lahir dari refleks si Satpam yang reaktif, menavigasi dunia dengan dashboard emosi, dan membangun peradaban dengan sihir bahasa...</p>
-      <p>Melihat agama dari sudut pandang ini tidak bertujuan untuk meremehkannya...</p>
-      <p>Pada akhirnya, pertanyaan terpenting bukanlah "apakah cerita itu benar secara harfiah?"...</p>
+    <section id="penutup">
+      <div class="block"><svg class="iconPenutup" viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12"/><path d="M8.5 21V12h7v9"/></svg></div>
+      <h2>Penutup: Katedral di Dalam Pikiran</h2>
+      <p>Kita lahir dari refleks si Satpam yang reaktif...</p>
     </section>
   </article>
 </div>
