@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8" />
+<meta charset="utf--8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="light dark" />
 <title>Di Antara Jutaan Spesies — PlayPal.ID</title>
@@ -14,27 +14,19 @@
 <meta property="og:locale" content="id_ID">
 
 <style>
-/* ===== CLASSIC MODERN PREMIUM FLAT STYLE ===== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
+/* ===== ESSENTIAL MINIMALISM (FOKUS BACA) ===== */
 :root{
-  --bg: #F9F9F7; /* Latar belakang off-white yang hangat */
-  --paper: #FFFFFF;
-  --ink: #222222; /* Hitam yang lebih lembut */
-  --muted: #7A7A7A;
-  --hair: #EAEAEA;
-  --accent: #2A52BE; /* Biru Cobalt sebagai aksen premium */
-  --shadow: rgba(0, 0, 0, 0.05);
+  --bg: #FFFFFF;
+  --ink: #202020;
+  --muted: #666666;
+  --hair: #EFEFEF;
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg: #121212;
-    --paper: #1C1C1C;
-    --ink: #E0E0E0;
-    --muted: #888888;
-    --hair: #333333;
-    --accent: #5A87FF;
-    --shadow: rgba(0, 0, 0, 0.2);
+    --bg: #111111;
+    --ink: #E2E2E2;
+    --muted: #999999;
+    --hair: #2A2A2A;
   }
 }
 
@@ -46,129 +38,100 @@ html{
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-/* 1. TIPOGRAFI MODERN: Menggunakan satu keluarga font sans-serif yang kuat (Inter) */
+/* 1. TIPOGRAFI NYAMAN: Satu font, ukuran pas, spasi lega */
 body{
   margin:0;
   background:var(--bg);
   color:var(--ink);
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  font-size: 1.1rem; /* Sekitar 17.6px, nyaman dibaca */
-  line-height: 1.8;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.0625rem; /* 17px, ukuran ideal untuk kenyamanan membaca */
+  line-height: 1.85; /* Spasi antar baris yang sangat lega */
   -webkit-font-smoothing: antialiased;
 }
 
-/* 2. LAYOUT RATA KIRI: Bersih dan terstruktur */
+/* 2. LAYOUT SEDERHANA: Lebar kolom ideal untuk pergerakan mata */
 .wrapper{
-  max-width: 68ch; /* Sedikit lebih lebar untuk sans-serif */
+  max-width: 65ch;
   margin-inline: auto;
-  padding: clamp(3rem, 8vw, 6rem) 1.5rem;
+  padding: 4rem 1.5rem;
 }
 
-/* 3. HIRARKI ELEGAN: Spasi dan ketebalan sebagai pembeda utama */
+/* 3. HIRARKI SUBTIL: Pembeda ukuran yang sangat kecil dan fungsional */
 header{
-  margin-bottom: 3.5rem;
-  text-align: left; /* Semua teks mulai dari kiri */
+  margin-bottom: 2rem;
 }
-.kicker{
-  font-size: .8rem;
-  font-weight: 600;
-  color: var(--accent); /* Aksen warna digunakan secara strategis */
-  letter-spacing: .05em;
-  text-transform: uppercase;
-  margin-bottom: .75rem;
+.kicker, .byline {
+  font-size: 0.9rem; /* Lebih kecil dari teks utama */
+  color: var(--muted);
+  line-height: 1.6;
+}
+.kicker {
+  margin-bottom: 0.5rem;
 }
 h1{
-  margin: 0 0 .75rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.03em; /* Kerning yang rapat untuk kesan premium */
-  font-size: clamp(2.2rem, 1.5rem + 3vw, 3.2rem);
+  margin: 0.5rem 0;
+  font-weight: 600;
+  line-height: 1.3;
+  font-size: 1.6rem; /* Judul utama tidak besar, hanya tegas */
   text-wrap: balance;
 }
-.byline{
-  color: var(--muted);
-  font-size: .95rem;
-}
 .byline strong {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--ink);
 }
 
-/* 4. KARTU ARTIKEL FLAT & PREMIUM: Menggunakan bayangan halus, bukan border */
+/* 4. TANPA KARTU: Teks mengalir langsung di halaman */
 article{
-  background:var(--paper);
-  border-radius: 12px;
-  padding: clamp(2rem, 5vw, 3.5rem);
-  box-shadow: 0 4px 24px var(--shadow); /* Bayangan halus untuk efek 'mengambang' */
+  /* Tidak ada style khusus, menyatu dengan body */
 }
 
-section + section{
-  margin-top: 3rem;
-}
-
-/* Subjudul yang bersih, dipisahkan oleh garis tipis di atas */
+/* Subjudul yang hanya sedikit lebih besar dari teks */
 h2{
   margin: 3.5rem 0 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-  border-top: 1px solid var(--hair);
-  padding-top: 3rem;
+  line-height: 1.4;
 }
 section:first-of-type h2 {
-  margin-top: 0;
-  border-top: none;
-  padding-top: 0;
+  margin-top: 2rem;
 }
 
-/* Paragraf rata kiri untuk kenyamanan membaca di layar */
+/* Paragraf rata kiri, fokus pada alur baca alami */
 p{
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  text-align: left;
+  margin: 0 0 1.5rem;
 }
 p:last-child { margin-bottom: 0; }
 
-/* 5. DETAIL KLASIK: Mengganti garis HR dengan pemisah tipografis */
-.hr{
-  height: auto;
-  background: transparent;
-  margin: 3.5rem 0;
+/* 5. PEMISAH FUNGSIONAL: Garis tipis sebagai pengganti semua dekorasi */
+hr{
   border: none;
-  text-align: center;
-}
-.hr::before {
-  content: '•••';
-  font-size: 1rem;
-  letter-spacing: 0.6em; /* Jarak antar titik */
-  color: var(--muted);
+  height: 1px;
+  background-color: var(--hair);
+  margin: 3rem 0;
 }
 
-/* Ikon & Diagram Monokromatik */
-.figure{display:flex; justify-content:center; margin: 2rem 0;}
-.icon, .diagram{
-  width:100%;
-  max-width: 520px;
-  height:auto;
-  opacity: .9;
-}
-svg, svg * {
-  stroke: currentColor !important;
-  fill: none !important; /* Default fill dinonaktifkan */
-}
-svg path[fill]:not([fill="none"]), svg circle[fill]:not([fill="none"]){
-  fill: currentColor !important; /* Hanya fill elemen yang memang harus diisi */
+/* 6. FOKUS TEKS MURNI: Semua gambar dan diagram disembunyikan. */
+/* Hapus atau beri komentar pada baris di bawah ini untuk menampilkan kembali ikon/diagram */
+.figure {
+  display: none;
 }
 
-/* Warna seleksi yang sesuai tema */
+/* Hilangkan style spesifik untuk SVG karena sudah disembunyikan */
+svg { display: none; }
+
+
+/* Warna seleksi yang tidak mengganggu */
 ::selection{
-  background:color-mix(in srgb, var(--accent) 25%, transparent);
+  background: rgba(0,0,0,0.08);
+}
+@media (prefers-color-scheme: dark){
+  ::selection{
+    background: rgba(255,255,255,0.1);
+  }
 }
 
 @media print{
-  body {font-size: 12pt; color: #000;}
-  article{border:none; padding:0; box-shadow: none;}
+  body {font-size: 11pt; color: #000;}
   .wrapper {max-width: 100%; padding: 0;}
 }
 
@@ -183,6 +146,8 @@ svg path[fill]:not([fill="none"]), svg circle[fill]:not([fill="none"]){
     <div class="byline">Penulis: <strong>PlayPal.ID</strong></div>
   </header>
 
+  <hr />
+
   <article role="article">
     <section id="pembuka" aria-labelledby="pembuka-title">
       <h2 id="pembuka-title">Pembuka</h2>
@@ -190,131 +155,68 @@ svg path[fill]:not([fill="none"]), svg circle[fill]:not([fill="none"]){
       <p>Mengapa? Karena sejak awal otak kita bukan mesin pencari kebenaran, melainkan mesin bertahan hidup. Lama-lama, mesin ini berkembang menjadi mesin yang menciptakan arti dan cerita. Dari sana lahir tiga dunia yang kita jalani: <em>dunia nyata</em> yang bisa disentuh, <em>dunia rasa</em> di dalam diri, dan <em>dunia cerita bersama</em> yang hanya ada karena kita percaya bersama. Agama berdiri di puncak dunia cerita itu: tumbuh dari cara otak kita menata hidup.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
+    <hr />
 
     <section id="survival" aria-labelledby="s1">
       <h2 id="s1">1. Otak Bertahan Hidup (Dunia Nyata)</h2>
-      <div class="figure" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 96 96">
-          <path d="M48 14l26 10v18c0 18-12 30-26 38C34 72 22 60 22 42V24l26-10z" fill="none" stroke="currentColor" stroke-width="2"/>
-          <path d="M46 28l-6 12h8l-6 12" fill="none" stroke="currentColor" stroke-width="2"/>
-        </svg>
-      </div>
       <p>Bayangkan orang desa berjalan di sawah. Ia melihat bayangan di tanah. Tanpa pikir panjang, ia mundur. Kadang itu hanya ranting, tapi kalau ternyata ular, mundur itu menyelamatkan nyawa.</p>
       <p>Begitu juga kita. Di jalan raya, saat motor tiba-tiba menyalip, rem diinjak dulu, mikir belakangan. Otak kita didesain untuk <strong>selamat dulu</strong>, akurat nanti. Sistem cepat ini kadang keliru, tapi menyelamatkan. Kita lebih takut kecelakaan yang heboh ketimbang penyakit sunyi seperti darah tinggi. Analogi mudah: <strong>helm motor</strong>. Helm tidak membuat kita lebih jago, tapi melindungi saat jatuh.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
+    <hr />
 
     <section id="emosi" aria-labelledby="s2">
       <h2 id="s2">2. Emosi: Kompas Rasa</h2>
-      <div class="figure" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 96 96">
-          <path d="M48 74s-24-16-24-34a12 12 0 0 1 24-7 12 12 0 0 1 24 7c0 18-24 34-24 34z" fill="none" stroke="currentColor" stroke-width="2"/>
-          <circle cx="48" cy="52" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
-          <path d="M48 44l4 4-4 4-4-4z" fill="currentColor"/>
-        </svg>
-      </div>
       <p>Selamat saja tidak cukup. Kita butuh arah. Di sinilah <strong>emosi</strong> berfungsi.</p>
       <p><strong>Takut</strong> membuat kita waspada. <strong>Jijik</strong> menahan kita dari makanan berbahaya. <strong>Senang</strong> menyuruh kita mengingat hal yang baik untuk diulang. <strong>Sepi</strong> mendorong kita mencari teman, karena sendirian itu rawan.</p>
       <p>Riset otak menunjukkan, tanpa emosi orang sulit mengambil keputusan. Emosi bukan musuh logika—ia <em>bahan bakarnya</em>. Dalam budaya kita, rasa <em>sungkan</em>, <em>malu</em>, dan <em>gotong royong</em> menuntun pilihan sehari-hari tanpa rumus panjang.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
+    <hr />
 
     <section id="bahasa" aria-labelledby="s3">
       <h2 id="s3">3. Bahasa: Dunia Cerita Bersama</h2>
-      <div class="figure" aria-hidden="true">
-        <svg class="diagram" viewBox="0 0 640 240">
-          <circle cx="240" cy="120" r="84" fill="none" stroke="currentColor" stroke-width="2"/>
-          <circle cx="320" cy="120" r="84" fill="none" stroke="currentColor" stroke-width="2"/>
-          <circle cx="400" cy="120" r="84" fill="none" stroke="currentColor" stroke-width="2" opacity=".75"/>
-          <circle cx="320" cy="120" r="12" fill="currentColor"/>
-        </svg>
-      </div>
       <p>Lompatan terbesar manusia adalah <strong>bahasa</strong>. Dengan bahasa, kita menciptakan dunia yang hanya ada kalau kita semua percaya.</p>
       <p>Contoh paling dekat: <strong>uang</strong>. Selembar seratus ribu hanyalah kertas. Tapi karena kita sepakat nilainya, ia bisa berubah jadi nasi Padang, bensin, atau kuota. Begitu juga <strong>Merah Putih</strong>, <strong>NKRI</strong>, atau <strong>akta nikah</strong>—kuat bukan karena kain atau kertasnya, melainkan karena kita percaya bersama.</p>
       <p><strong>Proklamasi 17 Agustus</strong> membuktikannya: kalimat singkat mengubah nasib jutaan orang. Kata-kata bisa lebih kuat dari senjata ketika diakui bersama.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
+    <hr />
 
     <section id="suku-tuhan" aria-labelledby="s4">
       <h2 id="s4">4. Dari Suku ke Tuhan</h2>
-      <div class="figure" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 96 96">
-          <circle cx="24" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-          <circle cx="48" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-          <circle cx="72" cy="48" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-          <path d="M16 26h64M32 70v16M64 70v16" stroke="currentColor" stroke-width="2"/>
-        </svg>
-      </div>
       <p>Di kampung kecil, gosip cukup jadi “polisi.” Semua orang tahu siapa yang jujur dan siapa yang licik. Tapi ketika orang makin banyak, gosip tidak cukup. Kita butuh <strong>cerita besar</strong> yang mengikat banyak kepala: roh gunung, roh laut, leluhur yang mengawasi, simbol kerajaan, hingga <strong>perintah Tuhan</strong>.</p>
       <p>Cerita besar memotong biaya curiga. Kita tak perlu kenal semua orang satu per satu, cukup yakin ada aturan yang berlaku untuk semua, dijaga oleh sesuatu yang lebih tinggi dari kepala suku.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
+    <hr />
 
     <section id="agama" aria-labelledby="s5">
       <h2 id="s5">5. Agama: Perjalanan Panjang Pikiran</h2>
-      <div class="figure" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 96 96">
-          <circle cx="48" cy="48" r="26" fill="none" stroke="currentColor" stroke-width="2"/>
-          <circle cx="48" cy="48" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
-          <circle cx="48" cy="48" r="6" fill="currentColor"/>
-        </svg>
-      </div>
       <p><strong>Agama</strong> lahir dari proses panjang. Ia bukan benda mati yang jatuh begitu saja, tetapi cara manusia menata hidup, menenangkan cemas, dan menyatukan banyak orang.</p>
       <p><strong>Awal</strong>: alam dianggap berjiwa (animisme), ritual menenangkan ketakutan. <strong>Berikutnya</strong>: mitos leluhur—nenek moyang dipercaya menjaga cucu-cicit. <strong>Lalu</strong>: politeisme—banyak dewa untuk urusan berbeda, seperti kementerian kosmos. <strong>Kemudian</strong>: monoteisme—satu Tuhan, satu hukum, satu tujuan, mudah menyatukan wilayah luas. <strong>Di masa kini</strong>: agama bertemu sains; ada yang kembali ke teks, ada yang menafsir ulang, banyak yang menekankan nilai universal seperti kasih sayang, keadilan, dan amanah.</p>
       <p>Agama kuat karena bekerja di tiga lapis sekaligus: memberi tafsir pada alam, memberi makna pada rasa, dan memberi aturan pada hidup bersama. Itu sebabnya hingga sekarang ia masih mampu menggerakkan jutaan orang.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
+    <hr />
 
     <section id="paradoks" aria-labelledby="s6">
       <h2 id="s6">6. Paradoks: Tuhan & Uang</h2>
-      <div class="figure" aria-hidden="true">
-        <svg class="diagram" viewBox="0 0 640 220">
-          <line x1="60" y1="170" x2="580" y2="170" stroke="currentColor" stroke-width="2"/>
-          <line x1="320" y1="40" x2="320" y2="170" stroke="currentColor" stroke-width="2"/>
-          <line x1="140" y1="120" x2="500" y2="120" stroke="currentColor" stroke-width="2" transform="rotate(-7 320 120)"/>
-          <circle cx="210" cy="138" r="28" fill="none" stroke="currentColor" stroke-width="2"/>
-          <circle cx="430" cy="106" r="28" fill="none" stroke="currentColor" stroke-width="2"/>
-        </svg>
-      </div>
       <p><strong>Uang</strong> diam saat dihina, namun besok tetap berguna: membeli makan, membayar rumah sakit. <strong>Tuhan</strong>—atau tepatnya cerita tentang Tuhan—sering memicu amarah saat diremehkan. Mengapa?</p>
       <p>Karena uang menyentuh <em>fungsi</em> sehari-hari, sementara Tuhan melekat pada <em>identitas</em>. Menyentuh agama terasa seperti menyentuh harga diri. Bisa jadi yang sering kita bela adalah <strong>cerita kita tentang Tuhan</strong>. Dan yang kita diamkan pada uang adalah kenyataan bahwa ia hanyalah <strong>alat</strong>—dipakai semua orang tanpa perlu dicintai.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
+    <hr />
 
     <section id="tangga" aria-labelledby="s7">
       <h2 id="s7">7. Tangga Cerita Kita</h2>
-      <div class="figure" aria-hidden="true">
-        <svg class="diagram" viewBox="0 0 640 220">
-          <line x1="80" y1="190" x2="560" y2="190" stroke="currentColor" stroke-width="2"/>
-          <path d="M120 190v-22h60v-22h60v-22h60v-22h60v-22h60v-22h60" fill="none" stroke="currentColor" stroke-width="2"/>
-          <circle cx="120" cy="190" r="4" fill="currentColor"/>
-          <circle cx="180" cy="168" r="4" fill="currentColor"/>
-          <circle cx="240" cy="146" r="4" fill="currentColor"/>
-          <circle cx="300" cy="124" r="4" fill="currentColor"/>
-          <circle cx="360" cy="102" r="4" fill="currentColor"/>
-          <circle cx="420" cy="80"  r="4" fill="currentColor"/>
-        </svg>
-      </div>
       <p>Perjalanan manusia mirip tangga: <strong>Keluarga → Suku → Kerajaan → Negara → Tuhan → Uang → Algoritma</strong>. Semakin naik, semakin abstrak, namun jangkauannya makin luas. Dari wajah-wajah akrab, ke bendera, ke kitab, ke angka saldo, hingga ke arus informasi di layar kita.</p>
     </section>
 
-    <div class="hr" role="presentation"></div>
+    <hr />
 
     <section id="penutup" aria-labelledby="s8">
       <h2 id="s8">Penutup: Katedral Makna</h2>
-      <div class="figure" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 96 96">
-          <path d="M20 72h56M30 72V44l18-14 18 14v28" fill="none" stroke="currentColor" stroke-width="2"/>
-          <circle cx="48" cy="50" r="6" fill="currentColor"/>
-        </svg>
-      </div>
       <p>Kita lahir dari rasa takut dan lapar, lalu menata hidup dengan refleks, rasa, dan cerita. Dari situlah lahir adat, hukum, bangsa, agama, uang—<strong>katedral makna</strong> yang berdiri di kepala namun nyata dampaknya di dunia.</p>
       <p>Agama, jika dilihat dengan jernih, adalah bagian dari sejarah panjang otak manusia. Ia bukan musuh sains, bukan hadiah misterius, melainkan hasil pencarian manusia untuk hidup lebih teratur dan bermakna.</p>
       <p>Pada akhirnya, pertanyaannya sederhana: <em>cerita apa yang kita pilih untuk kita pegang?</em> Apakah cerita itu membuat kita lebih adil, lebih welas asih, dan lebih bijak?</p>
