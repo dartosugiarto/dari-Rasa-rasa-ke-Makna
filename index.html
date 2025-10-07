@@ -4,146 +4,266 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="light dark" />
-<title>Di Antara Jutaan Spesies — Dari Otak Survival ke Pencipta Makna</title>
+<title>Memahami Gaya Filsafat Nietzsche: Pergulatan dalam Keterputusan dan Pencarian Makna</title>
 
-<meta name="description" content="Penjelasan mendalam untuk awam: bagaimana otak manusia berevolusi dari mesin bertahan hidup menjadi pencipta makna, melahirkan agama, uang, dan struktur sosial kompleks.">
-<meta name="author" content="PlayPal.ID">
+<meta name="description" content="Eksplorasi mendalam gaya filsafat Friedrich Nietzsche: dari pengalaman personal, kritik terhadap ide fix, hingga konsep Übermensch dan hidup di era nihilisme pasca-kematian Tuhan.">
+<meta name="author" content="Friedrich Nietzsche">
+<meta property="og:title" content="Memahami Gaya Filsafat Nietzsche: Pergulatan dalam Keterputusan dan Pencarian Makna">
+<meta property="og:description" content="Dari 'Tuhan sudah mati' hingga Manusia Unggul: memahami pergulatan Nietzsche dengan kepercayaan, nihilisme, dan transformasi kehidupan.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="id_ID">
 
 <style>
 :root{
   --bg:#f4f6f8;
   --paper:#ffffff;
-  --ink:#1a1a1a;
+  --ink:#1A1A1A;
   --muted:#757575;
-  --hair:#e6e8eb;
-  --accent:#3654ff;
-  --a1:#2d7ff9; --a2:#00bfa6; --a3:#ffb020; --a4:#e14d72;
-  --a5:#7c5cfc; --a6:#12b886; --a7:#9c27b0; --a8:#3e8ef7;
+  --hair:#E6E8EB;
+  --accent:#336699;
 }
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#0d0f12;
     --paper:#121417;
-    --ink:#e3e6ea;
-    --muted:#a0a7b0;
+    --ink:#E0E0E0;
+    --muted:#9aa3ad;
     --hair:#22262b;
   }
 }
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 body{
-  margin:0;
-  background:var(--bg);
-  color:var(--ink);
-  font-family:'Inter', system-ui, sans-serif;
-  font-size:16px;
-  line-height:1.8;
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,Arial,sans-serif;
+  font-size:16px; line-height:1.8;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 }
 .wrapper{max-width:680px;margin-inline:auto;padding:4rem 1.5rem}
-header{margin-bottom:3rem}
-h1{font-size:1.8rem;font-weight:600;line-height:1.25;margin:0 0 .5rem}
+header{margin-bottom:3rem;text-align:left}
+h1{font-size:1.8rem;font-weight:600;line-height:1.25;letter-spacing:-0.02em;margin:0 0 .5rem 0;text-wrap:balance}
 .byline{font-size:.9rem;color:var(--muted)}
-.byline strong{color:var(--ink)}
+.byline strong{font-weight:500;color:var(--ink)}
+article{background:transparent}
 section+section{margin-top:2.5rem}
-h2{font-size:1.2rem;font-weight:600;margin:1rem 0 .5rem;border-bottom:1px solid var(--hair);padding-bottom:.5rem}
-p{margin:0 0 1.25rem;font-size:1.05rem}
-
-/* blok ikon */
+h2{
+  font-size:1.2rem;font-weight:600;line-height:1.4;
+  margin:2rem 0 .75rem 0; padding-bottom:.5rem; border-bottom:1px solid var(--hair);
+  text-align:left;
+}
+p{margin:0 0 1.25rem 0; font-size:1.05rem; text-wrap:pretty; text-align:left}
+p:last-of-type{margin-bottom:0}
 .block{
   background:var(--paper);
   border:1px solid var(--hair);
   border-radius:16px;
   padding:20px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin:1rem 0 1.5rem;
+  display:flex; justify-content:center; align-items:center;
+  margin:1rem 0 1.25rem 0;
   box-shadow:0 1px 2px rgba(0,0,0,.06);
 }
-.block svg{width:44px;height:44px;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-
-/* warna ikon */
-.iconPembuka{stroke:var(--a8)}
-.iconSatpam{stroke:var(--a1)}
-.iconEmosi{stroke:var(--a2)}
-.iconBahasa{stroke:var(--a3)}
-.iconSuku{stroke:var(--a4)}
-.iconAgama{stroke:var(--a5)}
-.iconParadoks{stroke:var(--a6)}
-.iconTangga{stroke:var(--a7)}
-.iconPenutup{stroke:var(--a8)}
+@media (prefers-color-scheme: dark){
+  .block{box-shadow:0 1px 2px rgba(0,0,0,.5)}
+}
+.block svg{
+  width:44px; height:44px; stroke-width:2; fill:none;
+  stroke-linecap:round; stroke-linejoin:round; stroke:var(--accent);
+}
+.buyLink{
+  display:flex; align-items:center; justify-content:center; gap:.5rem;
+  width:100%; padding:.9rem 1.2rem; background:var(--accent); color:#fff;
+  font-size:1rem; font-weight:500; text-decoration:none; border-radius:10px; text-align:center;
+  transition:transform .12s ease, background .25s ease;
+}
+.buyLink svg{width:22px; height:22px; stroke:#fff; stroke-width:2; fill:none}
+.buyLink:hover{background:color-mix(in srgb, var(--accent) 85%, black 15%); transform:translateY(-1px)}
+::selection{background:color-mix(in srgb, var(--accent) 20%, transparent)}
+@media print{
+  body{font-size:12pt; background:#fff}
+  .wrapper{padding:0}
+  .block{box-shadow:none}
+}
 </style>
 </head>
 <body>
 <div class="wrapper">
-  <header>
-    <h1>Di Antara Jutaan Spesies: Dari Otak Bertahan Hidup ke Mesin Pencipta Makna</h1>
-    <div class="byline">Penulis: <strong>PlayPal.ID</strong></div>
+  <header role="banner">
+    <h1>Memahami Gaya Filsafat Nietzsche: Pergulatan dalam Keterputusan dan Pencarian Makna</h1>
+    <div class="byline">Filsuf: <strong>Friedrich Nietzsche</strong></div>
   </header>
 
-  <article>
-    <section id="pembuka">
-      <h2>Pembuka</h2>
-      <div class="block"><svg class="iconPembuka" viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 5-4 8-7 9-3-1-7-4-7-9V7l7-4z"/><path d="M9.5 12h5M12 9v6"/></svg></div>
-      <p>Kita adalah makhluk yang aneh. Kita bisa tersulut amarah jika simbol tak terlihat yang kita sucikan dihina, namun seringkali diam saat harga kebutuhan pokok merangkak naik. Kita rela berkorban demi ide-ide abstrak seperti 'keadilan' atau 'bangsa', namun kesulitan menabung untuk masa tua yang nyata.</p>
-      <p>Keanehan ini bukan sebuah cacat, melainkan petunjuk. Petunjuk bahwa otak kita pada dasarnya tidak dirancang untuk mencari kebenaran mutlak, melainkan untuk bertahan hidup. Seiring waktu, mesin bertahan hidup ini berevolusi menjadi sesuatu yang jauh lebih kompleks: sebuah mesin pencipta makna. Perjalanan inilah yang melahirkan tiga dunia yang kita huni secara bersamaan: <strong>dunia nyata</strong>, <strong>dunia rasa</strong>, dan <strong>dunia cerita bersama</strong>.</p>
-      <p>Mari kita telusuri perjalanan ini, langkah demi langkah, dari refleks dasar hingga gagasan paling agung yang membentuk peradaban.</p>
+  <article role="article">
+    <section id="pendahuluan" aria-labelledby="p1">
+      <h2 id="p1">Pendahuluan: Filsuf yang Memprovokasi</h2>
+      <div class="block" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        </svg>
+      </div>
+      <p>Friedrich Nietzsche adalah seorang pemikir yang kerap memprovokasi, terkenal dengan pernyataannya yang kontroversial, "Tuhan sudah mati." Namun, lebih dari sekadar klaim, pernyataan ini adalah bagian dari gaya filsafatnya yang mendalam dan penuh pertanyaan, mengajak kita untuk merenungkan kembali fondasi kepercayaan dan nilai-nilai yang kita pegang.</p>
+      <p>Pembahasan mengenai Nietzsche akan dibagi menjadi tiga bagian utama: pengenalan diri dan pengalaman hidupnya, pemikiran intinya mengenai kebutuhan akan kepercayaan, dan bagaimana kita hidup di era "kematian Tuhan" atau nihilisme.</p>
     </section>
 
-    <section id="survival">
-      <h2>1. Otak Bertahan Hidup: Si Satpam yang Reaktif</h2>
-      <div class="block"><svg class="iconSatpam" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V6l-8-3-8 3v6c0 6 8 10 8 10z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></div>
-      <p>Bayangkan otak kita memiliki dua pekerja utama: seorang <strong>Satpam</strong> dan seorang <strong>Detektif</strong>. Satpam ini bertugas di pos jaga depan. Kerjanya super cepat, sedikit panik, dan motonya adalah "lebih baik salah sangka daripada celaka". Saat ia melihat bayangan meliuk di tanah, ia langsung berteriak, "ULAR!" dan menyuruh tubuh melompat mundur. Seringkali itu hanya ranting, tapi jika suatu saat itu benar ular, keputusannya menyelamatkan nyawa.</p>
-      <p>Satpam ini adalah <strong>sistem berpikir cepat</strong> kita, bekerja berdasarkan insting dan pengalaman masa lalu. Ia hemat energi, reaktif, dan menyelamatkan kita dari bahaya.</p>
-      <p>Sementara itu, si Detektif adalah <strong>sistem berpikir lambat</strong>, logis dan analitis, tapi lambat dan boros energi. Evolusi lebih memilih Satpam dulu, agar kita selamat untuk bisa berpikir kemudian.</p>
+    <section id="bagian-1" aria-labelledby="s1">
+      <h2 id="s1">Pengalaman Personal dan Gaya Berpikir Nietzsche</h2>
+      <div class="block" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
+        </svg>
+      </div>
+      <p>Nietzsche adalah seorang filsuf, penyair, komponis, dan filolog klasik yang berjuang keras dengan penyakit sepanjang hidupnya. Pengalaman pribadinya, yang ditandai oleh "keterputusan" mendalam, sangat memengaruhi cara ia memandang dunia dan berfilsafat.</p>
     </section>
 
-    <section id="emosi">
-      <h2>2. Emosi: Dashboard Kesadaran</h2>
-      <div class="block"><svg class="iconEmosi" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-      <p>Jika Satpam tadi sistem peringatan, maka emosi adalah dashboard yang memberi tahu apa yang penting. Rasa jijik, takut, lapar, senang, dan sepi semuanya bekerja sebagai indikator biologis yang mengarahkan perilaku kita.</p>
-      <p>Tanpa emosi, logika tidak tahu apa yang harus dianalisis. Orang yang pusat emosinya rusak sulit mengambil keputusan, bahkan untuk hal sepele. Emosi memberi bobot pada setiap pilihan hidup.</p>
+    <section id="1-1-kehidupan" aria-labelledby="s1-1">
+      <h2 id="s1-1">Kehidupan yang Penuh Tantangan</h2>
+      <div class="block" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+        </svg>
+      </div>
+      <p>Sejak usia muda, Nietzsche harus menghadapi berbagai penyakit serius, yang memaksanya berhenti dari posisi profesor filologi dan menjalani hidup mengembara untuk mencari iklim yang sesuai. Kesehatannya yang terus menurun, diperparah dengan kolaps pada tahun 1889 dan sepuluh tahun terakhir hidupnya dalam kegelapan akibat sakit jiwa, membentuk pemikiran soliter dan pergulatannya dengan penderitaan.</p>
+      <p>Kondisi ini juga memengaruhi gaya penulisannya yang aforistik, yaitu ungkapan-ungkapan pendek yang padat dan bernas, serta labirin, sebuah strategi agar pembacanya tidak cepat-cepat memahami, melainkan diajak untuk berpikir mandiri dan menemukan jalannya sendiri.</p>
     </section>
 
-    <section id="bahasa">
-      <h2>3. Bahasa: Sihir Dunia Cerita Bersama</h2>
-      <div class="block"><svg class="iconBahasa" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
-      <p>Bahasa adalah sihir: ia membuat manusia bisa berbicara tentang hal-hal yang tidak ada. Dari gosip sampai konsep abstrak seperti negara dan hak asasi, bahasa memungkinkan kita membangun cerita bersama.</p>
-      <p>Contoh terbaiknya uang. Secarik kertas bernilai hanya karena kita semua sepakat. Begitu pula negara, perusahaan, bahkan hukum. Cerita bersama adalah pondasi peradaban.</p>
+    <section id="1-2-penolakan" aria-labelledby="s1-2">
+      <h2 id="s1-2">Penolakan untuk Ditiru</h2>
+      <div class="block" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+          <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+          <path d="M12 2v2" />
+        </svg>
+      </div>
+      <p>Nietzsche tidak ingin diikuti atau ditiru. Ia percaya bahwa setiap individu harus menjadi contoh bagi dirinya sendiri, persis seperti yang ia lakukan. Ia bahkan khawatir jika tulisannya terlalu mudah dipahami, karena itu berarti orang tersebut telah mengalami penderitaan dan kengerian hidup yang sama seperti dirinya. Mengenali diri sendiri adalah kunci untuk memahami Nietzsche, bukan dengan meniru, tetapi dengan memahami pengalaman hidup kita sendiri yang serupa.</p>
     </section>
 
-    <section id="suku-tuhan">
-      <h2>4. Dari Gosip Suku ke Otoritas Tuhan</h2>
-      <div class="block"><svg class="iconSuku" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-      <p>Pada kelompok kecil, gosip cukup untuk menjaga ketertiban. Namun saat manusia hidup dalam ribuan orang, gosip runtuh. Maka lahirlah otoritas yang lebih besar: dewa atau roh pengawas.</p>
-      <p>Kepercayaan pada pengawas gaib membuat kerja sama massal menjadi mungkin. Ia menurunkan biaya ketidakpercayaan dan mempersatukan orang asing dalam aturan bersama.</p>
+    <section id="1-3-manipulasi" aria-labelledby="s1-3">
+      <h2 id="s1-3">Manipulasi Karya Nietzsche</h2>
+      <div class="block" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <path d="M14 2v6h6" />
+          <path d="M12 18v-6" />
+          <path d="M9 15l3 3 3-3" />
+        </svg>
+      </div>
+      <p>Setelah Nietzsche jatuh sakit, adik perempuannya, Elisabeth Förster-Nietzsche, memanipulasi dan memalsukan beberapa teks Nietzsche, terutama dengan menambahkan ide-ide antisemit dan Nazi yang sesuai dengan suaminya. Ini menyebabkan karya-karya seperti "Will to Power" disalahgunakan oleh rezim Nazi untuk membenarkan ideologi mereka.</p>
+      <p>Beruntung, saat ini kita memiliki teks-teks Nietzsche yang telah dibersihkan oleh para ilmuwan dari Italia, seperti Mazzino Montinari dan Giorgio Colli, sehingga kita dapat membaca pemikiran aslinya.</p>
     </section>
 
-    <section id="agama">
-      <h2>5. Agama: Evolusi "Sistem Operasi" Sosial</h2>
-      <div class="block"><svg class="iconAgama" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0L12 2.69z"/></svg></div>
-      <p>Agama bisa dilihat sebagai sistem operasi sosial. Dari animisme, politeisme, hingga monoteisme, tiap tahap menjawab tantangan yang lebih besar.</p>
-      <p>Monoteisme adalah lompatan besar: satu Tuhan, satu aturan moral untuk semua. Ia menyatukan imperium luas dengan hukum dan identitas tunggal.</p>
+    <section id="bagian-2" aria-labelledby="s2">
+      <h2 id="s2">Pemikiran Inti: Kebutuhan akan Kepercayaan</h2>
+      <div class="block" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5z" />
+          <path d="M2 17l10 5 10-5" />
+          <path d="M2 12l10 5 10-5" />
+          <path d="M6 12v7c0 1 2 3 6 3s6-2 6-3v-7" />
+        </svg>
+      </div>
+      <p>Nietzsche melihat bahwa manusia memiliki kebutuhan dasar akan pegangan atau kepercayaan. Kebutuhan ini mendorong kita untuk memakukan dan membakukan apa yang kita yakini, entah itu kebenaran, Tuhan, politik, atau estetika. Inilah yang kemudian ia sebut sebagai "ide fix" atau "isme-isme" yang ia kritik.</p>
     </section>
 
-    <section id="paradoks">
-      <h2>6. Paradoks Identitas: Mengapa Kita Membela Tuhan, Bukan Uang?</h2>
-      <div class="block"><svg class="iconParadoks" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div>
-      <p>Kita marah jika agama dihina, tapi tidak jika uang diremehkan. Uang hanya alat, impersonal. Agama adalah identitas, menjawab “siapa saya” dan “siapa kita”.</p>
-      <p>Karena itu serangan pada simbol agama terasa personal, seolah menyerang harga diri kelompok.</p>
+    <section id="2-1-tuhan-mati" aria-labelledby="s2-1">
+      <h2 id="s2-1">Tuhan Sudah Mati: Bukan Sekadar Atheisme</h2>
+      <div class="block" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M15 9l-6 6" />
+          <path d="M9 9l6 6" />
+        </svg>
+      </div>
+      <p>Pernyataan "Tuhan sudah mati" bukan berarti Nietzsche adalah seorang ateis sederhana. Ia juga mengolok-olok ateisme yang dogmatis, yang baginya hanyalah bentuk kepercayaan baru—kepercayaan pada ketidakpercayaan. Bagi Nietzsche, baik teisme maupun ateisme sama-sama melibatkan kebutuhan untuk percaya pada sesuatu yang tetap.</p>
+      <p>Ia melihat bahwa di balik semua "isme" (seperti teisme, ateisme, komunisme, scientisme, patriotisme), ada manusia dengan kebutuhan untuk percaya. Pertanyaan Nietzsche bukanlah "Apakah Tuhan ada?", melainkan "Mengapa saya butuh percaya pada Tuhan atau apa pun itu?" Ia mengajak kita untuk melakukan "genealogi" atas kepercayaan kita, menyelidiki dari mana asalnya dan apa yang membuat diri kita membutuhkan pegangan tersebut.</p>
     </section>
 
-    <section id="tangga">
-      <h2>7. Tangga Abstraksi Kita</h2>
-      <div class="block"><svg class="iconTangga" viewBox="0 0 24 24"><path d="M12 1.67L4.62 6.33 12 11l7.38-4.67L12 1.67zM4 9v6l8 5 8-5V9l-8 5-8-5z"/></svg></div>
-      <p>Peradaban adalah pendakian tangga abstraksi: keluarga, suku, kerajaan, Tuhan, uang, dan kini algoritma. Semakin tinggi, semakin abstrak perekatnya, namun semakin luas jangkauan kerja samanya.</p>
+    <section id="2-2-kritik" aria-labelledby="s2-2">
+      <h2 id="s2-2">Kritik terhadap Metafisika dan Moralitas</h2>
+      <div class="block" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+          <path d="M12 18h.01" />
+          <path d="M12 6v6" />
+        </svg>
+      </div>
+      <p>Nietzsche mengkritik semua bentuk "ide fix" yang telah membakukan kebenaran, mulai dari Platonisme, Hegelianisme, Marxisme, Kristiani, hingga Buddhisme dan Scientisme. Ia membongkar ide-ide ini dengan kembali kepada manusia dan kehendak berkuasa (will to power). Ia melihat bahwa dunia adalah kekacauan (chaos), pluralitas tanpa bentuk, tanpa "mengapa" dan "untuk apa". Menerima dunia apa adanya, dengan segala keindahan dan kekejamannya, adalah esensi dari "mengiyakan" (ja sagen) kehidupan.</p>
+      <p>Nietzsche membedakan antara Yesus historis—sosok manusia yang baik, penuh kasih, dan mengampuni—dengan Kristus iman yang diwartakan oleh Paulus dan kemudian menjadi institusi gereja. Baginya, Kristus iman inilah yang melahirkan moralitas yang membelenggu manusia, membagi dunia menjadi baik dan buruk, dan menolak realitas demi dunia di seberang sana.</p>
+      <p>Begitu pula, ia membedakan Yahudi pra-pembuangan (orang-orang merdeka dan percaya diri) dengan Yahudi pasca-pembuangan (tipe budak yang mencari pegangan). Kritik Nietzsche seringkali disalahpahami sebagai antisemit, padahal ia mengkritik mentalitas budak yang mencari pegangan, bukan etnisitas.</p>
     </section>
 
-    <section id="penutup">
-      <h2>Penutup: Katedral di Dalam Pikiran</h2>
-      <div class="block"><svg class="iconPenutup" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-      <p>Kita lahir dari insting survival, navigasi emosi, dan sihir bahasa. Dari itu semua kita bangun adat, hukum, bangsa, dan agama—katedral makna yang berdiri di pikiran kita.</p>
-      <p>Agama adalah pencapaian kognitif luar biasa: bukti kemampuan manusia menciptakan makna kolektif untuk kerja sama dan hidup lebih bermakna.</p>
-      <p>Pertanyaan akhirnya: cerita apa yang kita pilih untuk dihidupi bersama? Apakah cerita itu membuat kita lebih adil, welas asih, dan bijak? Itulah tanggung jawab kita sebagai pencipta makna.</p>
+    <section id="bagian-3" aria-labelledby="s3">
+      <h2 id="s3">Hidup di Era Nihilisme dan Manusia Unggul</h2>
+      <div class="block" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2v7.5l3 3" />
+          <path d="M21.5 12H2" />
+          <path d="M3 7l3 3-3 3" />
+          <path d="M21 7l-3 3 3 3" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+      </div>
+      <p>Ketika "Tuhan sudah mati" dan semua pegangan telah hancur, kita hidup di era nihilisme, di mana segala sesuatu terasa kosong. Pertanyaannya adalah: bagaimana kita bisa hidup tanpa memegang sebuah kepercayaan, kebenaran, atau ideologi tertentu?</p>
     </section>
+
+    <section id="3-1-lautan-bebas" aria-labelledby="s3-1">
+      <h2 id="s3-1">Lautan Bebas Tanpa Dermaga</h2>
+      <div class="block" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M2 20a8 8 0 1 1 16 0" />
+          <path d="M10 3v14" />
+          <path d="M10 3l-2 2" />
+          <path d="M10 3l2 2" />
+          <path d="M14 8l-4 4" />
+        </svg>
+      </div>
+      <p>Nietzsche menggunakan metafora: "perahu kita sudah berlayar, dermaga sudah kita bakar, kita mengarungi lautan luas bebas". Ini adalah gambaran manusia yang telah melepaskan diri dari segala bentuk dogma dan kepercayaan yang membatasi. Dalam kondisi ini, kita dihadapkan pada pertanyaan apakah kita tidak akan "rindu pulang kampung" atau mencari pegangan baru. Namun, Nietzsche justru mengajak kita untuk merayakan kebebasan ini.</p>
+    </section>
+
+    <section id="3-2-beyond" aria-labelledby="s3-2">
+      <h2 id="s3-2">Moralitas di Luar Kebaikan dan Kejahatan</h2>
+      <div class="block" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 2v10l8 4" />
+        </svg>
+      </div>
+      <p>Bagi Nietzsche, dunia adalah campuran kebaikan dan kejahatan, keindahan dan monster. Moralitas "melampaui kebaikan dan kejahatan" (beyond good and evil) berarti menerima realitas apa adanya, tanpa membelahnya menjadi dua kubu yang saling bertolak belakang. Manusia unggul (Übermensch) adalah mereka yang mampu menerima semua aspek kehidupan, termasuk penderitaan dan kekacauan, dan mentransformasikannya menjadi kekuatan kreatif.</p>
+    </section>
+
+    <section id="3-3-transfigurasi" aria-labelledby="s3-3">
+      <h2 id="s3-3">Filsafat sebagai Seni Transfigurasi</h2>
+      <div class="block" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+      </div>
+      <p>Nietzsche juga memandang filsafat sebagai seni transfigurasi, yaitu kemampuan untuk mengubah segala pengalaman hidup—termasuk penderitaan—menjadi bentuk-bentuk ekspresi yang baru dan bermakna. Ini bisa berupa seni, musik, atau pemikiran itu sendiri. Seperti sapi yang mengunyah makanannya berulang kali hingga halus, filsafat membutuhkan "gigi yang kokoh dan perut yang kuat" untuk mencerna dan mentransformasi realitas menjadi pemahaman yang mendalam.</p>
+    </section>
+
+    <section id="penutup" aria-labelledby="p2">
+      <h2 id="p2">Penutup: Warisan dan Tantangan Nietzsche</h2>
+      <div class="block" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 20h18L12 4 3 20z" />
+          <path d="M12 14v-4" />
+          <circle cx="12" cy="18" r="0.5" />
+        </svg>
+      </div>
+      <p>Gaya dan pemikiran Nietzsche yang fragmentaris, seperti labirin, mengajak setiap pembaca untuk terlibat secara aktif, bukan sekadar menerima. Ia percaya bahwa semua pemikir yang mendalam lebih takut dipahami daripada disalahpahami, karena pemahaman yang sejati seringkali berarti menghadapi realitas yang keras dan menyakitkan.</p>
+      <p>Warisan Nietzsche terus menantang kita untuk mempertanyakan asumsi-asumsi dasar kita dan menemukan makna dalam pergulatan hidup yang penuh keterputusan.</p>
+    </section>
+
+    <div class="block">
+      <a href="https://www.tokopedia.com/search?q=nietzsche" class="buyLink" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+        </svg>
+        Beli Buku Nietzsche
+      </a>
+    </div>
   </article>
 </div>
 </body>
